@@ -1,13 +1,27 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
+    <tabbar :selected="selected" :tabs='tabs'></tabbar>
   </div>
 </template>
 
 <script>
+
+import tabbar from './components/TabBar'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+      'tabbar': tabbar
+  },
+  data(){
+        return{
+            selected:"mainInscar",
+            tabs:[require("./assets/images/home/test.png"),require("./assets/images/home/test.png"),
+                  require("./assets/images/home/test.png"),require("./assets/images/home/test.png")],
+ 
+          }
+  },
 }
 </script>
 
