@@ -17,9 +17,32 @@ export default {
   data(){
         return{
             selected:"mainInscar",
-            tabs:[require("./assets/images/home/test.png"),require("./assets/images/home/test.png"),
-                  require("./assets/images/home/test.png"),require("./assets/images/home/test.png")],
- 
+            tabs:[
+              {
+                id:"mainInscar",
+                text:"车险",
+                iconPath:require("./assets/images/home/test.png"),
+                selectedIconPath:require("./assets/images/home/test_fill.png")
+              },
+              { 
+                id:"mainInscom",
+                text:"寿险",
+                iconPath:require("./assets/images/home/test.png"),
+                selectedIconPath:require("./assets/images/home/test_fill.png")
+              },
+              {
+                 id:"mainOrder",
+                 text:"订单",
+                 iconPath:require("./assets/images/home/test.png"),
+                 selectedIconPath:require("./assets/images/home/test_fill.png")
+              },
+              {
+                 id:"mainMy",
+                 text:"我的",
+                 iconPath:require("./assets/images/home/test.png"),
+                 selectedIconPath:require("./assets/images/home/test_fill.png")
+              }
+            ]
           }
   },
 }
