@@ -5,9 +5,6 @@ import App from './App'
 import router from './router'
 
 
-Vue.use(Mint)
-
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
