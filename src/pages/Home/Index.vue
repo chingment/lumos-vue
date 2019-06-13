@@ -1,15 +1,18 @@
 <template>
-  <div id="page">
+  <div class="lumos-page-wrap">
+    <div class="lumos-tabbody">
     <router-view/>
+    </div>
+  
     <tabbar :tabs="tabs"></tabbar>
   </div>
 </template>
+
 
 <script>
 import tabbar from "@/components/TabBar";
 
 export default {
-  name: 'page',  
   components: {
     tabbar: tabbar
   },
