@@ -3,12 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Mint from 'mint-ui'
-
+import 'lib-flexible'
 
 Vue.use(Mint)
 
-import 'mint-ui/lib/style.css'
 
 /* eslint-disable no-new */
 new Vue({

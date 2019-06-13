@@ -1,13 +1,14 @@
 <template>
   <div id="app">
+    {{ $route.meta.showFooter }}
     <router-view/>
-    <tabbar :selected="selected" :tabs='tabs'></tabbar>
+    <tabbar :tabs='tabs'  v-show="$route.meta.showFooter" ></tabbar>
   </div>
 </template>
 
 <script>
 
-import tabbar from './components/TabBar'
+import tabbar from './components/tabbar'
 
 export default {
   name: 'App',
@@ -16,31 +17,54 @@ export default {
   },
   data(){
         return{
-            selected:"mainInscar",
             tabs:[
               {
-                id:"mainInscar",
+                name:"HomeInsCar",
                 text:"车险",
                 iconPath:require("./assets/images/home/test.png"),
-                selectedIconPath:require("./assets/images/home/test_fill.png")
+                selectedIconPath:require("./assets/images/home/test_fill.png"),
+                pagePath:"Home/InsCar",
+                vonBadge:{ 
+                  type:"circle",
+                  text:""
+                },
+                selected:true
               },
               { 
-                id:"mainInscom",
+                name:"HomeInsCom",
                 text:"寿险",
                 iconPath:require("./assets/images/home/test.png"),
-                selectedIconPath:require("./assets/images/home/test_fill.png")
+                selectedIconPath:require("./assets/images/home/test_fill.png"),
+                pagePath:"Home/InsCom",
+                vonBadge:{ 
+                  type:"circle",
+                  text:""
+                },
+                selected:false
               },
               {
-                 id:"mainOrder",
+                 name:"HomeOrder",
                  text:"订单",
                  iconPath:require("./assets/images/home/test.png"),
-                 selectedIconPath:require("./assets/images/home/test_fill.png")
+                 selectedIconPath:require("./assets/images/home/test_fill.png"),
+                 pagePath:"Home/Order",
+                 vonBadge:{ 
+                  type:"number",
+                  text:"20"
+                 },
+                 selected:false
               },
               {
-                 id:"mainMy",
+                 name:"HomeMy",
                  text:"我的",
                  iconPath:require("./assets/images/home/test.png"),
-                 selectedIconPath:require("./assets/images/home/test_fill.png")
+                 selectedIconPath:require("./assets/images/home/test_fill.png"),
+                 pagePath:"Home/My",
+                 vonBadge:{ 
+                  type:"circle",
+                  text:"2"
+                 },
+                 selected:false
               }
             ]
           }

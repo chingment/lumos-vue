@@ -1,39 +1,69 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import MainInscar from '@/views/mainInscar'
-import MainInscom from '@/views/mainInscom'
-import MainOrder from '@/views/mainOrder'
-import MainMy from '@/views/mainMy'
+import HomeInsCar from '@/pages/Home/InsCar'
+import HomeInsCom from '@/pages/Home/Inscom'
+import HomeOrder from '@/pages/Home/Order'
+import HomeMy from '@/pages/Home/My'
+import Hello from '@/pages/hello'
 
 Vue.use(Router)
 
 export default new Router({
-  mode:'history',
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'MainInscar',
-      component: MainInscar
+      name: 'HomeInsCar',
+      component: HomeInsCar,
+      meta: {
+        index: 1,
+        showFooter: true
+      }
     },
     {
-      path: '/MainInscar',
-      name: 'MainInscar',
-      component: MainInscar
+      path: '/Home/InsCar',
+      name: 'HomeInsCar',
+      component: HomeInsCar,
+      meta: {
+        index: 1,
+        showFooter: true
+      }
     },
     {
-      path: '/MainInscom',
-      name: 'MainInscom',
-      component: MainInscom
+      path: '/Home/InsCom',
+      name: 'HomeInsCom',
+      component: HomeInsCom,
+      meta: {
+        index: 1,
+        showFooter: true
+      }
     },
     {
-      path: '/MainOrder',
-      name: 'MainOrder',
-      component: MainOrder
+      path: '/Home/Order',
+      name: 'HomeOrder',
+      component: HomeOrder,
+      meta: {
+        index: 1,
+        showFooter: true
+      }
     },
     {
-      path: '/MainMy',
-      name: 'MainMy',
-      component: MainMy
+      path: '/Home/My',
+      name: 'HomeMy',
+      component: HomeMy,
+      meta: {
+        index: 1,
+        showFooter: true
+      }
+    },
+    {
+      path: '/Hello',
+      name: 'Hello',
+      component: Hello,
+      meta: {
+        index: 1,
+        showFooter: false
+      }
     }
   ]
 })
