@@ -68,9 +68,9 @@
 
 </style>
 
-
 <script>
 export default {
+  name: 'lumos-tabbar',
   data() {
     return {
       //选中的tabbar值message为外面页面传入的值selected
@@ -103,7 +103,7 @@ export default {
 
       if (m_index > -1) {
         this.atabs[m_index].selected = true;
-        this.$router.push("/" + this.atabs[m_index].pagePath);
+        this.$router.push(this.atabs[m_index].pagePath);
       }
     }
   },

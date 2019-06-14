@@ -1,28 +1,28 @@
 <template>
-  <div class="lumos-page-wrap">
+  <div class="lumos-page">
     <div class="lumos-tabbody">
     <router-view/>
     </div>
   
-    <tabbar :tabs="tabs"></tabbar>
+     <lumos-tabbar :tabs="tabs"></lumos-tabbar> 
   </div>
 </template>
 
 
 <script>
-import tabbar from "@/components/TabBar";
+ //import tabbar from "@/components/tabbar/src/tabbar";
 
 export default {
-  components: {
-    tabbar: tabbar
-  },
+  //  components: {
+  //    tabbar: tabbar
+  //  },
   data() {
     return {
       tabs: [
         {
           name: "HomeInsCar",
           text: "车险",
-          pagePath: "Home/InsCar",
+          pagePath: "/Home/InsCar",
           iconPath: require("@/assets/images/home/test.png"),
           selectedIconPath: require("@/assets/images/home/test_fill.png"),
           vonBadge: {
@@ -34,7 +34,7 @@ export default {
         {
           name: "HomeInsCom",
           text: "寿险",
-          pagePath: "Home/InsCom",
+          pagePath: "/Home/InsCom",
           iconPath: require("@/assets/images/home/test.png"),
           selectedIconPath: require("@/assets/images/home/test_fill.png"),
           vonBadge: {
@@ -46,7 +46,7 @@ export default {
         {
           name: "HomeOrder",
           text: "订单",
-          pagePath: "Home/Order",
+          pagePath: "/Home/Order",
           iconPath: require("@/assets/images/home/test.png"),
           selectedIconPath: require("@/assets/images/home/test_fill.png"),
           vonBadge: {
@@ -58,7 +58,7 @@ export default {
         {
           name: "HomeMy",
           text: "我的",
-          pagePath: "Home/My",
+          pagePath: "/Home/My",
           iconPath: require("@/assets/images/home/test.png"),
           selectedIconPath: require("@/assets/images/home/test_fill.png"),
           vonBadge: {
