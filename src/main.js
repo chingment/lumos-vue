@@ -18,6 +18,14 @@ Object.keys(components).forEach((key) => {
 	Vue.component(components[key].name, components[key])
 });
 
+import global from './config/global'
+
+Vue.prototype.global=global;
+
+// //方法挂靠全局
+// Object.keys(global).forEach((key) => {
+// 	Vue.prototype[key] = global[key];
+// });
 
 /* eslint-disable no-new */
 new Vue({

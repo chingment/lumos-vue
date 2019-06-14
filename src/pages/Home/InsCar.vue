@@ -11,6 +11,7 @@ export default {
   },
   methods: {
     goLink() {
+      this.global.setname("hello,chingment")
       this.$router.push({
         path: '/Hello',
         name: "Hello"

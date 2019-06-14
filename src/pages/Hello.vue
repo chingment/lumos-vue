@@ -1,6 +1,8 @@
 <template>
 	<div>我是aaa
 	<button @click="back">点我返回</button>
+
+   {{ this.global.name }}
 	</div>
 	
 </template>

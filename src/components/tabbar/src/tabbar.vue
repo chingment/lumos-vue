@@ -6,7 +6,7 @@
                  <img v-if="!tab.selected" :src="tab.iconPath">
                  <img v-if="tab.selected" :src="tab.selectedIconPath">
              </div>
-             <div class="lumos-tab-label" >
+             <div class="lumos-tab-text" >
                  <span>{{ tab.text }}</span>
              </div>
              <div class="lumos-tab-vonbadge" >
@@ -22,7 +22,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 44px;
+  height: 8rem;
   z-index: 10;
   background-color: #fff;
   flex-wrap: wrap;
@@ -55,7 +55,7 @@
   height: 100%;
 }
 
-.lumos-tabbar .lumos-tab-label {
+.lumos-tabbar .lumos-tab-text {
   font-size: 32px;
 }
 
@@ -127,6 +127,8 @@ export default {
     //console.log("当前路由 index:"+this.$route.meta.index	);
     //console.log("当前路由 name:"+this.$route.name	);
     this.setTab(m_index);
+
+     console.log("this.global.name"+this.global.name)
   }
 };
 </script>
