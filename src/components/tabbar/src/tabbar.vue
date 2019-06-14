@@ -49,28 +49,27 @@
   margin: auto;
 }
 
-.lumos-tabbar .lumos-tab-icon img{
-    display: block;
-    width: 100%;
-    height: 100%;
+.lumos-tabbar .lumos-tab-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
-.lumos-tabbar .lumos-tab-label{
-   font-size: 32px;
+.lumos-tabbar .lumos-tab-label {
+  font-size: 32px;
 }
 
-.lumos-tabbar .lumos-tab-vonbadge{
-    position: absolute;
-    top: 2px;
-    left: 50%;
-    margin-left: 6px;
+.lumos-tabbar .lumos-tab-vonbadge {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  margin-left: 6px;
 }
-
 </style>
 
 <script>
 export default {
-  name: 'lumos-tabbar',
+  name: "lumos-tabbar",
   data() {
     return {
       //选中的tabbar值message为外面页面传入的值selected
@@ -88,7 +87,7 @@ export default {
       //console.log("pagePath:"+name	);
       this.setTab(index);
     },
-    setTab: function(index) {
+    setTab(index) {
       console.log("pagePath:" + index);
       //var m_pagePath=pagePath.toLowerCase();
       var m_index = -1;
@@ -105,17 +104,22 @@ export default {
         this.atabs[m_index].selected = true;
         this.$router.push(this.atabs[m_index].pagePath);
       }
+    },
+    setVonbadgeText(index, text) {
+      this.atabs[index].vonBadge.text = text;
     }
   },
   mounted: function() {
     var m_index = -1;
 
+    var m_cur_route_name = this.$route.name;
+
+    console.log("当前路由名称:" + m_cur_route_name);
+
     for (var i = 0; i < this.atabs.length; i++) {
       var l_name = this.atabs[i].name;
-      var l_name2 = this.$route.name;
       console.log("当前路由 l_name:" + l_name);
-      console.log("当前路由 l_name2:" + l_name2);
-      if (l_name == l_name2) {
+      if (l_name == m_cur_route_name) {
         m_index = i;
       }
     }

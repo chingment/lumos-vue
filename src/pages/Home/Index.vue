@@ -1,10 +1,10 @@
 <template>
   <div class="lumos-page">
+    <button @click="clickParent">点击</button>
     <div class="lumos-tabbody">
     <router-view/>
     </div>
-  
-     <lumos-tabbar :tabs="tabs"></lumos-tabbar> 
+     <lumos-tabbar :tabs="tabs" ref="mychild"  ></lumos-tabbar> 
   </div>
 </template>
 
@@ -69,7 +69,12 @@ export default {
         }
       ]
     };
-  }
+  },
+  methods: {
+      clickParent() {
+        this.$refs.mychild.setVonbadgeText(1,"嘿嘿嘿");
+      }
+    }
 };
 </script>
 
