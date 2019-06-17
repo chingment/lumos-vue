@@ -21,7 +21,7 @@ export default {
             val: "hello,chingment333"
       });
 
-  		this.$router.push('/Home/InsCar')
+  		this.$router.push('/InsCar')
   	}
   }
 }

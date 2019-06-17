@@ -13,9 +13,9 @@ export default {
     return {
       tabs: [
         {
-          name: "HomeInsCar",
+          name: "InsCar",
           text: "车险",
-          pagePath: "/Home/InsCar",
+          pagePath: "/InsCar",
           iconPath: require("@/assets/images/home/test.png"),
           selectedIconPath: require("@/assets/images/home/test_fill.png"),
           vonBadge: {
@@ -25,9 +25,9 @@ export default {
           selected: true
         },
         {
-          name: "HomeInsCom",
-          text: "寿险",
-          pagePath: "/Home/InsCom",
+          name: "InsMarket",
+          text: "意外险",
+          pagePath: "/InsMarket",
           iconPath: require("@/assets/images/home/test.png"),
           selectedIconPath: require("@/assets/images/home/test_fill.png"),
           vonBadge: {
@@ -37,9 +37,9 @@ export default {
           selected: false
         },
         {
-          name: "HomeOrder",
-          text: "订单",
-          pagePath: "/Home/Order",
+          name: "InsClaim",
+          text: "理赔",
+          pagePath: "/InsClaim",
           iconPath: require("@/assets/images/home/test.png"),
           selectedIconPath: require("@/assets/images/home/test_fill.png"),
           vonBadge: {
@@ -49,9 +49,9 @@ export default {
           selected: false
         },
         {
-          name: "HomeMy",
+          name: "My",
           text: "我的",
-          pagePath: "/Home/My",
+          pagePath: "/My",
           iconPath: require("@/assets/images/home/test.png"),
           selectedIconPath: require("@/assets/images/home/test_fill.png"),
           vonBadge: {
@@ -68,6 +68,7 @@ export default {
       this.$refs.mychild.setVonbadgeText(1, "嘿嘿嘿");
     }
   }
+  
 };
 </script>
 
