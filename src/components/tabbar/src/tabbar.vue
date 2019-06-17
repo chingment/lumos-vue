@@ -1,18 +1,20 @@
 <template>
    <div class="lumos-tabbar fixed" >
-      <template v-for="(tab,index) in this.atabs">
-         <div class="lumos-tab-item" :key="tab.name" @click="tabclick(index)" >
+      <template v-for="(tab) in this.atabs">
+
+         <router-link  class="lumos-tab-item" :key="tab.name" :to="tab.pagePath" >
              <div class="lumos-tab-icon"  >
                  <img v-if="!tab.selected" :src="tab.iconPath">
                  <img v-if="tab.selected" :src="tab.selectedIconPath">
-             </div>
+             </div> 
              <div class="lumos-tab-text" >
                  <span>{{ tab.text }}</span>
              </div>
              <div class="lumos-tab-vonbadge" >
                  <span :class="tab.vonBadge.type" >{{ tab.vonBadge.text }}</span>
             </div>
-         </div>
+         </router-link>
+
      </template>
    </div>
 </template>
@@ -39,6 +41,7 @@
   flex: 1;
   flex-direction: column;
   position: relative;
+  text-decoration: none;
 }
 
 .lumos-tabbar .lumos-tab-icon {
@@ -110,18 +113,20 @@ export default {
     }
   },
   mounted: function() {
-    var m_index = -1;
+
 
     var m_cur_route_name = this.$route.name;
 
     for (var i = 0; i < this.atabs.length; i++) {
       var l_name = this.atabs[i].name;
+
+       this.atabs[i].selected=false;
+       
       if (l_name == m_cur_route_name) {
-        m_index = i;
+           this.atabs[i].selected = true;
       }
     }
 
-    this.setTab(m_index);
 
   }
 };

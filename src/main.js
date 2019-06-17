@@ -24,6 +24,22 @@ Object.keys(components).forEach((key) => {
 // 	Vue.prototype[key] = global[key];
 // });
 
+
+router.beforeEach((to, from, next) => {
+  
+  // if (to.matched.some(record => record.meta.requireAuth)){  // 判断该路由是否需要登录权限
+  // // next({
+  // //   path: '/My',
+  // //   query: { redirect: to.fullPath }
+  // // })
+  // }
+  // else {
+  //   next();
+  // }
+
+  next();
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

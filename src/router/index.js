@@ -15,10 +15,10 @@ export default new Router({
   routes: [
     {
       path: '/', name: 'InsCar', component: HomeIndex, children: [
-        { path: '/InsCar', name: 'InsCar', component: InsCarIndex },
-        { path: '/InsMarket', name: 'InsMarket', component: InsMarketIndex },
-        { path: '/InsClaim', name: 'InsClaim', component: InsClaimIndex },
-        { path: '/My', name: 'My', component: MyIndex }
+        { path: '/InsCar', name: 'InsCar', component: InsCarIndex,meta: {requireAuth: true} },
+        { path: '/InsMarket', name: 'InsMarket', component: InsMarketIndex,meta: {requireAuth: true} },
+        { path: '/InsClaim', name: 'InsClaim', component: InsClaimIndex,meta: {requireAuth: true} },
+        { path: '/My', name: 'My', component: MyIndex,meta: {requireAuth: false} }
       ]
     },
     {
