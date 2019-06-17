@@ -128,7 +128,6 @@ export default {
     //console.log("当前路由 name:"+this.$route.name	);
     this.setTab(m_index);
 
-     console.log("this.global.name"+this.global.name)
   }
 };
 </script>

@@ -1,5 +1,10 @@
 <template>
+<div>
  <a @click="goLink">inscar</a>
+
+{{ this.$store.state.testStatus.helloWorld }}
+
+</div>
 </template>
 
 <script>
@@ -11,7 +16,12 @@ export default {
   },
   methods: {
     goLink() {
-      this.global.setname("hello,chingment")
+ 
+      this.$store.commit('updateTestStatus', {
+            name: 'helloWorld',
+            val: "hello,chingment"
+      });
+
       this.$router.push({
         path: '/Hello',
         name: "Hello"

@@ -1,4 +1,4 @@
-webpackJsonp([0],{
+webpackJsonp([1],{
 
 /***/ "2MJs":
 /***/ (function(module, exports) {
@@ -162,6 +162,11 @@ var Index_Component = Index_normalizeComponent(
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ var InsCar = ({
   data() {
@@ -171,7 +176,12 @@ var Index_Component = Index_normalizeComponent(
   },
   methods: {
     goLink() {
-      this.global.setname("hello,chingment");
+
+      this.$store.commit('updateTestStatus', {
+        name: 'helloWorld',
+        val: "hello,chingment"
+      });
+
       this.$router.push({
         path: '/Hello',
         name: "Hello"
@@ -179,8 +189,8 @@ var Index_Component = Index_normalizeComponent(
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-3abc6980","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/Home/InsCar.vue
-var InsCar_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('a',{on:{"click":_vm.goLink}},[_vm._v("inscar")])}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-c39bb056","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/Home/InsCar.vue
+var InsCar_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('a',{on:{"click":_vm.goLink}},[_vm._v("inscar")]),_vm._v("\r\n\r\n"+_vm._s(this.$store.state.testStatus.helloWorld)+"\r\n\r\n")])}
 var InsCar_staticRenderFns = []
 var InsCar_esExports = { render: InsCar_render, staticRenderFns: InsCar_staticRenderFns }
 /* harmony default export */ var Home_InsCar = (InsCar_esExports);
@@ -308,24 +318,28 @@ var My_Component = My_normalizeComponent(
 //
 //
 //
-//
-//
 
 /* harmony default export */ var hello = ({
   name: 'aaa',
-  /*data () {
+  data() {
     return {
       msg: '哈哈'
-    }
-  },*/
+    };
+  },
   methods: {
     back() {
+
+      this.$store.commit('updateTestStatus', {
+        name: 'helloWorld',
+        val: "hello,chingment333"
+      });
+
       this.$router.push('/Home/InsCar');
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-3c20b7b2","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/hello.vue
-var hello_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("我是aaa\n\t"),_c('button',{on:{"click":_vm.back}},[_vm._v("点我返回")]),_vm._v("\n\n   "+_vm._s(this.global.name)+"\n\t")])}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-70bb6d29","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/hello.vue
+var hello_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("我是aaa "+_vm._s(this.$store.state.testStatus.helloWorld)+"\n"),_c('button',{on:{"click":_vm.back}},[_vm._v("点我返回")])])}
 var hello_staticRenderFns = []
 var hello_esExports = { render: hello_render, staticRenderFns: hello_staticRenderFns }
 /* harmony default export */ var pages_hello = (hello_esExports);
@@ -369,7 +383,7 @@ var hello_Component = hello_normalizeComponent(
 vue_esm["a" /* default */].use(vue_router_esm["a" /* default */]);
 
 /* harmony default export */ var router = (new vue_router_esm["a" /* default */]({
-  // mode: 'history',
+  mode: 'history',
   routes: [{
     path: '/',
     name: 'HomeIndex',
@@ -396,6 +410,35 @@ vue_esm["a" /* default */].use(vue_router_esm["a" /* default */]);
     name: 'Hello',
     component: src_pages_hello
   }]
+}));
+// EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
+var vuex_esm = __webpack_require__("NYxO");
+
+// CONCATENATED MODULE: ./src/store/state.js
+const state = {
+	testStatus: {
+		helloWorld: "hello,Vue"
+	}
+};
+// CONCATENATED MODULE: ./src/store/mutations.js
+const mutations = {
+	//更新信用中心资料状态
+	updateTestStatus(state, param) {
+		state.testStatus[param.name] = param.val;
+	}
+
+};
+// CONCATENATED MODULE: ./src/store/index.js
+
+
+
+
+
+vue_esm["a" /* default */].use(vuex_esm["a" /* default */]);
+
+/* harmony default export */ var store = (new vuex_esm["a" /* default */].Store({
+	state: state,
+	mutations: mutations
 }));
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/components/tabbar/src/tabbar.vue
 //
@@ -527,18 +570,16 @@ vue_esm["a" /* default */].use(vue_router_esm["a" /* default */]);
     //console.log("当前路由 index:"+this.$route.meta.index	);
     //console.log("当前路由 name:"+this.$route.name	);
     this.setTab(m_index);
-
-    console.log("this.global.name" + this.global.name);
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-111e22f0","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/tabbar/src/tabbar.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-d3eaece8","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/tabbar/src/tabbar.vue
 var tabbar_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"lumos-tabbar fixed"},[_vm._l((this.atabs),function(tab,index){return [_c('div',{key:tab.name,staticClass:"lumos-tab-item",on:{"click":function($event){return _vm.tabclick(index)}}},[_c('div',{staticClass:"lumos-tab-icon"},[(!tab.selected)?_c('img',{attrs:{"src":tab.iconPath}}):_vm._e(),_vm._v(" "),(tab.selected)?_c('img',{attrs:{"src":tab.selectedIconPath}}):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"lumos-tab-text"},[_c('span',[_vm._v(_vm._s(tab.text))])]),_vm._v(" "),_c('div',{staticClass:"lumos-tab-vonbadge"},[_c('span',{class:tab.vonBadge.type},[_vm._v(_vm._s(tab.vonBadge.text))])])])]})],2)}
 var tabbar_staticRenderFns = []
 var tabbar_esExports = { render: tabbar_render, staticRenderFns: tabbar_staticRenderFns }
 /* harmony default export */ var src_tabbar = (tabbar_esExports);
 // CONCATENATED MODULE: ./src/components/tabbar/src/tabbar.vue
 function tabbar_injectStyle (ssrContext) {
-  __webpack_require__("yvzq")
+  __webpack_require__("fAFO")
 }
 var tabbar_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -572,21 +613,10 @@ var tabbar_Component = tabbar_normalizeComponent(
 /* harmony default export */ var components = ({
     Tabbar: tabbar_src_tabbar
 });
-// CONCATENATED MODULE: ./src/config/global.js
-var global = {
-  name: 'Who',
-  sex: 'Male',
-  setname(_name) {
-    this.name = _name;
-    console.log('姓名已经改变');
-  }
-
-};
-
-/* harmony default export */ var config_global = (global);
 // CONCATENATED MODULE: ./src/main.js
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+
 
 
 
@@ -603,10 +633,6 @@ Object.keys(components).forEach(key => {
   vue_esm["a" /* default */].component(components[key].name, components[key]);
 });
 
-
-
-vue_esm["a" /* default */].prototype.global = config_global;
-
 // //方法挂靠全局
 // Object.keys(global).forEach((key) => {
 // 	Vue.prototype[key] = global[key];
@@ -616,6 +642,7 @@ vue_esm["a" /* default */].prototype.global = config_global;
 new vue_esm["a" /* default */]({
   el: '#app',
   router: router,
+  store: store,
   components: { App: src_App },
   template: '<App/>'
 });
@@ -636,7 +663,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABHCAYAAAEi
 
 /***/ }),
 
-/***/ "yvzq":
+/***/ "fAFO":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -644,4 +671,4 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABHCAYAAAEi
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.747b6cf569ff1b5e8123.js.map
+//# sourceMappingURL=app.53508dc00bb1c9cacf6d.js.map

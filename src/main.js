@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import store from './store'
 
 
 //单个组件导入
@@ -18,9 +18,6 @@ Object.keys(components).forEach((key) => {
 	Vue.component(components[key].name, components[key])
 });
 
-import global from './config/global'
-
-Vue.prototype.global=global;
 
 // //方法挂靠全局
 // Object.keys(global).forEach((key) => {
@@ -31,6 +28,7 @@ Vue.prototype.global=global;
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
