@@ -7,15 +7,8 @@
      <lumos-tabbar :tabs="tabs" ref="mychild"  ></lumos-tabbar> 
   </div>
 </template>
-
-
 <script>
- //import tabbar from "@/components/tabbar/src/tabbar";
-
 export default {
-  //  components: {
-  //    tabbar: tabbar
-  //  },
   data() {
     return {
       tabs: [
@@ -71,10 +64,10 @@ export default {
     };
   },
   methods: {
-      clickParent() {
-        this.$refs.mychild.setVonbadgeText(1,"嘿嘿嘿");
-      }
+    clickParent() {
+      this.$refs.mychild.setVonbadgeText(1, "嘿嘿嘿");
     }
+  }
 };
 </script>
 

@@ -114,18 +114,13 @@ export default {
 
     var m_cur_route_name = this.$route.name;
 
-    console.log("当前路由名称:" + m_cur_route_name);
-
     for (var i = 0; i < this.atabs.length; i++) {
       var l_name = this.atabs[i].name;
-      console.log("当前路由 l_name:" + l_name);
       if (l_name == m_cur_route_name) {
         m_index = i;
       }
     }
 
-    //console.log("当前路由 index:"+this.$route.meta.index	);
-    //console.log("当前路由 name:"+this.$route.name	);
     this.setTab(m_index);
 
   }
