@@ -1,7 +1,11 @@
 export const mutations = {
-	//更新信用中心资料状态
-	updateTestStatus(state, param) {
-		state.testStatus[param.name] = param.val;
+	//更新用户ID标识
+	setAId(state, val) {
+		state.aId = val;
+	},
+	//更新用户代理标识
+	setUId(state, val) {
+		state.uId = val;
 	}
 
 }

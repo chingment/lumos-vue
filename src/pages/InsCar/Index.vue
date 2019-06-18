@@ -2,7 +2,7 @@
 <div>
  <a @click="goLink">inscar</a>
 
-{{ this.$store.state.testStatus.helloWorld }}
+{{ this.$store.getters.getUId }}
 
 </div>
 </template>
@@ -17,10 +17,7 @@ export default {
   methods: {
     goLink() {
  
-      this.$store.commit('updateTestStatus', {
-            name: 'helloWorld',
-            val: "hello,chingment"
-      });
+      //this.$store.dispatch('setUId', 'test');
 
       this.$router.push({
         path: '/Hello',

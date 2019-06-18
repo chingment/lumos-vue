@@ -1,5 +1,5 @@
 <template>
-	<div>我是aaa {{ this.$store.state.testStatus.helloWorld }}
+	<div>我是aaa {{ this.$store.getters.getUId }}
 	<button @click="back">点我返回</button>
 	</div>
 	
@@ -16,10 +16,7 @@ export default {
   methods:{
   	back(){
 
-      this.$store.commit('updateTestStatus', {
-            name: 'helloWorld',
-            val: "hello,chingment333"
-      });
+      this.$store.dispatch('setUId', 'testssdsd');
 
   		this.$router.push('/InsCar')
   	}

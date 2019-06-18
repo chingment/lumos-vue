@@ -1,5 +1,4 @@
 export const state = {
-	testStatus: {
-		helloWorld: "hello,Vue"
-	}
+	aId: 'aId',
+	uId:'uId'
 }
