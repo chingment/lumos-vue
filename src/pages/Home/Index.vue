@@ -22,7 +22,7 @@ export default {
             type: "circle",
             text: ""
           },
-          selected: true
+          selected: false
         },
         {
           name: "InsMarket",

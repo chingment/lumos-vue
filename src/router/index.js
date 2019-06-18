@@ -14,7 +14,7 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/', name: 'InsCar', component: HomeIndex, children: [
+      path: '/', name: 'HomeIndex', component: HomeIndex, children: [
         { path: '/InsCar', name: 'InsCar', component: InsCarIndex,meta: {requireAuth: true} },
         { path: '/InsMarket', name: 'InsMarket', component: InsMarketIndex,meta: {requireAuth: true} },
         { path: '/InsClaim', name: 'InsClaim', component: InsClaimIndex,meta: {requireAuth: true} },

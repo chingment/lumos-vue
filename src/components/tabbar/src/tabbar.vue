@@ -1,22 +1,20 @@
 <template>
-   <div class="lumos-tabbar fixed" >
-      <template v-for="(tab) in this.atabs">
-
-         <router-link  class="lumos-tab-item" :key="tab.name" :to="tab.pagePath" >
-             <div class="lumos-tab-icon"  >
-                 <img v-if="!tab.selected" :src="tab.iconPath">
-                 <img v-if="tab.selected" :src="tab.selectedIconPath">
-             </div> 
-             <div class="lumos-tab-text" >
-                 <span>{{ tab.text }}</span>
-             </div>
-             <div class="lumos-tab-vonbadge" >
-                 <span :class="tab.vonBadge.type" >{{ tab.vonBadge.text }}</span>
-            </div>
-         </router-link>
-
-     </template>
-   </div>
+  <div class="lumos-tabbar fixed">
+    <template v-for="(tab) in this.atabs">
+      <router-link class="lumos-tab-item" :key="tab.name" :to="tab.pagePath">
+        <div class="lumos-tab-icon">
+          <img v-if="!tab.selected" :src="tab.iconPath">
+          <img v-if="tab.selected" :src="tab.selectedIconPath">
+        </div>
+        <div class="lumos-tab-text">
+          <span>{{ tab.text }}</span>
+        </div>
+        <div class="lumos-tab-vonbadge">
+          <span :class="tab.vonBadge.type">{{ tab.vonBadge.text }}</span>
+        </div>
+      </router-link>
+    </template>
+  </div>
 </template>
  
 <style>
@@ -86,48 +84,34 @@ export default {
     tabs: Array
   },
   methods: {
-    tabclick(index) {
-      //console.log("pagePath:"+name	);
-      this.setTab(index);
+    setVonbadgeText(index, text) {
+      this.atabs[index].vonBadge.text = text;
     },
-    setTab(index) {
-      console.log("pagePath:" + index);
-      //var m_pagePath=pagePath.toLowerCase();
-      var m_index = -1;
+    setTab() {
+      var m_cur_route_name = this.$route.name;
 
       for (var i = 0; i < this.atabs.length; i++) {
+        var l_name = this.atabs[i].name;
+
         this.atabs[i].selected = false;
-        // var l_index=this.atabs[i].pagePath.toLowerCase();
-        if (i == index) {
-          m_index = i;
+
+        if (l_name == m_cur_route_name) {
+          this.atabs[i].selected = true;
         }
       }
 
-      if (m_index > -1) {
-        this.atabs[m_index].selected = true;
-        this.$router.push(this.atabs[m_index].pagePath);
-      }
-    },
-    setVonbadgeText(index, text) {
-      this.atabs[index].vonBadge.text = text;
+      //var m_cur_route_name = this.$route.name;
+      console.log("改变路由:" + m_cur_route_name);
+      //this.selected = sessionStorage.getItem('pageUrl')
     }
   },
   mounted: function() {
-
-
-    var m_cur_route_name = this.$route.name;
-
-    for (var i = 0; i < this.atabs.length; i++) {
-      var l_name = this.atabs[i].name;
-
-       this.atabs[i].selected=false;
-       
-      if (l_name == m_cur_route_name) {
-           this.atabs[i].selected = true;
-      }
+    this.setTab();
+  },
+  watch: {
+    $route() {
+      this.setTab();
     }
-
-
   }
 };
 </script>
