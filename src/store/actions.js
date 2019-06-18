@@ -1,11 +1,11 @@
 export const actions = {
 	//更新用户ID标识
 	setAId ({commit}, val) {
-        commit('setAId', val);
+        commit('SETAID', val);
      },
 	//更新用户代理标识
 	setUId({commit}, val) {
-        commit('setUId', val);
+        commit('SETUID', val);
 	}
 
 }
