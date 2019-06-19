@@ -82,14 +82,10 @@ export default {
   name: "lumos-tabbar",
   data() {
     return {
-      //选中的tabbar值message为外面页面传入的值selected
-      aselected: this.selected,
-      //这里使用的icon图标为图片，所以需要加图片改变的传入，若使用阿里图标，则不用加
       atabs: this.tabs
     };
   },
   props: {
-    selected: String,
     tabs: Array
   },
   methods: {

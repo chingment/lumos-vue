@@ -1,5 +1,8 @@
 <template>
 <div>
+
+ <lumos-header title="车险询价" ></lumos-header>
+
  <a @click="goLink">inscar</a>
 
 <a>dsda</a><br>
@@ -7,29 +10,8 @@
 <a>dsda</a><br>
 <a>dsda</a><br>
 <a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
+
+
 
 {{ this.$store.getters.getUId }}
 
@@ -38,21 +20,20 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      msg: '哈哈'
-    }
+      msg: "哈哈"
+    };
   },
   methods: {
     goLink() {
- 
       //this.$store.dispatch('setUId', 'test');
 
       this.$router.push({
-        path: '/Hello',
+        path: "/Hello",
         name: "Hello"
-      })
+      });
     }
   }
-}
+};
 </script>
