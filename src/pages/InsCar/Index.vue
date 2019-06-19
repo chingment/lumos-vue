@@ -3,17 +3,13 @@
 
  <lumos-header title="车险询价" ></lumos-header>
 
- <a @click="goLink">inscar</a>
-
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
-<a>dsda</a><br>
+ <!-- <a @click="goLink">inscar</a> -->
 
 
 
-{{ this.$store.getters.getUId }}
+
+
+<!-- {{ this.$store.getters.getUId }} -->
 
 </div>
 </template>

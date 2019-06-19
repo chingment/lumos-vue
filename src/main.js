@@ -6,21 +6,25 @@ import router from './router'
 import store from './store'
 
 
+//import lumosui from 'lumos-ui'
 
+//import mintui from 'mint-ui'
 
 import './assets/css/base.css'
+
+// Vue.use(lumosui)
 
 //单个组件导入
 //import tabbar from "@/components/tabbar/src/tabbar";
 //Vue.component("lumos-tabbar", tabbar);
 
 
-//整套组件导入 通过components下的index.js文件导入组件,遍历 index.js 对象
-import components from './components/index'
+// //整套组件导入 通过components下的index.js文件导入组件,遍历 index.js 对象
+// import components from './components/index'
 
-Object.keys(components).forEach((key) => {
-	Vue.component(components[key].name, components[key])
-});
+// Object.keys(components).forEach((key) => {
+// 	Vue.component(components[key].name, components[key])
+// });
 
 
 // //方法挂靠全局
