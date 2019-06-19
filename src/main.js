@@ -5,14 +5,11 @@ import App from './App'
 import router from './router'
 import store from './store'
 
-
-//import lumosui from 'lumos-ui'
-
-//import mintui from 'mint-ui'
+import lumosui from 'lumos-ui'
 
 import './assets/css/base.css'
 
-// Vue.use(lumosui)
+Vue.use(lumosui)
 
 //单个组件导入
 //import tabbar from "@/components/tabbar/src/tabbar";
