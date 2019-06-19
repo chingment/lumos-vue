@@ -1,6 +1,6 @@
 <template>
   <div class="lumos-page">
-    <button @click="clickParent">点击</button>
+    <!-- <button @click="clickParent">点击</button> -->
     <div class="lumos-tabbody">
     <router-view/>
     </div>
@@ -16,8 +16,8 @@ export default {
           name: "InsCar",
           text: "车险",
           pagePath: "/InsCar",
-          iconPath: require("@/assets/images/home/test.png"),
-          selectedIconPath: require("@/assets/images/home/test_fill.png"),
+          iconPath: require("@/assets/images/home/tabbar_icon_insCar.png"),
+          selectedIconPath: require("@/assets/images/home/tabbar_icon_insCar_fill.png"),
           vonBadge: {
             type: "circle",
             text: ""
@@ -28,8 +28,8 @@ export default {
           name: "InsMarket",
           text: "意外险",
           pagePath: "/InsMarket",
-          iconPath: require("@/assets/images/home/test.png"),
-          selectedIconPath: require("@/assets/images/home/test_fill.png"),
+          iconPath: require("@/assets/images/home/tabbar_icon_insMarket.png"),
+          selectedIconPath: require("@/assets/images/home/tabbar_icon_insMarket_fill.png"),
           vonBadge: {
             type: "circle",
             text: ""
@@ -40,11 +40,11 @@ export default {
           name: "InsClaim",
           text: "理赔",
           pagePath: "/InsClaim",
-          iconPath: require("@/assets/images/home/test.png"),
-          selectedIconPath: require("@/assets/images/home/test_fill.png"),
+          iconPath: require("@/assets/images/home/tabbar_icon_insClaim.png"),
+          selectedIconPath: require("@/assets/images/home/tabbar_icon_insClaim_fill.png"),
           vonBadge: {
             type: "number",
-            text: "20"
+            text: ""
           },
           selected: false
         },
@@ -52,11 +52,11 @@ export default {
           name: "My",
           text: "我的",
           pagePath: "/My",
-          iconPath: require("@/assets/images/home/test.png"),
-          selectedIconPath: require("@/assets/images/home/test_fill.png"),
+          iconPath: require("@/assets/images/home/tabbar_icon_my.png"),
+          selectedIconPath: require("@/assets/images/home/tabbar_icon_my_fill.png"),
           vonBadge: {
             type: "circle",
-            text: "2"
+            text: ""
           },
           selected: false
         }

@@ -2,6 +2,35 @@
 <div>
  <a @click="goLink">inscar</a>
 
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+<a>dsda</a><br>
+
 {{ this.$store.getters.getUId }}
 
 </div>

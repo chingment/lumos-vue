@@ -6,6 +6,10 @@ import router from './router'
 import store from './store'
 
 
+
+
+import './assets/css/base.css'
+
 //单个组件导入
 //import tabbar from "@/components/tabbar/src/tabbar";
 //Vue.component("lumos-tabbar", tabbar);
