@@ -94,7 +94,7 @@
   position: absolute;
   top: -6px;
   left: 50%;
-  font-size: 0.1rem;
+  font-size: .5rem;
 }
 
 .lumos-header .button-right .button-text {
