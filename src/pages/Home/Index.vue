@@ -4,7 +4,7 @@
     <div class="lumos-tabbody">
     <router-view/>
     </div>
-     <lumos-tabbar :tabs="tabs" :abc="我是" ref="mychild"  ></lumos-tabbar> 
+     <lumos-tabbar :tabs="tabs" ref="mychild"  ></lumos-tabbar> 
   </div>
 </template>
 <script>

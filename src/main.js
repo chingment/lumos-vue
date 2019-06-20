@@ -16,7 +16,7 @@ Vue.use(lumosui)
 //Vue.component("lumos-tabbar", tabbar);
 
 
-// //整套组件导入 通过components下的index.js文件导入组件,遍历 index.js 对象
+//整套组件导入 通过components下的index.js文件导入组件,遍历 index.js 对象
 // import components from './components/index'
 
 // Object.keys(components).forEach((key) => {
