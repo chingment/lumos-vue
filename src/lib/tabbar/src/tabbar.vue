@@ -3,8 +3,8 @@
     <template v-for="(tab) in this.atabs">
       <router-link class="tabbar-item" :key="tab.name" :to="tab.pagePath">
         <div class="tabbar-item-icon">
-          <img v-if="!tab.selected" :src="tab.iconPath">
-          <img v-if="tab.selected" :src="tab.selectedIconPath">
+          <img v-if="!tab.selected" :src="tab.iconPath" />
+          <img v-if="tab.selected" :src="tab.selectedIconPath"/>
         </div>
         <div class="tabbar-item-text">
           <span :class="tab.selected?'active':'normal'" >{{ tab.text }}</span>

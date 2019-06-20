@@ -7,16 +7,16 @@
   color: #2c3e50;
 }
 
-.titlebar[data-v-21a4cedd] {
+.titlebar[data-v-83be226c] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1rem;
+  margin: 1rem 1rem 0 1rem;
 }
-.titlebar .bar-left[data-v-21a4cedd] {
+.titlebar .bar-left[data-v-83be226c] {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -30,15 +30,16 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.titlebar .bar-left .icon[data-v-21a4cedd] {
+.titlebar .bar-left .icon[data-v-83be226c] {
   width: 0.4rem;
   height: 2rem;
 }
-.titlebar .bar-left .title[data-v-21a4cedd] {
+.titlebar .bar-left .title[data-v-83be226c] {
   font-weight: 600;
   font-size: 1.6rem;
+  margin-left: .3rem;
 }
-.titlebar .bar-right[data-v-21a4cedd] {
+.titlebar .bar-right[data-v-83be226c] {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -49,10 +50,64 @@
   display: -ms-flexbox;
   display: flex;
 }
+.rules[data-v-83be226c]{
+  margin: 0rem 1rem;
+}
+.rule-item[data-v-83be226c] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-bottom: 1px solid #f8f8f8;
+  padding: .5rem 0;
+}
+.rule-item[data-v-83be226c]:last-child{
+  border-bottom-width:0px;
+}
+.rule-item .rule-left[data-v-83be226c] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.rule-item .rule-left .icon[data-v-83be226c] {
+  width: 5rem;
+  height: 3rem;
+  display: inline-block;
+}
+.rule-item .rule-right[data-v-83be226c] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.rule-item .rate[data-v-83be226c]{
+ color: #006dee;
+ font-size: 1.2rem;
+ font-weight: 800;
+}
 
 * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
 }
 
 body {
@@ -218,4 +273,4 @@ img{
   margin-left: 0.3rem;
 }
 
-/*# sourceMappingURL=app.1e5754c6bede07324c6bbc4ffd9234c6.css.map*/
+/*# sourceMappingURL=app.83195a21183e1fc86f4f66e47eb79bb2.css.map*/
