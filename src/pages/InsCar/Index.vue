@@ -6,6 +6,8 @@
       v-on:rightButtonVonBadgeChange="myTest"
     ></lumos-header>
 
+
+   <div class="block-rules" >
     <div class="titlebar">
       <div class="bar-left">
         <span class="icon">
@@ -17,32 +19,61 @@
     </div>
 
     <ul class="rules">
-      <template v-for="(rule) in this.rules">
-        <li class="rule-item" :key="rule.name">
-          <div class="rule-left">
+      <template v-for="(rule,index) in this.rules">
+        <li class="rules-item" :key="index">
+          <div class="rules-item-left">
             <span class="icon">
               <img :src="rule.imgUrl">
             </span>
             <span class="name">{{ rule.name }}</span>
           </div>
-          <div class="rule-right">
+          <div class="rules-item-right">
             <span class="rate">{{ rule.rate }}</span>
           </div>
         </li>
       </template>
     </ul>
+  </div>
+    <div></div>
 
-    <a @click="goLink">点击</a>
+<div class="block-hisPlateNumbers" >
+    <div class="titlebar">
+      <div class="bar-left">
+        <span class="icon">
+          <img src="@/assets/images/home/titlebar_icon.png">
+        </span>
+        <span class="title">历史记录</span>
+      </div>
+      <div class="bar-right"></div>
+    </div>
+
+   <div class="hisPlateNumbers" >
+      <template v-for="(hisPlateNumber,index) in this.hisPlateNumbers">
+        <div class="hisPlateNumbers-item" :key="index">
+            <span>{{ hisPlateNumber.plateNumber }}</span>
+        </div>
+      </template>
+   </div>
+
+</div>
+    <!-- <a @click="goLink">点击</a> -->
 
     <!-- {{ this.$store.getters.getUId }} -->
   </div>
 </template>
 
 <style scoped>
+
+
+.block-rules,.block-hisPlateNumbers{
+  background-color: #fff;
+  padding: 1rem;
+}
+
 .titlebar {
   display: flex;
   align-items: center;
-  margin: 1rem 1rem 0 1rem;
+  background-color: #fff;
 }
 
 .titlebar .bar-left {
@@ -60,7 +91,7 @@
 .titlebar .bar-left .title {
   font-weight: 600;
   font-size: 1.6rem;
-  margin-left: .3rem;
+  margin-left: 0.3rem;
 }
 
 .titlebar .bar-right {
@@ -69,45 +100,57 @@
   display: flex;
 }
 
-.rules{
-  margin: 0rem 1rem;
+.rules {
+
 }
-.rule-item {
+.rules-item {
   display: flex;
   align-content: center;
   border-bottom: 1px solid #f8f8f8;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
-.rule-item:last-child{
-  border-bottom-width:0px;
+.rules-item:last-child {
+  border-bottom-width: 0px;
 }
 
-.rule-item .rule-left {
+.rules-item-left {
   flex: 1;
   display: flex;
   align-content: center;
   align-items: center;
 }
 
-.rule-item .rule-left .icon {
+.rules-item-left .icon {
   width: 5rem;
   height: 3rem;
   display: inline-block;
 }
-.rule-item .rule-right {
+.rules-item-right {
   flex: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.rule-item .rate{
- color: #006dee;
- font-size: 1.2rem;
- font-weight: 800;
+.rules-item .rate {
+  color: #006dee;
+  font-size: 1.2rem;
+  font-weight: 800;
 }
 
+.hisPlateNumbers{
+ display: block;
+ text-align: left;
+ margin-top: .8rem;
+}
+.hisPlateNumbers-item{
+  background-color: #f8f8f8;
+  padding: .5rem .5rem;
+  margin: .2rem;
+  border-radius: 6px;
+  display: inline-block;
+}
 </style>
 
 
@@ -150,10 +193,36 @@ export default {
           imgUrl: require("@/assets/images/home/company3.png"),
           rate: "20%"
         }
+      ],
+      hisPlateNumbers: [
+        {
+          plateNumber: "粤AT810P"
+        },
+        {
+          plateNumber: "粤AT810P"
+        },
+        {
+          plateNumber: "粤AT810P"
+        },
+        {
+          plateNumber: "粤AT810P"
+        },
+        {
+          plateNumber: "粤AT810P"
+        },
+        {
+          plateNumber: "粤AT810P"
+        },
+        {
+          plateNumber: "粤AT810P"
+        }
       ]
     };
   },
   methods: {
+    getPlateLicense(data) {
+      console.log("组件传出的data", data);
+    },
     goLink() {
       //this.header.title.text = "ssss"
       this.header.rightButton.vonBadge.text = "12";

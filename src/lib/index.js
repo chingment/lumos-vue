@@ -1,5 +1,6 @@
 import tabbar from "./tabbar/src/tabbar";
 import header from "./header/src/header";
+import plateNumber from "./plateNumber/src/plateNumber";
 // const components={
 //     install(Vue){
 //         Vue.component("lumos-tabbar",tabbar)
@@ -16,5 +17,6 @@ import header from "./header/src/header";
  
 export default {
     tabbar,
-    header
+    header,
+    plateNumber
 }
