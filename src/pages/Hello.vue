@@ -1,25 +1,47 @@
 <template>
-	<div>我是aaa {{ this.$store.getters.getUId }}
-	<button @click="back">点我返回</button>
-	</div>
-	
+  <div id="app">
+    <ul class="menu">
+      <li v-scroll-to="'#a'">item 1</li>
+      <li v-scroll-to="'#b'">item 2</li>
+      <li v-scroll-to="'#c'">item 3</li>
+    </ul>
+
+    <div
+      class="content"
+      id="a"
+    >content 1</div>
+    <div
+      class="content"
+      id="b"
+    >content 2</div>
+    <div
+      class="content"
+      id="c"
+    >content 3</div>
+  </div>
 </template>
- 
+
 <script>
+
+
+
 export default {
-  name: 'aaa',
-  data () {
-    return {
-      msg: '哈哈'
-    }
-  },
-  methods:{
-  	back(){
-
-      this.$store.dispatch('setUId', 'testssdsd');
-
-  		this.$router.push('/InsCar')
-  	}
-  }
-}
+  name: "app"
+};
 </script>
+
+<style>
+.menu {
+  position: fixed;
+  width: 200px;
+  background-color: #eee;
+}
+.content {
+  width: 500px;
+  height: 500px;
+  margin-left: 300px;
+  margin-bottom: 50px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+}
+</style>

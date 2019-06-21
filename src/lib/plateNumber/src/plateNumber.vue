@@ -1,5 +1,5 @@
 <template>
-  <div id="page">
+  <div id="plateNumber" class="item">
     <div class="wrap">
       <div class="radio-box">
         <label class="flex-items-center">
@@ -25,12 +25,18 @@
             value="2" />新能源车牌
         </label>
       </div>
-      <div class="card-header">车牌号码：</div>
+
+      <div class="plate-box" >
+    
+     <div class="title-box" >
+       <span>车牌号</span>
+     </div>
+
       <div class="num-box">
         <div class="num0" @click="clickFirstWrap()">
             <span>{{formData.num0}}</span>
         </div>
-        <div class="num1" @click="clickKeyWordWrap(1)"><span>{{formData.num1}}</span></div>
+        <div class="num1 mgr2" @click="clickKeyWordWrap(1)"><span>{{formData.num1}}</span></div>
         <em class="spot"></em>
         <div class="num1" @click="clickKeyWordWrap(2)"><span>{{formData.num2}}</span></div>
         <div class="num1" @click="clickKeyWordWrap(3)"><span>{{formData.num3}}</span></div>
@@ -40,9 +46,11 @@
         <div v-if="formData.commonCard == '2'" class="num1" @click="clickKeyWordWrap(7)"><span>{{formData.num7}}</span></div>
       </div>
 
-      <div class="submit-box">
-        <button @click="submitFn()">确认</button>
       </div>
+
+      <!-- <div class="submit-box">
+        <button @click="submitFn()">确认</button>
+      </div> -->
     </div>
     <div class="first-word-wrap" ref="firstwordwrap"
       v-if="firstWrapStatus">
@@ -256,6 +264,10 @@ export default {
       this.keyBoardStatus = false
       this.formData.num0 = ''
 
+      this.$nextTick(() => {
+        document.body.scrollTop =1000
+      });
+
     },
     selectFirstWord (event) {
       // 选择省份
@@ -286,6 +298,10 @@ export default {
           this.keyBoardStatus = false
         }
       }
+
+      //     this.$nextTick(() => {
+      //   document.body.scrollTop =0
+      // });
     },
     deleteWord () { // 退格
       // console.log(this.activeKeyWordIndex)
@@ -411,6 +427,35 @@ export default {
         this.formData.num7
       )
     }
+  },
+  
+  watch:{
+     firstWrapStatus:function(val,oldval){
+       
+       //var cur_top=document.body.scrollTop;
+       //console.log("cur_top:"+cur_top);
+
+       // console.log("keyBoardStatus:"+val)
+
+      var top=0;
+        if(val){
+          top=300;
+        }
+
+          this.$nextTick(() => {
+      document.body.scrollTop =top
+ });
+    },
+    keyBoardStatus:function(val,oldval){
+          var top=0;
+        if(val){
+          top=300;
+        }
+
+          this.$nextTick(() => {
+      document.body.scrollTop =top
+ });
+    }
   }
 }
 </script>
@@ -419,12 +464,16 @@ export default {
   display: flex;
   align-items: center;
 }
+.mgr2{
+  margin-right: .2rem;
+}
 .wrap {
-  height: 11.1rem;
-  margin: 0.5rem 0.6rem;
-  padding: 0.85rem 0.6rem;
-  background-color: #fff;
-  border-radius: 0.5rem;
+  width: 100%;
+  // height: 11.1rem;
+  // margin: 0.5rem 0.6rem;
+  // padding: 0.85rem 0.6rem;
+  // background-color: #fff;
+  // border-radius: 0.5rem;
   .radio-box {
     display: flex;
     align-items: center;
@@ -432,6 +481,7 @@ export default {
     font-size: 0.7rem;
     text-align: right;
     color: #4a4a4a;
+    line-height: 1.8rem;
     input[type="radio"] {
       display: none;
     }
@@ -449,8 +499,23 @@ export default {
     margin: 0.2rem 0 0.5rem;
     color: #4a4a4a;
   }
+
+   .plate-box{
+      display: flex;
+      align-content: center;
+      justify-content: center;
+   }
+
+   .title-box{
+     flex: 1;
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+
   // input输入框
   .num-box {
+     flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -461,9 +526,10 @@ export default {
       background-color: #d8d8d8;
     }
     & > div {
-      width: 1.8rem;
-      height: 1.8rem;
+      width: 1.6rem;
+      height: 1.6rem;
       border: 1px solid #e4e4e4;
+      margin-left: .2rem;
       &.first {
         position: relative;
         text-align: center;

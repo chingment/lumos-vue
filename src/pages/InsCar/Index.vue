@@ -13,7 +13,7 @@
         <span class="icon">
           <img src="@/assets/images/home/titlebar_icon.png">
         </span>
-        <span class="title">保险积分</span>
+        <span class="title">保险公司</span>
       </div>
       <div class="bar-right"></div>
     </div>
@@ -34,9 +34,44 @@
       </template>
     </ul>
   </div>
-    <div></div>
+   <div class="space"></div>
 
-<div class="block-hisPlateNumbers" >
+  <div class="block-serarch" >
+  <!-- <a @click="goLink" >点击</a>  -->
+
+
+    <div class="lumos-lnav" >
+     <plateNumber @getPlateLicense="getPlateLicense" ></plateNumber>
+    
+     <div class="item" >
+      <div class="item-icon-left lumos-hid"></div>
+      <div class="item-content" >  
+      <div class="title" > 投保城市  </div>
+      <div class="note" >广州市</div>
+      </div>  
+      <div class="item-icon-right" >
+           <img 
+            src="@/assets/images/icon_right.png"
+            alt="">
+      </div>      
+     </div>
+    
+    </div>
+
+
+   <button class="lumos-button lumos-button-positive lumos-button-block" >立即询价</button>
+
+   
+      <div class="manr">
+
+       <span >人工报价</span>
+       <img src="@/assets/images/icon_right.png" alt="">
+
+
+      </div>
+
+  </div>
+<div class="block-hisPlateNumbers"  >
     <div class="titlebar">
       <div class="bar-left">
         <span class="icon">
@@ -47,7 +82,7 @@
       <div class="bar-right"></div>
     </div>
 
-   <div class="hisPlateNumbers" >
+   <div class="hisPlateNumbers" id="a" >
       <template v-for="(hisPlateNumber,index) in this.hisPlateNumbers">
         <div class="hisPlateNumbers-item" :key="index">
             <span>{{ hisPlateNumber.plateNumber }}</span>
@@ -56,7 +91,7 @@
    </div>
 
 </div>
-    <!-- <a @click="goLink">点击</a> -->
+  
 
     <!-- {{ this.$store.getters.getUId }} -->
   </div>
@@ -65,9 +100,13 @@
 <style scoped>
 
 
-.block-rules,.block-hisPlateNumbers{
+.block-rules, .block-hisPlateNumbers{
   background-color: #fff;
   padding: 1rem;
+}
+.block-serarch{
+  background-color: #fff;
+   padding:0 1rem;
 }
 
 .titlebar {
@@ -150,7 +189,18 @@
   margin: .2rem;
   border-radius: 6px;
   display: inline-block;
+  color: #b7b7b7
 }
+
+.manr span{
+  color: #006dee;
+  font-size: .8rem;
+}
+.manr img{
+   width: .3rem;
+  height: .6rem;
+}
+
 </style>
 
 
@@ -181,17 +231,17 @@ export default {
         {
           name: "平安保险",
           imgUrl: require("@/assets/images/home/company1.png"),
-          rate: "20%"
+          rate: "20"
         },
         {
           name: "人保保险",
           imgUrl: require("@/assets/images/home/company2.png"),
-          rate: "20%"
+          rate: "18"
         },
         {
           name: "太平洋保险",
           imgUrl: require("@/assets/images/home/company3.png"),
-          rate: "20%"
+          rate: "21"
         }
       ],
       hisPlateNumbers: [
@@ -224,9 +274,15 @@ export default {
       console.log("组件传出的data", data);
     },
     goLink() {
+     // document.body.scrollTop = '300px';
       //this.header.title.text = "ssss"
-      this.header.rightButton.vonBadge.text = "12";
+      //this.header.rightButton.vonBadge.text = "12";
+     
 
+
+// this.$nextTick(() => {
+//      document.body.scrollTop =1000
+// });
       //this.$store.dispatch('setUId', 'test');
 
       // this.$router.push({

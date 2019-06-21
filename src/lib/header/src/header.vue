@@ -36,7 +36,7 @@
 <style>
 .lumos-header {
   background: #006dee;
-  height: 2.4rem;
+  height: 2.6rem;
   color: #fff;
   display: flex;
   align-items: center;
@@ -57,10 +57,11 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: inherit;
-  font-weight: 400;
+  font-weight: 600;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  font-size:1.1rem;
 }
 
 .lumos-header .button-left {

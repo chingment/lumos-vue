@@ -23,6 +23,26 @@ Object.keys(components).forEach((key) => {
 	Vue.component(components[key].name, components[key])
 });
 
+import VueScrollTo from "vue-scrollto";
+
+
+//https://github.om/rigor789/vue-scrollto
+
+let options = {
+  container: "body", //滚动的容器
+  duration: 500, //滚动时间
+  easing: "ease", //缓动类型
+  offset: 0, //滚动时应应用的偏移量。此选项接受回调函数
+  force: true, //是否应执行滚动
+  cancelable: true,
+  onStart: false,
+  onDone: false,
+  onCancel: false,
+  x: false,
+  y: true
+};
+
+Vue.use(VueScrollTo, options);
 
 // //方法挂靠全局
 // Object.keys(global).forEach((key) => {
