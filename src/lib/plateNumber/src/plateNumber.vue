@@ -1,5 +1,5 @@
 <template>
-  <div id="plateNumber" class="item">
+  <div id="plateNumber" class="item pdt0"   v-clickoutside="handleClose">
     <div class="wrap">
       <div class="radio-box">
         <label class="flex-items-center">
@@ -52,7 +52,8 @@
         <button @click="submitFn()">确认</button>
       </div> -->
     </div>
-    <div class="first-word-wrap" ref="firstwordwrap"
+
+    <div class="first-word-wrap"  v-show="show" ref="firstwordwrap" 
       v-if="firstWrapStatus">
       <div class="first-word"
         @click="selectFirstWord($event)">
@@ -163,7 +164,7 @@
         </div>
       </div>
     </div>
-    <div class="keyboard-wrap"  ref="keyboardwrap" v-if="keyBoardStatus === true">
+    <div class="keyboard-wrap"   ref="keyboardwrap"  v-if="keyBoardStatus === true">
       <!-- <div class="number-wrap"></div>
       <div class="letter-wrap"></div>
       <div class="cn-wrap"></div> -->
@@ -221,10 +222,39 @@
   </div>
 </template>
 <script>
+import { fail } from 'assert';
+
+const clickoutside = {
+    // 初始化指令
+    bind(el, binding, vnode) {
+        function documentHandler(e) {
+            // 这里判断点击的元素是否是本身，是本身，则返回
+            if (el.contains(e.target)) {
+                return false;
+            }
+            // 判断指令中是否绑定了函数
+            if (binding.expression) {
+                // 如果绑定了函数 则调用那个函数，此处binding.value就是handleClose方法
+                binding.value(e);
+            }
+        }
+        // 给当前元素绑定个私有变量，方便在unbind中可以解除事件监听
+        el.__vueClickOutside__ = documentHandler;
+        document.addEventListener('click', documentHandler);
+    },
+    update() {},
+    unbind(el, binding) {
+        // 解除事件监听
+        document.removeEventListener('click', el.__vueClickOutside__);
+        delete el.__vueClickOutside__;
+    },
+};
+
 export default {
   name: 'plateNumber',
   data () {
     return {
+      show: true,
       formData: {
         commonCard: '1',
         num0: '',
@@ -256,14 +286,25 @@ export default {
   },
   mounted () {
   },
+  directives: {clickoutside},
   methods: {
+     handleClose(e) {
+            //this.show = false;
+            // this.firstWrapStatus=false;
+
+            // if(this.keyBoardStatus)
+            // {
+            //   this.keyBoardStatus=false;
+            // }
+            
+        },
     clickFirstWrap () {
       // 点击第一个输入框
       this.firstClickStatus = true
       this.firstWrapStatus = true
       this.keyBoardStatus = false
       this.formData.num0 = ''
-
+      this.show=true
       this.$nextTick(() => {
         document.body.scrollTop =1000
       });
@@ -478,10 +519,10 @@ export default {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     text-align: right;
     color: #4a4a4a;
-    line-height: 1.8rem;
+    line-height: 2.1rem;
     input[type="radio"] {
       display: none;
     }
@@ -511,6 +552,7 @@ export default {
      display: flex;
     justify-content: space-between;
     align-items: center;
+        font-size: 1.1rem;
    }
 
   // input输入框
@@ -623,12 +665,14 @@ export default {
     margin-bottom: 0.45rem;
     .word {
       box-sizing: border-box;
-      width: 1.8rem;
-      height: 1.8rem;
+      // width: 1.8rem;
+       height: 1.8rem;
       // border: 1px solid #9cbce2;
       box-shadow: 0px 1px 4px  rgba(0, 0, 0, 0.35);
       border-radius: 0.16rem;
       text-align: center;
+      flex: 1;
+      margin: .2rem;
       &.bordernone {
         border: none;
         box-shadow:none
@@ -672,7 +716,7 @@ export default {
     span {
       text-align: center;
       display: flex;
-      width: 1.8rem;
+      // width: 1.8rem;
       align-items: center;
       justify-content: center;
       height: 1.8rem;
@@ -680,6 +724,8 @@ export default {
       box-shadow: 0px 1px 4px  rgba(0, 0, 0, 0.35);
       background-color: #fff;
       border-radius: 0.125rem;
+      flex: 1;
+      margin: .2rem;
       &:active {
         background-color: #e4e4e4;
       }
@@ -695,6 +741,7 @@ export default {
         background-color: #465266;
         img{
           width: 1.15rem;
+          height: .8rem;
         }
       }
     }

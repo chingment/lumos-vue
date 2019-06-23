@@ -20,14 +20,14 @@
 
     <ul class="rules">
       <template v-for="(rule,index) in this.rules">
-        <li class="rules-item" :key="index">
-          <div class="rules-item-left">
+        <li class="item" :key="index">
+          <div class="item-left">
             <span class="icon">
               <img :src="rule.imgUrl">
             </span>
             <span class="name">{{ rule.name }}</span>
           </div>
-          <div class="rules-item-right">
+          <div class="item-right">
             <span class="rate">{{ rule.rate }}</span>
           </div>
         </li>
@@ -44,12 +44,12 @@
      <plateNumber @getPlateLicense="getPlateLicense" ></plateNumber>
     
      <div class="item" >
-      <div class="item-icon-left lumos-hid"></div>
+      <div class="item-lefticon lumos-hid"></div>
       <div class="item-content" >  
       <div class="title" > 投保城市  </div>
       <div class="note" >广州市</div>
       </div>  
-      <div class="item-icon-right" >
+      <div class="item-righticon" >
            <img 
             src="@/assets/images/icon_right.png"
             alt="">
@@ -82,9 +82,9 @@
       <div class="bar-right"></div>
     </div>
 
-   <div class="hisPlateNumbers" id="a" >
+   <div class="hisPlateNumbers"  >
       <template v-for="(hisPlateNumber,index) in this.hisPlateNumbers">
-        <div class="hisPlateNumbers-item" :key="index">
+        <div class="item" :key="index">
             <span>{{ hisPlateNumber.plateNumber }}</span>
         </div>
       </template>
@@ -142,37 +142,42 @@
 .rules {
 
 }
-.rules-item {
+.rules > .item {
   display: flex;
   align-content: center;
   border-bottom: 1px solid #f8f8f8;
   padding: 0.5rem 0;
 }
 
-.rules-item:last-child {
+.rules > .item:last-child {
   border-bottom-width: 0px;
 }
 
-.rules-item-left {
+.rules > .item .item-left {
   flex: 1;
   display: flex;
   align-content: center;
   align-items: center;
 }
 
-.rules-item-left .icon {
+.rules > .item .item-left .icon {
   width: 5rem;
   height: 3rem;
   display: inline-block;
 }
-.rules-item-right {
+.rules > .item .item-right {
   flex: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.rules-item .rate {
+.rules .name{
+  font-size: 1.1rem;
+  padding-left: .2rem;
+}
+
+.rules .rate {
   color: #006dee;
   font-size: 1.2rem;
   font-weight: 800;
@@ -183,7 +188,7 @@
  text-align: left;
  margin-top: .8rem;
 }
-.hisPlateNumbers-item{
+.hisPlateNumbers > .item{
   background-color: #f8f8f8;
   padding: .5rem .5rem;
   margin: .2rem;

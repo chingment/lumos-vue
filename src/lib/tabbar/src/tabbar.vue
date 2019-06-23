@@ -1,15 +1,15 @@
 <template>
   <div class="lumos-tabbar is-fixed">
     <template v-for="(tab) in this.atabs">
-      <router-link class="tabbar-item" :key="tab.name" :to="tab.pagePath">
-        <div class="tabbar-item-icon">
+      <router-link class="item" :key="tab.name" :to="tab.pagePath">
+        <div class="item-icon">
           <img v-if="!tab.selected" :src="tab.iconPath" />
           <img v-if="tab.selected" :src="tab.selectedIconPath"/>
         </div>
-        <div class="tabbar-item-text">
+        <div class="item-text">
           <span :class="tab.selected?'active':'normal'" >{{ tab.text }}</span>
         </div>
-        <div class="tabbar-item-vonbadge">
+        <div class="item-vonbadge">
           <span :class="tab.vonBadge.type">{{ tab.vonBadge.text }}</span>
         </div>
       </router-link>
@@ -34,7 +34,7 @@
 .lumos-tabbar.is-fixed {
   position: fixed;
 }
-.lumos-tabbar .tabbar-item {
+.lumos-tabbar > .item {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -42,7 +42,7 @@
   text-decoration: none;
 }
 
-.lumos-tabbar .tabbar-item-icon {
+.lumos-tabbar .item-icon {
   flex: none;
   height: 1.2rem;
   width: 1.2rem;
@@ -50,26 +50,26 @@
   margin: auto;
 }
 
-.lumos-tabbar .tabbar-item-icon img {
+.lumos-tabbar .item-icon img {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.lumos-tabbar .tabbar-item-text {
+.lumos-tabbar .item-text {
   font-size: 0.8rem;
   line-height: 1.2rem;
 }
 
-.lumos-tabbar .tabbar-item-text .active {
+.lumos-tabbar .item-text .active {
   color: #006dee;
 }
 
-.lumos-tabbar .tabbar-item-text .normal {
+.lumos-tabbar .item-text .normal {
   color: #7d7e80;
 }
 
-.lumos-tabbar .tabbar-item-vonbadge {
+.lumos-tabbar .item-vonbadge {
   position: absolute;
   top: 2px;
   left: 50%;

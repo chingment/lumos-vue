@@ -1,35 +1,33 @@
 <template>
   <div class="lumos-header">
-       <div class="button-left">
-          
-         <span class="button-icon"  v-show="aleftButton.iconPath!=''">
-           <img  :src="aleftButton.iconPath"  />
-
-           <div class="button-vonbadge">
-            <span :class="aleftButton.vonBadge.type" >{{ aleftButton.vonBadge.text }}</span>
-           </div>
-         </span>
-          <span class="button-text" v-show="aleftButton.iconPath!=''">{{ aleftButton.text }}</span>
-
-
-       </div>
-       <div class="title">
-          <div class="title-text">
-            <span>{{ atitle.text }}</span>
+    <div class="header-left">
+      <div class="button">
+        <span class="button-icon" v-show="aleftButton.iconPath!=''">
+          <img :src="aleftButton.iconPath">
+          <div class="button-vonbadge">
+            <span :class="aleftButton.vonBadge.type">{{ aleftButton.vonBadge.text }}</span>
           </div>
-       </div>
-       <div class="button-right">
-  
-           <span class="button-icon"  v-show="arightButton.iconPath!=''">
-           <img  :src="arightButton.iconPath"  />
+        </span>
+        <span class="button-text" v-show="aleftButton.iconPath!=''">{{ aleftButton.text }}</span>
+      </div>
+    </div>
+    <div class="header-title">
+      <div class="title">
+        <span class="title-text">{{ atitle.text }}</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="button">
+        <span class="button-icon" v-show="arightButton.iconPath!=''">
+          <img :src="arightButton.iconPath">
 
-           <div class="button-vonbadge">
-            <span :class="arightButton.vonBadge.type" >{{ arightButton.vonBadge.text }}</span>
-           </div>
-         </span>
-          <span class="button-text" v-show="arightButton.iconPath!=''">{{ arightButton.text }}</span>
-      
-       </div>
+          <div class="button-vonbadge">
+            <span :class="arightButton.vonBadge.type">{{ arightButton.vonBadge.text }}</span>
+          </div>
+        </span>
+        <span class="button-text" v-show="arightButton.iconPath!=''">{{ arightButton.text }}</span>
+      </div>
+    </div>
   </div>
 </template>
  
@@ -42,8 +40,8 @@
   align-items: center;
 }
 
-.lumos-header .button-left,
-.lumos-header .button-right {
+.lumos-header .header-left,
+.lumos-header .header-right {
   -webkit-box-flex: 0.5;
   -ms-flex: 0.5;
   flex: 0.5;
@@ -52,7 +50,7 @@
   position: relative;
 }
 
-.lumos-header > .title {
+.lumos-header > .header-title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -61,30 +59,34 @@
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-size:1.1rem;
+  font-size: 1.1rem;
 }
 
-.lumos-header .button-left {
+.lumos-header .header-left {
   justify-content: flex-start;
   padding-left: 10px;
 }
-.lumos-header .button-right {
+.lumos-header .header-right {
   justify-content: flex-end;
   padding-right: 10px;
 }
 
-.lumos-header .button-right .button-icon {
+.lumos-header .header-right .button{
+   display: flex;
+}
+
+.lumos-header .header-right .button .button-icon {
   position: relative;
-   width: 1.2rem;
+  width: 1.2rem;
   height: 1.2rem;
 }
 
-.lumos-header .button-right .button-icon img {
-  width: 100%;
+.lumos-header .header-right .button .button-icon img {
+  height: 100%;
   width: 100%;
 }
 
-.lumos-header .button-right .button-icon .button-vonbadge {
+.lumos-header .header-right .button .button-icon .button-vonbadge {
   position: absolute;
   display: inline-block;
   padding: 2px 3px;
@@ -95,10 +97,10 @@
   position: absolute;
   top: -6px;
   left: 50%;
-  font-size: .5rem;
+  font-size: 0.5rem;
 }
 
-.lumos-header .button-right .button-text {
+.lumos-header .header-right  .button .button-text {
   margin-left: 0.3rem;
 }
 </style>
