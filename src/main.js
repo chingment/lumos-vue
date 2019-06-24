@@ -37,9 +37,9 @@ Object.keys(lumoslib_uses).forEach((key) => {
 	Vue.use(lumoslib_uses[key]);
 });
 
+
 //然后通过 USE方法全局注册
 // import Loading from './lib/loading'
-
 // Vue.use(Loading);
 
 
