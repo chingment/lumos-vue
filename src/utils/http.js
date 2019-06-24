@@ -8,7 +8,7 @@ import qs from "qs";
 axios.interceptors.request.use(
   config => {
     console.log("请求响应前")
-     Vue.$loading.show()
+     Vue.prototype.$loading.show()
     return config;
   },
   error => {
@@ -20,7 +20,7 @@ axios.interceptors.request.use(
 //添加响应拦截器
 axios.interceptors.response.use(
   response => {
-    //this.$loading.hide()
+    Vue.prototype.$loading.hide()
     console.log("得到响应")
     return response;
   },

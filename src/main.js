@@ -18,14 +18,29 @@ import './assets/css/base.css'
 
 
 //整套组件导入 通过components下的index.js文件导入组件,遍历 index.js 对象
-import components from './lib/index'
-Object.keys(components).forEach((key) => {
-	Vue.component(components[key].name, components[key])
+// import components from './lib/index'
+// Object.keys(components).forEach((key) => {
+// 	Vue.component(components[key].name, components[key])
+// });
+
+import lumoslib from './lib/index'
+
+var lumoslib_components=lumoslib.components;
+
+Object.keys(lumoslib_components).forEach((key) => {
+	Vue.component(lumoslib_components[key].name, lumoslib_components[key])
+});
+
+var lumoslib_uses=lumoslib.uses;
+
+Object.keys(lumoslib_uses).forEach((key) => {
+	Vue.use(lumoslib_uses[key]);
 });
 
 //然后通过 USE方法全局注册
-import Loading from './lib/loading'
-Vue.use(Loading);
+// import Loading from './lib/loading'
+
+// Vue.use(Loading);
 
 
 Vue.prototype.$http = http;

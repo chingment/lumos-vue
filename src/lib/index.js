@@ -1,6 +1,8 @@
 import tabbar from "./tabbar/src/tabbar";
 import header from "./header/src/header";
 import plateNumber from "./plateNumber/src/plateNumber";
+import Loading from './loading'
+
 // import loading from "./loading/src/loading";
 // const components={
 //     install(Vue){
@@ -15,9 +17,18 @@ import plateNumber from "./plateNumber/src/plateNumber";
 
 // export default components;
 
- 
-export default {
+
+var components={
     tabbar,
     header,
     plateNumber
+}
+
+var uses={
+    Loading
+}
+
+export default {
+    components,
+    uses
 }
