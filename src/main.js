@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
+import http from "./utils/http";
 
 //import lumosui from 'lumos-ui'
 
@@ -18,31 +19,17 @@ import './assets/css/base.css'
 
 //整套组件导入 通过components下的index.js文件导入组件,遍历 index.js 对象
 import components from './lib/index'
-
 Object.keys(components).forEach((key) => {
 	Vue.component(components[key].name, components[key])
 });
 
-import VueScrollTo from "vue-scrollto";
+//然后通过 USE方法全局注册
+import Loading from './lib/loading'
+Vue.use(Loading);
 
 
-//https://github.om/rigor789/vue-scrollto
+Vue.prototype.$http = http;
 
-let options = {
-  container: "body", //滚动的容器
-  duration: 500, //滚动时间
-  easing: "ease", //缓动类型
-  offset: 0, //滚动时应应用的偏移量。此选项接受回调函数
-  force: true, //是否应执行滚动
-  cancelable: true,
-  onStart: false,
-  onDone: false,
-  onCancel: false,
-  x: false,
-  y: true
-};
-
-Vue.use(VueScrollTo, options);
 
 // //方法挂靠全局
 // Object.keys(global).forEach((key) => {
@@ -64,6 +51,7 @@ router.beforeEach((to, from, next) => {
 
    next();
 })
+
 
 /* eslint-disable no-new */
 new Vue({

@@ -7,7 +7,7 @@
     ></lumos-header>
 
 
-   <div class="block-rules" >
+   <div class="block-companyrules" >
     <div class="titlebar">
       <div class="bar-left">
         <span class="icon">
@@ -18,26 +18,31 @@
       <div class="bar-right"></div>
     </div>
 
-    <ul class="rules">
-      <template v-for="(rule,index) in this.rules">
+    <ul class="list-companyrules" v-if="companyRules.length>0" >
+      <template v-for="(companyRule,index) in this.companyRules">
         <li class="item" :key="index">
           <div class="item-left">
             <span class="icon">
-              <img :src="rule.imgUrl">
+              <img :src="companyRule.companyImgUrl">
             </span>
-            <span class="name">{{ rule.name }}</span>
+            <span class="name">{{ companyRule.companyName }}</span>
           </div>
           <div class="item-right">
-            <span class="rate">{{ rule.rate }}</span>
+            <span class="rate">{{ companyRule.commissionRate }}</span>
           </div>
         </li>
       </template>
     </ul>
+     <div class="empty-companyrules" v-else>
+      暂无数据
+    </div>
+
+
   </div>
    <div class="space"></div>
 
   <div class="block-serarch" >
-  <!-- <a @click="goLink" >点击</a>  -->
+ 
 
 
     <div class="lumos-lnav" >
@@ -71,7 +76,7 @@
       </div>
 
   </div>
-<div class="block-hisPlateNumbers"  >
+<div class="block-searchplatenorecords"  >
     <div class="titlebar">
       <div class="bar-left">
         <span class="icon">
@@ -82,31 +87,35 @@
       <div class="bar-right"></div>
     </div>
 
-   <div class="hisPlateNumbers"  >
-      <template v-for="(hisPlateNumber,index) in this.hisPlateNumbers">
+  
+
+   <div class="list-searchplatenorecords" v-if="searchPlateNoRecords.length>0">
+      <template v-for="(searchPlateNoRecord,index) in this.searchPlateNoRecords">
         <div class="item" :key="index">
-            <span>{{ hisPlateNumber.plateNumber }}</span>
+            <span>{{ searchPlateNoRecord.plateNo }}</span>
         </div>
       </template>
    </div>
+  <div class="empty-searchplatenorecords" v-else>
+      暂无记录
+    </div>
+   </div>
 
-</div>
   
-
+ <a @click="goLink" >点击</a> 
     <!-- {{ this.$store.getters.getUId }} -->
   </div>
 </template>
 
 <style scoped>
-
-
-.block-rules, .block-hisPlateNumbers{
+.block-companyrules,
+.block-searchplatenorecords {
   background-color: #fff;
   padding: 1rem;
 }
-.block-serarch{
+.block-serarch {
   background-color: #fff;
-   padding:0 1rem;
+  padding: 0 1rem;
 }
 
 .titlebar {
@@ -139,73 +148,81 @@
   display: flex;
 }
 
-.rules {
-
+.list-companyrules {
 }
-.rules > .item {
+.list-companyrules > .item {
   display: flex;
   align-content: center;
   border-bottom: 1px solid #f8f8f8;
   padding: 0.5rem 0;
 }
 
-.rules > .item:last-child {
+.list-companyrules > .item:last-child {
   border-bottom-width: 0px;
 }
 
-.rules > .item .item-left {
+.list-companyrules > .item .item-left {
   flex: 1;
   display: flex;
   align-content: center;
   align-items: center;
 }
 
-.rules > .item .item-left .icon {
+.list-companyrules > .item .item-left .icon {
   width: 5rem;
   height: 3rem;
   display: inline-block;
 }
-.rules > .item .item-right {
+.list-companyrules > .item .item-right {
   flex: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.rules .name{
+.list-companyrules .name {
   font-size: 1.1rem;
-  padding-left: .2rem;
+  padding-left: 0.2rem;
 }
 
-.rules .rate {
+.list-companyrules .rate {
   color: #006dee;
   font-size: 1.2rem;
   font-weight: 800;
 }
 
-.hisPlateNumbers{
- display: block;
- text-align: left;
- margin-top: .8rem;
+.empty-companyrules{
+  line-height: 2.3rem;
+  text-align: left;
 }
-.hisPlateNumbers > .item{
+
+.list-searchplatenorecords {
+  display: block;
+  text-align: left;
+  margin-top: 0.8rem;
+}
+.list-searchplatenorecords > .item {
   background-color: #f8f8f8;
-  padding: .5rem .5rem;
-  margin: .2rem;
+  padding: 0.5rem 0.5rem;
+  margin: 0.2rem;
   border-radius: 6px;
   display: inline-block;
-  color: #b7b7b7
+  color: #b7b7b7;
 }
 
-.manr span{
+.empty-searchplatenorecords{
+  line-height: 2.3rem;
+  text-align: left;
+}
+
+.manr span {
   color: #006dee;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
-.manr img{
-   width: .3rem;
-  height: .6rem;
+.manr img {
+  width: 0.3rem;
+  height: 0.6rem;
 }
-
 </style>
 
 
@@ -232,46 +249,8 @@ export default {
           }
         }
       },
-      rules: [
-        {
-          name: "平安保险",
-          imgUrl: require("@/assets/images/home/company1.png"),
-          rate: "20"
-        },
-        {
-          name: "人保保险",
-          imgUrl: require("@/assets/images/home/company2.png"),
-          rate: "18"
-        },
-        {
-          name: "太平洋保险",
-          imgUrl: require("@/assets/images/home/company3.png"),
-          rate: "21"
-        }
-      ],
-      hisPlateNumbers: [
-        {
-          plateNumber: "粤AT810P"
-        },
-        {
-          plateNumber: "粤AT810P"
-        },
-        {
-          plateNumber: "粤AT810P"
-        },
-        {
-          plateNumber: "粤AT810P"
-        },
-        {
-          plateNumber: "粤AT810P"
-        },
-        {
-          plateNumber: "粤AT810P"
-        },
-        {
-          plateNumber: "粤AT810P"
-        }
-      ]
+      companyRules: [],
+      searchPlateNoRecords: []
     };
   },
   methods: {
@@ -279,15 +258,16 @@ export default {
       console.log("组件传出的data", data);
     },
     goLink() {
-     // document.body.scrollTop = '300px';
+      
+       this.$loading.show()
+
+      // document.body.scrollTop = '300px';
       //this.header.title.text = "ssss"
       //this.header.rightButton.vonBadge.text = "12";
-     
 
-
-// this.$nextTick(() => {
-//      document.body.scrollTop =1000
-// });
+      // this.$nextTick(() => {
+      //      document.body.scrollTop =1000
+      // });
       //this.$store.dispatch('setUId', 'test');
 
       // this.$router.push({
@@ -297,7 +277,26 @@ export default {
     },
     myTest() {
       console.log("dsads");
+    },
+    getData(){
+  
+      this.$http
+        .get("/InsCar/GetIndexPageData")
+        .then(res => {
+          console.log(res);
+          var d=res.data;
+          this.companyRules=d.companyRules;
+          this.searchPlateNoRecords =d.searchPlateNoRecords;
+        })
+        .catch(error => {
+          alert(error);
+        });
+     
     }
+  },
+  mounted:function () {
+      this.getData();
   }
+  
 };
 </script>

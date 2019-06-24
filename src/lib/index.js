@@ -1,6 +1,7 @@
 import tabbar from "./tabbar/src/tabbar";
 import header from "./header/src/header";
 import plateNumber from "./plateNumber/src/plateNumber";
+// import loading from "./loading/src/loading";
 // const components={
 //     install(Vue){
 //         Vue.component("lumos-tabbar",tabbar)
