@@ -1,6 +1,7 @@
 import tabbar from "./tabbar/src/tabbar";
 import header from "./header/src/header";
 import plateNumber from "./plateNumber/src/plateNumber";
+import cityselect from "./cityselect/src/cityselect";
 import Loading from './loading'
 
 // import loading from "./loading/src/loading";
@@ -21,6 +22,7 @@ import Loading from './loading'
 var components={
     tabbar,
     header,
+    cityselect,
     plateNumber
 }
 

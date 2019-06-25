@@ -456,6 +456,18 @@ var Index_Component = Index_normalizeComponent(
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ var InsCar_Index = ({
   data() {
@@ -480,7 +492,19 @@ var Index_Component = Index_normalizeComponent(
         }
       },
       companyRules: [],
-      searchPlateNoRecords: []
+      searchPlateNoRecords: [],
+      city: {
+        isShow: false,
+        cityData: [],
+        onChoose: null,
+        starCity: [],
+        localCity: {
+          cityId: 440,
+          cityName: "广州",
+          citySpell: "GUANGZHOU",
+          cityFirstLetter: "G"
+        }
+      }
     };
   },
   methods: {
@@ -488,7 +512,6 @@ var Index_Component = Index_normalizeComponent(
       console.log("组件传出的data", data);
     },
     goLink() {
-
       this.$loading.show();
 
       // document.body.scrollTop = '300px';
@@ -509,7 +532,6 @@ var Index_Component = Index_normalizeComponent(
       console.log("dsads");
     },
     getData() {
-
       this.$http.get("/InsCar/GetIndexPageData").then(res => {
         console.log(res);
         var d = res.data;
@@ -518,21 +540,62 @@ var Index_Component = Index_normalizeComponent(
       }).catch(error => {
         alert(error);
       });
+    },
+    getCityInfo: function () {
+      // this.city.starCity = [
+      //   {
+      //     cityId: 440,
+      //     cityName: "广州",
+      //     citySpell: "GUANGZHOU",
+      //     cityFirstLetter: "G"
+      //   },
+      //   {
+      //     cityId: 441,
+      //     cityName: "深圳",
+      //     citySpell: "SHENZHEN",
+      //     cityFirstLetter: "S"
+      //   }
+      // ];
+
+      this.city.cityData = [{
+        cityId: 440,
+        cityName: "广州",
+        citySpell: "GUANGZHOU",
+        cityFirstLetter: "G"
+      }, {
+        cityId: 441,
+        cityName: "深圳",
+        citySpell: "SHENZHEN",
+        cityFirstLetter: "S"
+      }];
+    },
+    citySelectOpen: function () {
+      this.city.isShow = true;
+    },
+    citySelectClose() {
+      this.city.isShow = false;
     }
   },
   mounted: function () {
+    let _this = this;
     this.getData();
+    this.getCityInfo();
+    this.city.onChoose = function (res) {
+      //ToDo: 选完城市后......
+      console.log(res);
+      _this.city.isShow = false;
+      _this.city.localCity = res;
+    };
   }
-
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-b2f37b42","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsCar/Index.vue
-var InsCar_Index_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('lumos-header',{attrs:{"title":_vm.header.title,"rightButton":_vm.header.rightButton},on:{"rightButtonVonBadgeChange":_vm.myTest}}),_vm._v(" "),_c('div',{staticClass:"block-companyrules"},[_vm._m(0),_vm._v(" "),(_vm.companyRules.length>0)?_c('ul',{staticClass:"list-companyrules"},[_vm._l((this.companyRules),function(companyRule,index){return [_c('li',{key:index,staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":companyRule.companyImgUrl}})]),_vm._v(" "),_c('span',{staticClass:"name"},[_vm._v(_vm._s(companyRule.companyName))])]),_vm._v(" "),_c('div',{staticClass:"item-right"},[_c('span',{staticClass:"rate"},[_vm._v(_vm._s(companyRule.commissionRate))])])])]})],2):_c('div',{staticClass:"empty-companyrules"},[_vm._v("\n      暂无数据\n    ")])]),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_c('div',{staticClass:"block-serarch"},[_c('div',{staticClass:"lumos-lnav"},[_c('plateNumber',{on:{"getPlateLicense":_vm.getPlateLicense}}),_vm._v(" "),_vm._m(1)],1),_vm._v(" "),_c('button',{staticClass:"lumos-button lumos-button-positive lumos-button-block"},[_vm._v("立即询价")]),_vm._v(" "),_vm._m(2)]),_vm._v(" "),_c('div',{staticClass:"block-searchplatenorecords"},[_vm._m(3),_vm._v(" "),(_vm.searchPlateNoRecords.length>0)?_c('div',{staticClass:"list-searchplatenorecords"},[_vm._l((this.searchPlateNoRecords),function(searchPlateNoRecord,index){return [_c('div',{key:index,staticClass:"item"},[_c('span',[_vm._v(_vm._s(searchPlateNoRecord.plateNo))])])]})],2):_c('div',{staticClass:"empty-searchplatenorecords"},[_vm._v("\n      暂无记录\n    ")])]),_vm._v(" "),_c('a',{on:{"click":_vm.goLink}},[_vm._v("测试点击")])],1)}
-var InsCar_Index_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"titlebar"},[_c('div',{staticClass:"bar-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("保险公司")])]),_vm._v(" "),_c('div',{staticClass:"bar-right"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item"},[_c('div',{staticClass:"item-lefticon lumos-hid"}),_vm._v(" "),_c('div',{staticClass:"item-content"},[_c('div',{staticClass:"title"},[_vm._v(" 投保城市  ")]),_vm._v(" "),_c('div',{staticClass:"note"},[_vm._v("广州市")])]),_vm._v(" "),_c('div',{staticClass:"item-righticon"},[_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"manr"},[_c('span',[_vm._v("人工报价")]),_vm._v(" "),_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"titlebar"},[_c('div',{staticClass:"bar-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("历史记录")])]),_vm._v(" "),_c('div',{staticClass:"bar-right"})])}]
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-b068ec70","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsCar/Index.vue
+var InsCar_Index_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('lumos-header',{attrs:{"title":_vm.header.title,"rightButton":_vm.header.rightButton},on:{"rightButtonVonBadgeChange":_vm.myTest}}),_vm._v(" "),_c('div',{staticClass:"block-companyrules"},[_vm._m(0),_vm._v(" "),(_vm.companyRules.length>0)?_c('ul',{staticClass:"list-companyrules"},[_vm._l((this.companyRules),function(companyRule,index){return [_c('li',{key:index,staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":companyRule.companyImgUrl}})]),_vm._v(" "),_c('span',{staticClass:"name"},[_vm._v(_vm._s(companyRule.companyName))])]),_vm._v(" "),_c('div',{staticClass:"item-right"},[_c('span',{staticClass:"rate"},[_vm._v(_vm._s(companyRule.commissionRate))])])])]})],2):_c('div',{staticClass:"empty-companyrules"},[_vm._v("\n      暂无数据\n    ")])]),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_c('div',{staticClass:"block-serarch"},[_c('div',{staticClass:"lumos-lnav"},[_c('plateNumber',{on:{"getPlateLicense":_vm.getPlateLicense}}),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-lefticon lumos-hid"}),_vm._v(" "),_c('div',{staticClass:"item-content"},[_c('div',{staticClass:"title"},[_vm._v(" 投保城市  ")]),_vm._v(" "),_c('div',{staticClass:"note",on:{"click":function($event){return _vm.citySelectOpen()}}},[_vm._v(" "+_vm._s(_vm.city.localCity.cityName)+" ")])]),_vm._v(" "),_vm._m(1)])],1),_vm._v(" "),_c('button',{staticClass:"lumos-button lumos-button-positive lumos-button-block"},[_vm._v("立即询价")]),_vm._v(" "),_vm._m(2)]),_vm._v(" "),_c('div',{staticClass:"block-searchplatenorecords"},[_vm._m(3),_vm._v(" "),(_vm.searchPlateNoRecords.length>0)?_c('div',{staticClass:"list-searchplatenorecords"},[_vm._l((this.searchPlateNoRecords),function(searchPlateNoRecord,index){return [_c('div',{key:index,staticClass:"item"},[_c('span',[_vm._v(_vm._s(searchPlateNoRecord.plateNo))])])]})],2):_c('div',{staticClass:"empty-searchplatenorecords"},[_vm._v("\n      暂无记录\n    ")])]),_vm._v(" "),_c('a',{on:{"click":_vm.goLink}},[_vm._v("测试点击")]),_vm._v(" "),_c('lumos-cityselect',{attrs:{"is-show":_vm.city.isShow,"on-choose":_vm.city.onChoose,"city-data":_vm.city.cityData,"local-city":_vm.city.localCity,"star-city":_vm.city.starCity,"close":_vm.citySelectClose},on:{"update:isShow":function($event){return _vm.$set(_vm.city, "isShow", $event)},"update:is-show":function($event){return _vm.$set(_vm.city, "isShow", $event)}}})],1)}
+var InsCar_Index_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"titlebar"},[_c('div',{staticClass:"bar-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("保险公司")])]),_vm._v(" "),_c('div',{staticClass:"bar-right"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-righticon"},[_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"manr"},[_c('span',[_vm._v("人工报价")]),_vm._v(" "),_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"titlebar"},[_c('div',{staticClass:"bar-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("历史记录")])]),_vm._v(" "),_c('div',{staticClass:"bar-right"})])}]
 var InsCar_Index_esExports = { render: InsCar_Index_render, staticRenderFns: InsCar_Index_staticRenderFns }
 /* harmony default export */ var pages_InsCar_Index = (InsCar_Index_esExports);
 // CONCATENATED MODULE: ./src/pages/InsCar/Index.vue
 function Index_injectStyle (ssrContext) {
-  __webpack_require__("hM4U")
+  __webpack_require__("awq/")
 }
 var InsCar_Index_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -545,7 +608,7 @@ var InsCar_Index___vue_template_functional__ = false
 /* styles */
 var InsCar_Index___vue_styles__ = Index_injectStyle
 /* scopeId */
-var InsCar_Index___vue_scopeId__ = "data-v-b2f37b42"
+var InsCar_Index___vue_scopeId__ = "data-v-b068ec70"
 /* moduleIdentifier (server only) */
 var InsCar_Index___vue_module_identifier__ = null
 var InsCar_Index_Component = InsCar_Index_normalizeComponent(
@@ -1761,6 +1824,320 @@ var plateNumber_Component = plateNumber_normalizeComponent(
 
 /* harmony default export */ var plateNumber_src_plateNumber = (plateNumber_Component.exports);
 
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/lib/cityselect/src/cityselect.vue
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var cityselect = ({
+    name: "lumos-cityselect",
+    props: {
+        isShow: {
+            type: Boolean,
+            default: false,
+            required: false
+        },
+        simple: {
+            type: Boolean,
+            default: false
+        },
+        localCity: {
+            type: Object
+        },
+        starCity: {
+            type: Array
+        },
+        cityData: {
+            type: Array
+        },
+        onChoose: {
+            type: Function
+        },
+        initCity: {
+            type: Function,
+            default: null
+        },
+        /**
+         * call back when click cancel button
+         */
+        close: {
+            type: Function
+        }
+    },
+    data: function () {
+        return {
+            input: '',
+            list: '',
+            targetLetter: '',
+            searchList: [], //搜索结果
+            hotList: [],
+            letterList: [],
+            result: '',
+            defaultTrigger: true
+        };
+    },
+    watch: {
+        cityData: function () {
+            if (this.cityData && this.cityData.length > 0) {
+                this._formatCityList(this.cityData);
+            }
+        },
+        input: function () {
+            this._search();
+        },
+        targetLetter: function () {
+            this._scrollView();
+        }
+    },
+    activate: function (done) {
+        var _this = this;
+
+        done();
+        if (this.cityData && this.cityData.length > 0) {
+            this._formatCityList(this.cityData);
+        }
+    },
+    methods: {
+        show: function () {
+            // this.isShow = true;
+        },
+        hide: function () {
+            // this.isShow = false;
+            this.input = '';
+            this.searchList = [];
+            this.close && this.close();
+        },
+        _chooseDefault: function () {
+            let _this = this;
+            let arr = this.list.filter(function (item) {
+                return _this.localCity.cityId == item.cityId;
+            });
+            if (arr.length > 0) {
+                _this._chooseOne(arr[0]);
+            } else {
+                _this._chooseOne(this.list[0]);
+            }
+        },
+        /**
+         * 点击字母
+         */
+        _chooseLetter: function (e) {
+            let symbol = e.target.getAttribute('data-type');
+
+            if (symbol == 'starCity') {
+                this.targetLetter = '热门城市';
+            } else {
+                this.targetLetter = e.target.innerText;
+            }
+        },
+        /**
+         * slide letters list
+         */
+        _touchLetters: function (e) {
+            e.preventDefault();
+
+            let ol = document.querySelector('.xin-widget-citys-letnav ol'),
+                liNum = document.querySelectorAll('.xin-widget-citys-letnav li').length,
+                olHei = ol.clientHeight,
+                //ol height
+            liHei = Math.round(olHei / liNum),
+                //li height
+            olTop = ol.offsetTop + ol.offsetParent.offsetTop,
+                olBot = olTop + olHei,
+                touchY = e.touches[0].pageY,
+                $wrapper = document.querySelector('.xin-widget-citys');
+
+            switch (e.type) {
+                case 'touchstart':
+                    if (touchY < olTop) {
+                        // 回顶
+                        $wrapper.scrollTop = 0;
+                    } else if (touchY > olBot) {
+                        // 到底
+                        $wrapper.scrollTop = 10000;
+                    }
+                    break;
+                case 'touchmove':
+                    if (touchY < olBot && touchY > olTop) {
+                        let olTouchY = touchY - olTop,
+                            targetIndex = Math.ceil(olTouchY / liHei),
+                            target = document.querySelectorAll('.xin-widget-citys-letnav li')[targetIndex - 1];
+
+                        if (target.getAttribute('data-type') == 'starCity') {
+                            this.targetLetter = '热门城市';
+                        } else {
+                            this.targetLetter = target.innerText;
+                        }
+                    } else if (touchY <= olTop) {
+                        // 回顶
+                        $wrapper.scrollTop = 0;
+                    } else {
+                        // 到底
+                        $wrapper.scrollTop = 10000;
+                    }
+                    break;
+            }
+        },
+        /**
+         * 滚动可视区 - Triggered by '_chooseLetter'
+         */
+        _scrollView: function () {
+            let dtList = document.querySelectorAll('.xin-widget-citys-list dt'),
+                _this = this,
+                _dtList = Array.prototype.slice.call(dtList);
+
+            if (_dtList) {
+                _dtList.forEach((value, index, array) => {
+                    if (value.innerText === _this.targetLetter) {
+                        let wrapper = document.querySelector('.xin-widget-citys');
+                        let scrollTop = document.querySelector('.xin-widget-citys-list').offsetTop + value.offsetTop;
+
+                        wrapper.scrollTop = scrollTop;
+
+                        // setTimeout(function() {
+                        //     // 解决ios下 元素滚动的bug  现象是触发scroll时会导致部分滚动元素消失到二次元
+                        //     wrapper.style.width = (100 + (Math.round(Math.random() * 1000)) / 1000) + '%';
+                        // }, 0);
+                        return false;
+                    }
+                });
+            }
+        },
+        /**
+         * search city
+         */
+        _search: function () {
+            var reg = new RegExp(this.input == '' ? 'xxyy' : this.input, 'ig');
+
+            var _arr = [];
+            for (var i in this.letterList) {
+                for (var j = 0; j < this.letterList[i].length; j++) {
+                    if (reg.test(this.letterList[i][j]['cityName']) || reg.test(this.letterList[i][j]['cityFirstLetter']) || reg.test(this.letterList[i][j]['citySpell'])) {
+                        _arr.push(this.letterList[i][j]);
+                    }
+                }
+            }
+            this.searchList = _arr;
+        },
+        /**
+         * format data of city
+         * @param  {[Array]} arr [cityList]
+         */
+        _formatCityList: function (arr) {
+            var letterArr = {};
+
+            if (this.simple) {
+                for (var i = 0; i < arr.length; i++) {
+                    letterArr[i] = [];
+                    letterArr[i].push(arr[i]);
+                }
+            } else {
+                // 添加热门城市
+                if (this.starCity && this.starCity.length > 0) {
+                    let _starCity = this.starCity;
+
+                    _starCity.forEach((value, index, array) => {
+                        if (!('star' in letterArr)) {
+                            letterArr['star'] = [];
+                            letterArr['star'].unshift(value);
+                        } else {
+                            letterArr['star'].unshift(value);
+                        }
+                    });
+                }
+                for (var i = 0; i < arr.length; i++) {
+                    if (!(arr[i]['cityFirstLetter'] in letterArr)) {
+                        letterArr[arr[i]['cityFirstLetter']] = [];
+                        letterArr[arr[i]['cityFirstLetter']].push(arr[i]);
+                    } else {
+                        letterArr[arr[i]['cityFirstLetter']].push(arr[i]);
+                    }
+                }
+            }
+            this.letterList = letterArr;
+        },
+        _chooseOne: function (obj) {
+            this.onChoose && this.onChoose(JSON.parse(JSON.stringify(obj)));
+            // this.hide();
+        }
+    }
+});
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-0a48e0b2","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/lib/cityselect/src/cityselect.vue
+var cityselect_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"slide"}},[(_vm.isShow)?_c('div',{staticClass:"xin-widget-citys animated"},[_c('div',{staticClass:"xin-widget-citys-content"},[_c('div',{staticClass:"xin-widget-citys-header bdb"},[_c('div',{staticClass:"xin-widget-citys-iptbox"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.input),expression:"input"}],attrs:{"type":"text","placeholder":"城市中文名或拼音"},domProps:{"value":(_vm.input)},on:{"input":function($event){if($event.target.composing){ return; }_vm.input=$event.target.value}}})]),_vm._v(" "),_c('a',{attrs:{"href":"javascript:void(0)"},on:{"click":_vm.hide}},[_vm._v("取消")])]),_vm._v(" "),_c('div',{staticClass:"xin-widget-citys-local bdb"},[_vm._v("当前城市："+_vm._s(_vm.localCity.cityName || "无法定位当前城市"))]),_vm._v(" "),(_vm.input == '')?_c('div',{staticClass:"xin-widget-citys-list"},[_c('dl',[_vm._l((_vm.letterList),function(item,index){return [(index == 'star')?[_c('dt',[_c('em',{staticClass:"star-big"}),_vm._v("热门城市")])]:[(isNaN(index))?_c('dt',[_vm._v(_vm._s(index))]):_vm._e()],_vm._v(" "),_vm._l((item),function(item2,key){return [_c('dd',{staticClass:"bdb",on:{"click":function($event){return _vm._chooseOne(item2)}}},[_vm._v(_vm._s(item2.cityName))])]})]})],2)]):_vm._e(),_vm._v(" "),(_vm.input !== '')?_c('div',{staticClass:"xin-widget-citys-searchlist"},[(_vm.searchList.length!==0)?_c('ul',_vm._l((_vm.searchList),function(item){return _c('li',{staticClass:"bdb",on:{"click":function($event){return _vm._chooseOne(item)}}},[_vm._v(_vm._s(item.cityName))])}),0):_c('div',{staticClass:"nomatch"},[_vm._v("没有匹配城市")])]):_vm._e()]),_vm._v(" "),(_vm.isShow && _vm.input == '' && !_vm.simple)?_c('div',{staticClass:"xin-widget-citys-letnav",on:{"touchmove":_vm._touchLetters}},[_c('ol',[_vm._l((_vm.letterList),function(item,index){return [(isNaN(index) && index=='star')?_c('li',{attrs:{"data-type":"starCity"},on:{"click":_vm._chooseLetter}},[_c('em',{staticClass:"star-small",attrs:{"data-type":"starCity"}})]):_c('li',{attrs:{"data-type":"letter"},on:{"click":_vm._chooseLetter}},[_vm._v(_vm._s(index))])]})],2)]):_vm._e()]):_vm._e()])}
+var cityselect_staticRenderFns = []
+var cityselect_esExports = { render: cityselect_render, staticRenderFns: cityselect_staticRenderFns }
+/* harmony default export */ var src_cityselect = (cityselect_esExports);
+// CONCATENATED MODULE: ./src/lib/cityselect/src/cityselect.vue
+function cityselect_injectStyle (ssrContext) {
+  __webpack_require__("l142")
+}
+var cityselect_normalizeComponent = __webpack_require__("VU/8")
+/* script */
+
+
+/* template */
+
+/* template functional */
+var cityselect___vue_template_functional__ = false
+/* styles */
+var cityselect___vue_styles__ = cityselect_injectStyle
+/* scopeId */
+var cityselect___vue_scopeId__ = "data-v-0a48e0b2"
+/* moduleIdentifier (server only) */
+var cityselect___vue_module_identifier__ = null
+var cityselect_Component = cityselect_normalizeComponent(
+  cityselect,
+  src_cityselect,
+  cityselect___vue_template_functional__,
+  cityselect___vue_styles__,
+  cityselect___vue_scopeId__,
+  cityselect___vue_module_identifier__
+)
+
+/* harmony default export */ var cityselect_src_cityselect = (cityselect_Component.exports);
+
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/lib/loading/src/loading.vue
 //
 //
@@ -1889,6 +2266,7 @@ Load.install = (Vue, options) => {
 
 
 
+
 // import loading from "./loading/src/loading";
 // const components={
 //     install(Vue){
@@ -1907,6 +2285,7 @@ Load.install = (Vue, options) => {
 var components = {
     tabbar: tabbar_src_tabbar,
     header: header_src_header,
+    cityselect: cityselect_src_cityselect,
     plateNumber: plateNumber_src_plateNumber
 };
 
@@ -2018,6 +2397,13 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADj
 
 /***/ }),
 
+/***/ "awq/":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "bYW/":
 /***/ (function(module, exports) {
 
@@ -2032,7 +2418,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADj
 
 /***/ }),
 
-/***/ "hM4U":
+/***/ "l142":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -2082,4 +2468,4 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.c7a2237ec42a1eb60b4c.js.map
+//# sourceMappingURL=app.82ecde7af98025c919f7.js.map

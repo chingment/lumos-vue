@@ -52,7 +52,7 @@
       <div class="item-lefticon lumos-hid"></div>
       <div class="item-content" >  
       <div class="title" > 投保城市  </div>
-      <div class="note" >广州市</div>
+      <div class="note" @click="citySelectOpen()" > {{ city.localCity.cityName }} </div>
       </div>  
       <div class="item-righticon" >
            <img 
@@ -102,7 +102,19 @@
 
   
  <a @click="goLink" >测试点击</a> 
+
     <!-- {{ this.$store.getters.getUId }} -->
+
+
+        <lumos-cityselect
+            :is-show.sync='city.isShow'
+            :on-choose='city.onChoose'
+            :city-data='city.cityData'
+            :local-city='city.localCity'
+            :star-city='city.starCity'
+		      	:close="citySelectClose"
+            ></lumos-cityselect>
+
   </div>
 </template>
 
@@ -190,7 +202,7 @@
   font-weight: 800;
 }
 
-.empty-companyrules{
+.empty-companyrules {
   line-height: 2.3rem;
   text-align: left;
 }
@@ -209,7 +221,7 @@
   color: #b7b7b7;
 }
 
-.empty-searchplatenorecords{
+.empty-searchplatenorecords {
   line-height: 2.3rem;
   text-align: left;
 }
@@ -249,7 +261,19 @@ export default {
         }
       },
       companyRules: [],
-      searchPlateNoRecords: []
+      searchPlateNoRecords: [],
+      city: {
+        isShow: false,
+        cityData: [],
+        onChoose: null,
+        starCity: [],
+        localCity: {
+          cityId: 440,
+          cityName: "广州",
+          citySpell: "GUANGZHOU",
+          cityFirstLetter: "G"
+        }
+      }
     };
   },
   methods: {
@@ -257,8 +281,7 @@ export default {
       console.log("组件传出的data", data);
     },
     goLink() {
-      
-       this.$loading.show()
+      this.$loading.show();
 
       // document.body.scrollTop = '300px';
       //this.header.title.text = "ssss"
@@ -277,25 +300,67 @@ export default {
     myTest() {
       console.log("dsads");
     },
-    getData(){
-  
+    getData() {
       this.$http
         .get("/InsCar/GetIndexPageData")
         .then(res => {
           console.log(res);
-          var d=res.data;
-          this.companyRules=d.companyRules;
-          this.searchPlateNoRecords =d.searchPlateNoRecords;
+          var d = res.data;
+          this.companyRules = d.companyRules;
+          this.searchPlateNoRecords = d.searchPlateNoRecords;
         })
         .catch(error => {
           alert(error);
         });
-     
+    },
+    getCityInfo: function() {
+      // this.city.starCity = [
+      //   {
+      //     cityId: 440,
+      //     cityName: "广州",
+      //     citySpell: "GUANGZHOU",
+      //     cityFirstLetter: "G"
+      //   },
+      //   {
+      //     cityId: 441,
+      //     cityName: "深圳",
+      //     citySpell: "SHENZHEN",
+      //     cityFirstLetter: "S"
+      //   }
+      // ];
+
+      this.city.cityData = [
+        {
+          cityId: 440,
+          cityName: "广州",
+          citySpell: "GUANGZHOU",
+          cityFirstLetter: "G"
+        },
+        {
+          cityId: 441,
+          cityName: "深圳",
+          citySpell: "SHENZHEN",
+          cityFirstLetter: "S"
+        }
+      ];
+    },
+    citySelectOpen: function() {
+      this.city.isShow = true;
+    },
+    citySelectClose() {
+      this.city.isShow = false;
     }
   },
-  mounted:function () {
-      this.getData();
+  mounted: function() {
+    let _this = this;
+    this.getData();
+    this.getCityInfo();
+    this.city.onChoose = function(res) {
+      //ToDo: 选完城市后......
+      console.log(res);
+      _this.city.isShow = false;
+      _this.city.localCity = res;
+    };
   }
-  
 };
 </script>
