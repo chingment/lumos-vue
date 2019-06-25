@@ -1,23 +1,6 @@
 <template>
-  <div id="app">
-    <ul class="menu">
-      <li v-scroll-to="'#a'">item 1</li>
-      <li v-scroll-to="'#b'">item 2</li>
-      <li v-scroll-to="'#c'">item 3</li>
-    </ul>
-
-    <div
-      class="content"
-      id="a"
-    >content 1</div>
-    <div
-      class="content"
-      id="b"
-    >content 2</div>
-    <div
-      class="content"
-      id="c"
-    >content 3</div>
+  <div>
+    ss
   </div>
 </template>
 

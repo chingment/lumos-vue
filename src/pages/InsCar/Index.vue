@@ -3,7 +3,7 @@
     <lumos-header
       :title="header.title"
       :rightButton="header.rightButton"
-      v-on:rightButtonVonBadgeChange="myTest"
+      v-on:rightButtonVonBadgeChange="rightButtonVonBadgeChange"
     ></lumos-header>
 
 
@@ -64,12 +64,12 @@
     </div>
 
 
-   <button class="lumos-button lumos-button-positive lumos-button-block" >立即询价</button>
+   <button  @click="goAsCarInfo"  class="lumos-button lumos-button-positive lumos-button-block" >立即询价</button>
 
    
       <div class="manr">
 
-       <span >人工报价</span>
+       <span @click="goMsCarInfo"  >人工报价</span>
        <img src="@/assets/images/icon_right.png" alt="">
 
 
@@ -101,7 +101,7 @@
    </div>
 
   
- <a @click="goLink" >测试点击</a> 
+         <!-- <a @click="goLink" >测试点击</a>  -->
 
     <!-- {{ this.$store.getters.getUId }} -->
 
@@ -297,7 +297,7 @@ export default {
       //   name: "Hello"
       // });
     },
-    myTest() {
+    rightButtonVonBadgeChange() {
       console.log("dsads");
     },
     getData() {
@@ -314,21 +314,6 @@ export default {
         });
     },
     getCityInfo: function() {
-      // this.city.starCity = [
-      //   {
-      //     cityId: 440,
-      //     cityName: "广州",
-      //     citySpell: "GUANGZHOU",
-      //     cityFirstLetter: "G"
-      //   },
-      //   {
-      //     cityId: 441,
-      //     cityName: "深圳",
-      //     citySpell: "SHENZHEN",
-      //     cityFirstLetter: "S"
-      //   }
-      // ];
-
       this.city.cityData = [
         {
           cityId: 440,
@@ -349,15 +334,25 @@ export default {
     },
     citySelectClose() {
       this.city.isShow = false;
+    },
+    goAsCarInfo() {
+       console.log("goAsCarInfo");
+       this.$router.push({
+         path: "/InsCar/As/CarInfo"
+       });
+    },
+    goMsCarInfo() {
+        console.log("goMsCarInfo");
+         this.$router.push({
+         path: "/InsCar/Ms/CarInfo",
+       });
     }
   },
   mounted: function() {
     let _this = this;
-    this.getData();
-    this.getCityInfo();
-    this.city.onChoose = function(res) {
-      //ToDo: 选完城市后......
-      console.log(res);
+    _this.getData();
+    _this.getCityInfo();
+    _this.city.onChoose = function(res) {
       _this.city.isShow = false;
       _this.city.localCity = res;
     };
