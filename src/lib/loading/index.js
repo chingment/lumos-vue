@@ -1,6 +1,6 @@
 
 
-import loadTemp from './loading.vue'
+import loadTemp from './src/loading.vue'
 
 let Load = {};  // 定义插件对象
 

@@ -87,7 +87,6 @@
       <div class="bar-right"></div>
     </div>
 
-  
 
    <div class="list-searchplatenorecords" v-if="searchPlateNoRecords.length>0">
       <template v-for="(searchPlateNoRecord,index) in this.searchPlateNoRecords">
@@ -102,7 +101,7 @@
    </div>
 
   
- <a @click="goLink" >点击</a> 
+ <a @click="goLink" >测试点击</a> 
     <!-- {{ this.$store.getters.getUId }} -->
   </div>
 </template>

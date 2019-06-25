@@ -561,6 +561,8 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-width: 13rem;
+    max-width: 16rem;
     .spot {
       width: 0.2rem;
       height: 0.2rem;

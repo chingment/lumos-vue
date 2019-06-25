@@ -4,7 +4,7 @@
         <img src="@/assets/images/loading.gif" style="width:32px;display: inline-block" />
     </div>
     <div class="loading-tips">
-        <span>ddsdd</span>
+        <span></span>
     </div>
     </div>
 </template>
