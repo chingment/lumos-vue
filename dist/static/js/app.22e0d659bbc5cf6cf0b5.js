@@ -7,7 +7,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAABkCAYAAADE
 
 /***/ }),
 
-/***/ "1qqw":
+/***/ "27mi":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -25,6 +25,13 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADj
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAgCAYAAABts0pHAAADFElEQVRYR82YP0gbURzHvz+ujZIuxkWMtCA11tEOLq6Cg0sHu4YMDlWETi6Wrk3i2CkKIu6txCFDioMgopNLIby7i5laMypVVKLhXnlpE5Lz3t29uxj8rff788mR7/f93hE8olwu99Xr9W0imgfw3Cv/sZ8T0S8AH8hrkGEYac75qldeL58LeFfwSqUyfn9//xNAXy/B/MxyBdd1/QeAWT+Nep0jBTdNc96yrO+9BvI7zxG8Wq1GLy8vGYBXfhv1Os8RnDGWJqInJUj7i3kA/pQF2Q7/ADyMIK+vr3F1dYWhoSEQeTotLi4uwDnH4OCg8j+toztjbJ6IAgmyXC5ja2sLd3d3mJiYQCqVQiQSkQIVi0Xs7e01ns/NzWFmZkYJvgUeVpCbm5tgTOj5X4yNjWFhYcERvlAoYH9/v5UrfmAmkwkGbhjGF875J6XqtuR8Po/Dw8OOcid4O7QoGB4exsrKitLoxhtnjI0TUagT8vb2FrlcDmdnZ1J4J+hoNIqlpSXE43F18DCCbJ92c3OD9fV1R3gBdnBw0AEnoBcXFzEyMqIELZJJ1/V3AHaVKyUFMnh7ehjoBrhhGNuc81S3wEUfL/iw0A1w0zQ/Wpb1tZvgTfhsNgvh7e0h/H15eRmjo6OhRlKpVIpomiaE+SZUJ1uxkxCbKW5W6Zeh6SqzRCRW2K6EG3S34FsHkK7r3wC8D0sus7yBgQFUq1VPn/c7vwV+enr6sl6vi6Pvhd9ie54MWlheLBaTWqXshHXjsO8qq0SUDgJ+dHSEnZ0dV5+Wuc3k5CSSyaTS2A7wMELd2NiAaZqt4TLLc4LXNA1ra2u+NsrmgAe7J2MskFDFpic2PhFePm2HTyQSjRNUJRyXZl3XxWorvqP4DsuycHJygvPzc0xNTXnu2LVaDcfHxxB109PT6O/v9z1LJDqCd0OoShQBkqXXFMMwVjnngYQagEO5RAoeRqjKFAEKXC+GQYUagEO5xPNGG0SoyhSKBUT0xw+4uJqIG8Brxf6Plc6J6LMnuJj+/yL9VtO0Z49Fo9D3dyKRqPwFmnFqLga/mGsAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "A9gp":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -56,7 +63,7 @@ module.exports = __webpack_require__.p + "static/img/loading.b74908f.gif";
 
 /***/ }),
 
-/***/ "GVtj":
+/***/ "G/5i":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -93,14 +100,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // EXTERNAL MODULE: ./node_modules/vue/dist/vue.esm.js
 var vue_esm = __webpack_require__("7+uW");
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-150d5e10","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/App.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-25a48234","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/App.vue
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('router-view')],1)}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ var App = (esExports);
 // CONCATENATED MODULE: ./src/App.vue
 function injectStyle (ssrContext) {
-  __webpack_require__("GVtj")
+  __webpack_require__("A9gp")
+  __webpack_require__("UTZr")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -468,6 +476,7 @@ var Index_Component = Index_normalizeComponent(
 //
 //
 //
+//
 
 /* harmony default export */ var InsCar_Index = ({
   data() {
@@ -528,7 +537,7 @@ var Index_Component = Index_normalizeComponent(
       //   name: "Hello"
       // });
     },
-    myTest() {
+    rightButtonVonBadgeChange() {
       console.log("dsads");
     },
     getData() {
@@ -542,21 +551,6 @@ var Index_Component = Index_normalizeComponent(
       });
     },
     getCityInfo: function () {
-      // this.city.starCity = [
-      //   {
-      //     cityId: 440,
-      //     cityName: "广州",
-      //     citySpell: "GUANGZHOU",
-      //     cityFirstLetter: "G"
-      //   },
-      //   {
-      //     cityId: 441,
-      //     cityName: "深圳",
-      //     citySpell: "SHENZHEN",
-      //     cityFirstLetter: "S"
-      //   }
-      // ];
-
       this.city.cityData = [{
         cityId: 440,
         cityName: "广州",
@@ -574,28 +568,38 @@ var Index_Component = Index_normalizeComponent(
     },
     citySelectClose() {
       this.city.isShow = false;
+    },
+    goAsCarInfo() {
+      console.log("goAsCarInfo");
+      this.$router.push({
+        path: "/InsCar/As/CarInfo"
+      });
+    },
+    goMsCarInfo() {
+      console.log("goMsCarInfo");
+      this.$router.push({
+        path: "/InsCar/Ms/CarInfo"
+      });
     }
   },
   mounted: function () {
     let _this = this;
-    this.getData();
-    this.getCityInfo();
-    this.city.onChoose = function (res) {
-      //ToDo: 选完城市后......
-      console.log(res);
+    _this.getData();
+    _this.getCityInfo();
+    _this.city.onChoose = function (res) {
       _this.city.isShow = false;
       _this.city.localCity = res;
     };
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-b068ec70","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsCar/Index.vue
-var InsCar_Index_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('lumos-header',{attrs:{"title":_vm.header.title,"rightButton":_vm.header.rightButton},on:{"rightButtonVonBadgeChange":_vm.myTest}}),_vm._v(" "),_c('div',{staticClass:"block-companyrules"},[_vm._m(0),_vm._v(" "),(_vm.companyRules.length>0)?_c('ul',{staticClass:"list-companyrules"},[_vm._l((this.companyRules),function(companyRule,index){return [_c('li',{key:index,staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":companyRule.companyImgUrl}})]),_vm._v(" "),_c('span',{staticClass:"name"},[_vm._v(_vm._s(companyRule.companyName))])]),_vm._v(" "),_c('div',{staticClass:"item-right"},[_c('span',{staticClass:"rate"},[_vm._v(_vm._s(companyRule.commissionRate))])])])]})],2):_c('div',{staticClass:"empty-companyrules"},[_vm._v("\n      暂无数据\n    ")])]),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_c('div',{staticClass:"block-serarch"},[_c('div',{staticClass:"lumos-lnav"},[_c('plateNumber',{on:{"getPlateLicense":_vm.getPlateLicense}}),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-lefticon lumos-hid"}),_vm._v(" "),_c('div',{staticClass:"item-content"},[_c('div',{staticClass:"title"},[_vm._v(" 投保城市  ")]),_vm._v(" "),_c('div',{staticClass:"note",on:{"click":function($event){return _vm.citySelectOpen()}}},[_vm._v(" "+_vm._s(_vm.city.localCity.cityName)+" ")])]),_vm._v(" "),_vm._m(1)])],1),_vm._v(" "),_c('button',{staticClass:"lumos-button lumos-button-positive lumos-button-block"},[_vm._v("立即询价")]),_vm._v(" "),_vm._m(2)]),_vm._v(" "),_c('div',{staticClass:"block-searchplatenorecords"},[_vm._m(3),_vm._v(" "),(_vm.searchPlateNoRecords.length>0)?_c('div',{staticClass:"list-searchplatenorecords"},[_vm._l((this.searchPlateNoRecords),function(searchPlateNoRecord,index){return [_c('div',{key:index,staticClass:"item"},[_c('span',[_vm._v(_vm._s(searchPlateNoRecord.plateNo))])])]})],2):_c('div',{staticClass:"empty-searchplatenorecords"},[_vm._v("\n      暂无记录\n    ")])]),_vm._v(" "),_c('a',{on:{"click":_vm.goLink}},[_vm._v("测试点击")]),_vm._v(" "),_c('lumos-cityselect',{attrs:{"is-show":_vm.city.isShow,"on-choose":_vm.city.onChoose,"city-data":_vm.city.cityData,"local-city":_vm.city.localCity,"star-city":_vm.city.starCity,"close":_vm.citySelectClose},on:{"update:isShow":function($event){return _vm.$set(_vm.city, "isShow", $event)},"update:is-show":function($event){return _vm.$set(_vm.city, "isShow", $event)}}})],1)}
-var InsCar_Index_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"titlebar"},[_c('div',{staticClass:"bar-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("保险公司")])]),_vm._v(" "),_c('div',{staticClass:"bar-right"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-righticon"},[_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"manr"},[_c('span',[_vm._v("人工报价")]),_vm._v(" "),_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"titlebar"},[_c('div',{staticClass:"bar-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("历史记录")])]),_vm._v(" "),_c('div',{staticClass:"bar-right"})])}]
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-4deee59e","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsCar/Index.vue
+var InsCar_Index_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('lumos-header',{attrs:{"title":_vm.header.title,"rightButton":_vm.header.rightButton},on:{"rightButtonVonBadgeChange":_vm.rightButtonVonBadgeChange}}),_vm._v(" "),_c('div',{staticClass:"block-companyrules"},[_vm._m(0),_vm._v(" "),(_vm.companyRules.length>0)?_c('ul',{staticClass:"list-companyrules"},[_vm._l((this.companyRules),function(companyRule,index){return [_c('li',{key:index,staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":companyRule.companyImgUrl}})]),_vm._v(" "),_c('span',{staticClass:"name"},[_vm._v(_vm._s(companyRule.companyName))])]),_vm._v(" "),_c('div',{staticClass:"item-right"},[_c('span',{staticClass:"rate"},[_vm._v(_vm._s(companyRule.commissionRate))])])])]})],2):_c('div',{staticClass:"empty-companyrules"},[_vm._v("\n      暂无数据\n    ")])]),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_c('div',{staticClass:"block-serarch"},[_c('div',{staticClass:"lumos-lnav"},[_c('plateNumber',{on:{"getPlateLicense":_vm.getPlateLicense}}),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-lefticon lumos-hid"}),_vm._v(" "),_c('div',{staticClass:"item-content"},[_c('div',{staticClass:"title"},[_vm._v(" 投保城市  ")]),_vm._v(" "),_c('div',{staticClass:"note",on:{"click":function($event){return _vm.citySelectOpen()}}},[_vm._v(" "+_vm._s(_vm.city.localCity.cityName)+" ")])]),_vm._v(" "),_vm._m(1)])],1),_vm._v(" "),_c('button',{staticClass:"lumos-button lumos-button-positive lumos-button-block br4",on:{"click":_vm.goAsCarInfo}},[_vm._v("立即询价")]),_vm._v(" "),_c('div',{staticClass:"manr"},[_c('span',{on:{"click":_vm.goMsCarInfo}},[_vm._v("人工报价")]),_vm._v(" "),_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])]),_vm._v(" "),_c('div',{staticClass:"block-searchplatenorecords"},[_vm._m(2),_vm._v(" "),(_vm.searchPlateNoRecords.length>0)?_c('div',{staticClass:"list-searchplatenorecords"},[_vm._l((this.searchPlateNoRecords),function(searchPlateNoRecord,index){return [_c('div',{key:index,staticClass:"item"},[_c('span',[_vm._v(_vm._s(searchPlateNoRecord.plateNo))])])]})],2):_c('div',{staticClass:"empty-searchplatenorecords"},[_vm._v("\n      暂无记录\n    ")])]),_vm._v(" "),_c('lumos-cityselect',{attrs:{"is-show":_vm.city.isShow,"on-choose":_vm.city.onChoose,"city-data":_vm.city.cityData,"local-city":_vm.city.localCity,"star-city":_vm.city.starCity,"close":_vm.citySelectClose},on:{"update:isShow":function($event){return _vm.$set(_vm.city, "isShow", $event)},"update:is-show":function($event){return _vm.$set(_vm.city, "isShow", $event)}}})],1)}
+var InsCar_Index_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"titlebar"},[_c('div',{staticClass:"titlebar-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("保险公司")])]),_vm._v(" "),_c('div',{staticClass:"titlebar-right"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-righticon"},[_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"titlebar"},[_c('div',{staticClass:"titlebar-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("历史记录")])]),_vm._v(" "),_c('div',{staticClass:"titlebar-right"})])}]
 var InsCar_Index_esExports = { render: InsCar_Index_render, staticRenderFns: InsCar_Index_staticRenderFns }
 /* harmony default export */ var pages_InsCar_Index = (InsCar_Index_esExports);
 // CONCATENATED MODULE: ./src/pages/InsCar/Index.vue
 function Index_injectStyle (ssrContext) {
-  __webpack_require__("awq/")
+  __webpack_require__("G/5i")
 }
 var InsCar_Index_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -608,7 +612,7 @@ var InsCar_Index___vue_template_functional__ = false
 /* styles */
 var InsCar_Index___vue_styles__ = Index_injectStyle
 /* scopeId */
-var InsCar_Index___vue_scopeId__ = "data-v-b068ec70"
+var InsCar_Index___vue_scopeId__ = "data-v-4deee59e"
 /* moduleIdentifier (server only) */
 var InsCar_Index___vue_module_identifier__ = null
 var InsCar_Index_Component = InsCar_Index_normalizeComponent(
@@ -621,6 +625,269 @@ var InsCar_Index_Component = InsCar_Index_normalizeComponent(
 )
 
 /* harmony default export */ var src_pages_InsCar_Index = (InsCar_Index_Component.exports);
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/pages/InsCar/As/CarInfo.vue
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var CarInfo = ({
+  data() {
+    return {};
+  },
+  methods: {
+    goAsChooseKind() {
+      console.log("goAsChooseKind");
+      this.$router.push({
+        path: "/InsCar/As/ChooseKind"
+      });
+    }
+  }
+
+});
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-66e651af","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsCar/As/CarInfo.vue
+var CarInfo_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"mb5"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_vm._m(1),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_vm._m(2),_vm._v(" "),_c('button',{staticClass:"lumos-button lumos-button-positive lumos-button-bottom",on:{"click":_vm.goAsChooseKind}},[_vm._v("下一步")])])}
+var CarInfo_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"frmgrid"},[_c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("行驶证信息")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})]),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车牌号")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text","value":"粤AT810P"}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车架号")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text"}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车型")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text"}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("发动机号")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text"}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("注册日期")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text"}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"frmgrid"},[_c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("是否公司车")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})]),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车主")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text","value":""}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("证件号码")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text","value":""}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"frmgrid"},[_c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("是否过户车")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})]),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("过户日期")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text","value":""}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])])}]
+var CarInfo_esExports = { render: CarInfo_render, staticRenderFns: CarInfo_staticRenderFns }
+/* harmony default export */ var As_CarInfo = (CarInfo_esExports);
+// CONCATENATED MODULE: ./src/pages/InsCar/As/CarInfo.vue
+function CarInfo_injectStyle (ssrContext) {
+  __webpack_require__("WrJS")
+}
+var CarInfo_normalizeComponent = __webpack_require__("VU/8")
+/* script */
+
+
+/* template */
+
+/* template functional */
+var CarInfo___vue_template_functional__ = false
+/* styles */
+var CarInfo___vue_styles__ = CarInfo_injectStyle
+/* scopeId */
+var CarInfo___vue_scopeId__ = "data-v-66e651af"
+/* moduleIdentifier (server only) */
+var CarInfo___vue_module_identifier__ = null
+var CarInfo_Component = CarInfo_normalizeComponent(
+  CarInfo,
+  As_CarInfo,
+  CarInfo___vue_template_functional__,
+  CarInfo___vue_styles__,
+  CarInfo___vue_scopeId__,
+  CarInfo___vue_module_identifier__
+)
+
+/* harmony default export */ var InsCar_As_CarInfo = (CarInfo_Component.exports);
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/pages/InsCar/As/ChooseKind.vue
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var ChooseKind = ({
+  data() {
+    return {};
+  },
+  methods: {
+    goAsInsOffer() {
+      console.log("goAsInsOffer");
+      this.$router.push({
+        path: "/InsCar/As/InsOffer"
+      });
+    }
+  }
+
+});
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-1d4f53ae","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsCar/As/ChooseKind.vue
+var ChooseKind_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"mb5"},[_vm._v("\n FSFD\n"),_c('button',{staticClass:"lumos-button lumos-button-positive lumos-button-bottom",on:{"click":_vm.goAsInsOffer}},[_vm._v("下一步")])])}
+var ChooseKind_staticRenderFns = []
+var ChooseKind_esExports = { render: ChooseKind_render, staticRenderFns: ChooseKind_staticRenderFns }
+/* harmony default export */ var As_ChooseKind = (ChooseKind_esExports);
+// CONCATENATED MODULE: ./src/pages/InsCar/As/ChooseKind.vue
+var ChooseKind_normalizeComponent = __webpack_require__("VU/8")
+/* script */
+
+
+/* template */
+
+/* template functional */
+var ChooseKind___vue_template_functional__ = false
+/* styles */
+var ChooseKind___vue_styles__ = null
+/* scopeId */
+var ChooseKind___vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var ChooseKind___vue_module_identifier__ = null
+var ChooseKind_Component = ChooseKind_normalizeComponent(
+  ChooseKind,
+  As_ChooseKind,
+  ChooseKind___vue_template_functional__,
+  ChooseKind___vue_styles__,
+  ChooseKind___vue_scopeId__,
+  ChooseKind___vue_module_identifier__
+)
+
+/* harmony default export */ var InsCar_As_ChooseKind = (ChooseKind_Component.exports);
+
+// CONCATENATED MODULE: ./src/pages/InsCar/As/InsOffer.vue
+var InsOffer_normalizeComponent = __webpack_require__("VU/8")
+/* script */
+var InsOffer___vue_script__ = null
+/* template */
+var __vue_template__ = null
+/* template functional */
+var InsOffer___vue_template_functional__ = false
+/* styles */
+var InsOffer___vue_styles__ = null
+/* scopeId */
+var InsOffer___vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var InsOffer___vue_module_identifier__ = null
+var InsOffer_Component = InsOffer_normalizeComponent(
+  InsOffer___vue_script__,
+  __vue_template__,
+  InsOffer___vue_template_functional__,
+  InsOffer___vue_styles__,
+  InsOffer___vue_scopeId__,
+  InsOffer___vue_module_identifier__
+)
+
+/* harmony default export */ var InsOffer = (InsOffer_Component.exports);
+
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-18605907","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsCar/Ms/CarInfo.vue
+var Ms_CarInfo_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n  上传证件\n")])}
+var Ms_CarInfo_staticRenderFns = []
+var Ms_CarInfo_esExports = { render: Ms_CarInfo_render, staticRenderFns: Ms_CarInfo_staticRenderFns }
+/* harmony default export */ var Ms_CarInfo = (Ms_CarInfo_esExports);
+// CONCATENATED MODULE: ./src/pages/InsCar/Ms/CarInfo.vue
+var Ms_CarInfo_normalizeComponent = __webpack_require__("VU/8")
+/* script */
+var CarInfo___vue_script__ = null
+/* template */
+
+/* template functional */
+var Ms_CarInfo___vue_template_functional__ = false
+/* styles */
+var Ms_CarInfo___vue_styles__ = null
+/* scopeId */
+var Ms_CarInfo___vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var Ms_CarInfo___vue_module_identifier__ = null
+var Ms_CarInfo_Component = Ms_CarInfo_normalizeComponent(
+  CarInfo___vue_script__,
+  Ms_CarInfo,
+  Ms_CarInfo___vue_template_functional__,
+  Ms_CarInfo___vue_styles__,
+  Ms_CarInfo___vue_scopeId__,
+  Ms_CarInfo___vue_module_identifier__
+)
+
+/* harmony default export */ var InsCar_Ms_CarInfo = (Ms_CarInfo_Component.exports);
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-f5ccb37c","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsMarket/Index.vue
 var InsMarket_Index_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('a',[_vm._v("inscom")])}
@@ -772,36 +1039,19 @@ var My_Index_Component = My_Index_normalizeComponent(
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ var hello = ({
   name: "app"
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-7a33bb08","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/hello.vue
-var hello_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('ul',{staticClass:"menu"},[_c('li',{directives:[{name:"scroll-to",rawName:"v-scroll-to",value:('#a'),expression:"'#a'"}]},[_vm._v("item 1")]),_vm._v(" "),_c('li',{directives:[{name:"scroll-to",rawName:"v-scroll-to",value:('#b'),expression:"'#b'"}]},[_vm._v("item 2")]),_vm._v(" "),_c('li',{directives:[{name:"scroll-to",rawName:"v-scroll-to",value:('#c'),expression:"'#c'"}]},[_vm._v("item 3")])]),_vm._v(" "),_c('div',{staticClass:"content",attrs:{"id":"a"}},[_vm._v("content 1")]),_vm._v(" "),_c('div',{staticClass:"content",attrs:{"id":"b"}},[_vm._v("content 2")]),_vm._v(" "),_c('div',{staticClass:"content",attrs:{"id":"c"}},[_vm._v("content 3")])])}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-48a5fce7","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/hello.vue
+var hello_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n  ss\n")])}
 var hello_staticRenderFns = []
 var hello_esExports = { render: hello_render, staticRenderFns: hello_staticRenderFns }
 /* harmony default export */ var pages_hello = (hello_esExports);
 // CONCATENATED MODULE: ./src/pages/hello.vue
 function hello_injectStyle (ssrContext) {
-  __webpack_require__("1qqw")
+  __webpack_require__("rdxS")
 }
 var hello_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -839,6 +1089,11 @@ var hello_Component = hello_normalizeComponent(
 
 
 
+
+
+
+
+
 vue_esm["a" /* default */].use(vue_router_esm["a" /* default */]);
 
 /* harmony default export */ var router = (new vue_router_esm["a" /* default */]({
@@ -847,7 +1102,7 @@ vue_esm["a" /* default */].use(vue_router_esm["a" /* default */]);
     path: '/Home/Index', name: 'HomeIndex', component: pages_Home_Index, children: [{ path: '/InsCar', name: 'InsCar', component: src_pages_InsCar_Index, meta: { requireAuth: true } }, { path: '/InsMarket', name: 'InsMarket', component: pages_InsMarket_Index, meta: { requireAuth: true } }, { path: '/InsClaim', name: 'InsClaim', component: src_pages_InsClaim_Index, meta: { requireAuth: true } }, { path: '/My', name: 'My', component: pages_My_Index, meta: { requireAuth: false } }]
   }, {
     path: '/Hello', name: 'Hello', component: src_pages_hello
-  }]
+  }, { path: '/InsCar/As/CarInfo', name: 'InsCarAsCarInfo', component: InsCar_As_CarInfo, meta: { requireAuth: true } }, { path: '/InsCar/As/ChooseKind', name: 'InsCarAsChooseKind', component: InsCar_As_ChooseKind, meta: { requireAuth: true } }, { path: '/InsCar/As/InsOffer', name: 'InsCarAsInsOffer', component: InsOffer, meta: { requireAuth: true } }, { path: '/InsCar/Ms/CarInfo', name: 'InsCarMsCarInfo', component: InsCar_Ms_CarInfo, meta: { requireAuth: true } }]
 }));
 // EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
 var vuex_esm = __webpack_require__("NYxO");
@@ -2104,14 +2359,14 @@ var plateNumber_Component = plateNumber_normalizeComponent(
         }
     }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-0a48e0b2","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/lib/cityselect/src/cityselect.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-7eb72437","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/lib/cityselect/src/cityselect.vue
 var cityselect_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"slide"}},[(_vm.isShow)?_c('div',{staticClass:"xin-widget-citys animated"},[_c('div',{staticClass:"xin-widget-citys-content"},[_c('div',{staticClass:"xin-widget-citys-header bdb"},[_c('div',{staticClass:"xin-widget-citys-iptbox"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.input),expression:"input"}],attrs:{"type":"text","placeholder":"城市中文名或拼音"},domProps:{"value":(_vm.input)},on:{"input":function($event){if($event.target.composing){ return; }_vm.input=$event.target.value}}})]),_vm._v(" "),_c('a',{attrs:{"href":"javascript:void(0)"},on:{"click":_vm.hide}},[_vm._v("取消")])]),_vm._v(" "),_c('div',{staticClass:"xin-widget-citys-local bdb"},[_vm._v("当前城市："+_vm._s(_vm.localCity.cityName || "无法定位当前城市"))]),_vm._v(" "),(_vm.input == '')?_c('div',{staticClass:"xin-widget-citys-list"},[_c('dl',[_vm._l((_vm.letterList),function(item,index){return [(index == 'star')?[_c('dt',[_c('em',{staticClass:"star-big"}),_vm._v("热门城市")])]:[(isNaN(index))?_c('dt',[_vm._v(_vm._s(index))]):_vm._e()],_vm._v(" "),_vm._l((item),function(item2,key){return [_c('dd',{staticClass:"bdb",on:{"click":function($event){return _vm._chooseOne(item2)}}},[_vm._v(_vm._s(item2.cityName))])]})]})],2)]):_vm._e(),_vm._v(" "),(_vm.input !== '')?_c('div',{staticClass:"xin-widget-citys-searchlist"},[(_vm.searchList.length!==0)?_c('ul',_vm._l((_vm.searchList),function(item){return _c('li',{staticClass:"bdb",on:{"click":function($event){return _vm._chooseOne(item)}}},[_vm._v(_vm._s(item.cityName))])}),0):_c('div',{staticClass:"nomatch"},[_vm._v("没有匹配城市")])]):_vm._e()]),_vm._v(" "),(_vm.isShow && _vm.input == '' && !_vm.simple)?_c('div',{staticClass:"xin-widget-citys-letnav",on:{"touchmove":_vm._touchLetters}},[_c('ol',[_vm._l((_vm.letterList),function(item,index){return [(isNaN(index) && index=='star')?_c('li',{attrs:{"data-type":"starCity"},on:{"click":_vm._chooseLetter}},[_c('em',{staticClass:"star-small",attrs:{"data-type":"starCity"}})]):_c('li',{attrs:{"data-type":"letter"},on:{"click":_vm._chooseLetter}},[_vm._v(_vm._s(index))])]})],2)]):_vm._e()]):_vm._e()])}
 var cityselect_staticRenderFns = []
 var cityselect_esExports = { render: cityselect_render, staticRenderFns: cityselect_staticRenderFns }
 /* harmony default export */ var src_cityselect = (cityselect_esExports);
 // CONCATENATED MODULE: ./src/lib/cityselect/src/cityselect.vue
 function cityselect_injectStyle (ssrContext) {
-  __webpack_require__("l142")
+  __webpack_require__("27mi")
 }
 var cityselect_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -2124,7 +2379,7 @@ var cityselect___vue_template_functional__ = false
 /* styles */
 var cityselect___vue_styles__ = cityselect_injectStyle
 /* scopeId */
-var cityselect___vue_scopeId__ = "data-v-0a48e0b2"
+var cityselect___vue_scopeId__ = "data-v-7eb72437"
 /* moduleIdentifier (server only) */
 var cityselect___vue_module_identifier__ = null
 var cityselect_Component = cityselect_normalizeComponent(
@@ -2397,7 +2652,14 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADj
 
 /***/ }),
 
-/***/ "awq/":
+/***/ "UTZr":
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \r\n\r\n\r\n@import '@/assets/css/var.less'\r\n^\r\nMissing semi-colon or unrecognised media features on import\r\n      in D:\\github\\lumos-vue\\src\\App.vue (line 81, column 0)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at <anonymous>\n    at runMicrotasksCallback (internal/process/next_tick.js:121:5)\n    at _combinedTickCallback (internal/process/next_tick.js:131:7)\n    at process._tickCallback (internal/process/next_tick.js:180:9)");
+
+/***/ }),
+
+/***/ "WrJS":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -2418,14 +2680,14 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADj
 
 /***/ }),
 
-/***/ "l142":
+/***/ "qP9P":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ "qP9P":
+/***/ "rdxS":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -2468,4 +2730,4 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.82ecde7af98025c919f7.js.map
+//# sourceMappingURL=app.22e0d659bbc5cf6cf0b5.js.map

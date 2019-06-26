@@ -322,10 +322,10 @@
                 height: 2.8rem;
                 display: -webkit-box;
                 background: #fafafa;
+                padding-left: .8rem;
                 .xin-widget-citys-iptbox{
                     -webkit-box-flex: 1.0;
                     height: 100%;
-                    padding: 0 0.12rem;
                     input{
                         width: 100%;
                         height: 100%;
@@ -334,6 +334,8 @@
                         border: none;
                         background: none;
                         box-sizing: border-box;
+                        height: 2.8rem;
+                        font-size: 1rem;
                     }
                     input::-webkit-input-placeholder{
                         color: #cdcdcd;
@@ -344,16 +346,18 @@
                     width: 3rem;
                     height: 100%;
                     line-height: 2.8rem;
-                    text-align: center;
+                    text-align: right;
                     color: #999999;
                     display: block;
                     text-decoration: none;
+                    padding-right: .8rem
                 }
             }
             .xin-widget-citys-local{
                 height: 3rem;
                 line-height: 3rem;
                 text-indent: 0.16rem;
+                color: #006dee;
             }
             .xin-widget-citys-list{
                 position: relative;
@@ -392,7 +396,7 @@
                 line-height: 2.8rem;
             }
             .nomatch{
-                line-height: 0.5rem;
+                line-height: 2.8rem;
                 text-align: center;
                 color: #aaa;
             }

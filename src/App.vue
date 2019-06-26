@@ -5,10 +5,6 @@
 </template>
 
 <style>
-
-
-
-
 #app {
   cursor:pointer;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -18,3 +14,10 @@
   color: #2c3e50;
 }
 </style>
+
+<style lang="less">
+
+  @import './assets/css/var.less';
+   
+</style>
+

@@ -38,6 +38,10 @@ img{
     padding-top: 0;
 }
 
+.mb5{
+    margin-bottom: 5rem;
+}
+
 .lumos-hid{
     display: none;
 }
@@ -125,6 +129,16 @@ img{
     background-color: #006dee;
     color: #fff;
 }
+
+.lumos-button.lumos-button-bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    clear: both;
+    display: block;
+    border-radius: 0;
+}
+
 .lumos-button.lumos-button-block, .lumos-button.lumos-button-full {
     margin-top: 10px;
     margin-bottom: 10px;

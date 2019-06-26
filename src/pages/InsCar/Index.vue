@@ -9,13 +9,14 @@
 
    <div class="block-companyrules" >
     <div class="titlebar">
-      <div class="bar-left">
+      <div class="titlebar-left">
         <span class="icon">
           <img src="@/assets/images/home/titlebar_icon.png">
         </span>
         <span class="title">保险公司</span>
       </div>
-      <div class="bar-right"></div>
+      <div class="titlebar-right">
+      </div>
     </div>
 
     <ul class="list-companyrules" v-if="companyRules.length>0" >
@@ -63,8 +64,7 @@
     
     </div>
 
-
-   <button  @click="goAsCarInfo"  class="lumos-button lumos-button-positive lumos-button-block" >立即询价</button>
+   <button  @click="goAsCarInfo"  class="lumos-button lumos-button-positive lumos-button-block br4" >立即询价</button>
 
    
       <div class="manr">
@@ -78,13 +78,13 @@
   </div>
 <div class="block-searchplatenorecords"  >
     <div class="titlebar">
-      <div class="bar-left">
+      <div class="titlebar-left">
         <span class="icon">
           <img src="@/assets/images/home/titlebar_icon.png">
         </span>
         <span class="title">历史记录</span>
       </div>
-      <div class="bar-right"></div>
+      <div class="titlebar-right"></div>
     </div>
 
 
@@ -135,25 +135,25 @@
   background-color: #fff;
 }
 
-.titlebar .bar-left {
+.titlebar .titlebar-left {
   flex: 1;
   justify-content: flex-start;
   display: flex;
   align-items: center;
 }
 
-.titlebar .bar-left .icon {
+.titlebar .titlebar-left .icon {
   width: 0.4rem;
   height: 2rem;
 }
 
-.titlebar .bar-left .title {
+.titlebar .titlebar-left .title {
   font-weight: 600;
   font-size: 1.6rem;
   margin-left: 0.3rem;
 }
 
-.titlebar .bar-right {
+.titlebar .titlebar-right {
   flex: 1;
   justify-content: flex-end;
   display: flex;
@@ -336,16 +336,28 @@ export default {
       this.city.isShow = false;
     },
     goAsCarInfo() {
-       console.log("goAsCarInfo");
-       this.$router.push({
-         path: "/InsCar/As/CarInfo"
-       });
+      var plateNo = "粤A8K96A";
+
+      this.$http
+        .get("/InsCar/SearchCarInfo", { "plateNo":plateNo })
+        .then(res => {
+          console.log(res);
+          var d = res.data;
+        })
+        .catch(error => {
+          alert(error);
+        });
+
+      // console.log("goAsCarInfo");
+      // this.$router.push({
+      //   path: "/InsCar/As/CarInfo"
+      // });
     },
     goMsCarInfo() {
-        console.log("goMsCarInfo");
-         this.$router.push({
-         path: "/InsCar/Ms/CarInfo",
-       });
+      console.log("goMsCarInfo");
+      this.$router.push({
+        path: "/InsCar/Ms/CarInfo"
+      });
     }
   },
   mounted: function() {

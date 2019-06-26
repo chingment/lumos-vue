@@ -63,7 +63,8 @@ export default {
     });
   },
   get(url, params) {
-    params = qs.stringify(params);
+    //params = qs.stringify(params);
+    //console.log("params:"+params)
     return axios({
       method: "get",
       url,
