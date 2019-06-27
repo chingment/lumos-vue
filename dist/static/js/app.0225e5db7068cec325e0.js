@@ -1,5 +1,12 @@
 webpackJsonp([1],{
 
+/***/ "/N5t":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "1V5X":
 /***/ (function(module, exports) {
 
@@ -28,7 +35,14 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAgCAYAAABt
 
 /***/ }),
 
-/***/ "A9gp":
+/***/ "7WHE":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "8/He":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -63,13 +77,6 @@ module.exports = __webpack_require__.p + "static/img/loading.b74908f.gif";
 
 /***/ }),
 
-/***/ "G/5i":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "JSSc":
 /***/ (function(module, exports) {
 
@@ -100,15 +107,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // EXTERNAL MODULE: ./node_modules/vue/dist/vue.esm.js
 var vue_esm = __webpack_require__("7+uW");
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-25a48234","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/App.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-37757612","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/App.vue
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('router-view')],1)}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ var App = (esExports);
 // CONCATENATED MODULE: ./src/App.vue
 function injectStyle (ssrContext) {
-  __webpack_require__("A9gp")
-  __webpack_require__("UTZr")
+  __webpack_require__("8/He")
+  __webpack_require__("UdBE")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -476,7 +483,6 @@ var Index_Component = Index_normalizeComponent(
 //
 //
 //
-//
 
 /* harmony default export */ var InsCar_Index = ({
   data() {
@@ -570,10 +576,37 @@ var Index_Component = Index_normalizeComponent(
       this.city.isShow = false;
     },
     goAsCarInfo() {
-      console.log("goAsCarInfo");
-      this.$router.push({
-        path: "/InsCar/As/CarInfo"
+      var plateNo = "粤A8K96A";
+      let _this = this;
+      this.$http.get("/InsCar/SearchCarPlateNoInfo", { plateNo: plateNo }).then(res => {
+        if (res.result == 1) {
+          var d = res.data;
+
+          _this.$router.push({
+            name: 'InsCarAsCarInfo',
+            path: "/InsCar/As/CarInfo",
+            params: {
+              carPlateNoInfo: d
+            }
+          });
+        } else {
+          this.$confirm({
+            title: "提示",
+            msg: "搜索不到车辆信息，是否需要人工报价？",
+            yesBtnText: "人工报价",
+            yesClick: () => {
+              _this.$router.push({
+                path: "/InsCar/Ms/CarInfo"
+              });
+            }
+          });
+        }
       });
+
+      // console.log("goAsCarInfo");
+      // this.$router.push({
+      //   path: "/InsCar/As/CarInfo"
+      // });
     },
     goMsCarInfo() {
       console.log("goMsCarInfo");
@@ -592,14 +625,14 @@ var Index_Component = Index_normalizeComponent(
     };
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-4deee59e","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsCar/Index.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-57490c24","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsCar/Index.vue
 var InsCar_Index_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('lumos-header',{attrs:{"title":_vm.header.title,"rightButton":_vm.header.rightButton},on:{"rightButtonVonBadgeChange":_vm.rightButtonVonBadgeChange}}),_vm._v(" "),_c('div',{staticClass:"block-companyrules"},[_vm._m(0),_vm._v(" "),(_vm.companyRules.length>0)?_c('ul',{staticClass:"list-companyrules"},[_vm._l((this.companyRules),function(companyRule,index){return [_c('li',{key:index,staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":companyRule.companyImgUrl}})]),_vm._v(" "),_c('span',{staticClass:"name"},[_vm._v(_vm._s(companyRule.companyName))])]),_vm._v(" "),_c('div',{staticClass:"item-right"},[_c('span',{staticClass:"rate"},[_vm._v(_vm._s(companyRule.commissionRate))])])])]})],2):_c('div',{staticClass:"empty-companyrules"},[_vm._v("\n      暂无数据\n    ")])]),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_c('div',{staticClass:"block-serarch"},[_c('div',{staticClass:"lumos-lnav"},[_c('plateNumber',{on:{"getPlateLicense":_vm.getPlateLicense}}),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-lefticon lumos-hid"}),_vm._v(" "),_c('div',{staticClass:"item-content"},[_c('div',{staticClass:"title"},[_vm._v(" 投保城市  ")]),_vm._v(" "),_c('div',{staticClass:"note",on:{"click":function($event){return _vm.citySelectOpen()}}},[_vm._v(" "+_vm._s(_vm.city.localCity.cityName)+" ")])]),_vm._v(" "),_vm._m(1)])],1),_vm._v(" "),_c('button',{staticClass:"lumos-button lumos-button-positive lumos-button-block br4",on:{"click":_vm.goAsCarInfo}},[_vm._v("立即询价")]),_vm._v(" "),_c('div',{staticClass:"manr"},[_c('span',{on:{"click":_vm.goMsCarInfo}},[_vm._v("人工报价")]),_vm._v(" "),_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])]),_vm._v(" "),_c('div',{staticClass:"block-searchplatenorecords"},[_vm._m(2),_vm._v(" "),(_vm.searchPlateNoRecords.length>0)?_c('div',{staticClass:"list-searchplatenorecords"},[_vm._l((this.searchPlateNoRecords),function(searchPlateNoRecord,index){return [_c('div',{key:index,staticClass:"item"},[_c('span',[_vm._v(_vm._s(searchPlateNoRecord.plateNo))])])]})],2):_c('div',{staticClass:"empty-searchplatenorecords"},[_vm._v("\n      暂无记录\n    ")])]),_vm._v(" "),_c('lumos-cityselect',{attrs:{"is-show":_vm.city.isShow,"on-choose":_vm.city.onChoose,"city-data":_vm.city.cityData,"local-city":_vm.city.localCity,"star-city":_vm.city.starCity,"close":_vm.citySelectClose},on:{"update:isShow":function($event){return _vm.$set(_vm.city, "isShow", $event)},"update:is-show":function($event){return _vm.$set(_vm.city, "isShow", $event)}}})],1)}
 var InsCar_Index_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"titlebar"},[_c('div',{staticClass:"titlebar-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("保险公司")])]),_vm._v(" "),_c('div',{staticClass:"titlebar-right"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-righticon"},[_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"titlebar"},[_c('div',{staticClass:"titlebar-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("历史记录")])]),_vm._v(" "),_c('div',{staticClass:"titlebar-right"})])}]
 var InsCar_Index_esExports = { render: InsCar_Index_render, staticRenderFns: InsCar_Index_staticRenderFns }
 /* harmony default export */ var pages_InsCar_Index = (InsCar_Index_esExports);
 // CONCATENATED MODULE: ./src/pages/InsCar/Index.vue
 function Index_injectStyle (ssrContext) {
-  __webpack_require__("G/5i")
+  __webpack_require__("7WHE")
 }
 var InsCar_Index_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -612,7 +645,7 @@ var InsCar_Index___vue_template_functional__ = false
 /* styles */
 var InsCar_Index___vue_styles__ = Index_injectStyle
 /* scopeId */
-var InsCar_Index___vue_scopeId__ = "data-v-4deee59e"
+var InsCar_Index___vue_scopeId__ = "data-v-57490c24"
 /* moduleIdentifier (server only) */
 var InsCar_Index___vue_module_identifier__ = null
 var InsCar_Index_Component = InsCar_Index_normalizeComponent(
@@ -731,9 +764,32 @@ var InsCar_Index_Component = InsCar_Index_normalizeComponent(
 //
 //
 
+
+
+
 /* harmony default export */ var CarInfo = ({
   data() {
-    return {};
+    return {
+      carPlateNoInfo: {
+        carInfo: {
+          plateNo: "",
+          vin: "",
+          engineNo: "",
+          registerDate: "",
+          modelCode: "",
+          modelName: "",
+          displacement: "",
+          marketYear: "",
+          passengerNumber: "",
+          purchasePrice: "",
+          tonnage: "",
+          wholeWeight: "",
+          isTransfer: false,
+          transferDate: "",
+          isCompanyCar: false
+        }
+      }
+    };
   },
   methods: {
     goAsChooseKind() {
@@ -742,18 +798,23 @@ var InsCar_Index_Component = InsCar_Index_normalizeComponent(
         path: "/InsCar/As/ChooseKind"
       });
     }
-  }
+  },
+  mounted: function () {
+    var carPlateNoInfo = this.$route.params.carPlateNoInfo;
+    //console.log(carPlateNoInfo);
+    //this.carPlateNoInfo=carPlateNoInfo;
+    //this.carPlateNoInfo.carInfo.plateNo = "DASDADS";
+    this.carPlateNoInfo = Object.assign({}, carPlateNoInfo);
+    //Vue.set(carPlateNoInfo,'carInfo',carPlateNoInfo.carInfo);
 
+  }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-66e651af","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsCar/As/CarInfo.vue
-var CarInfo_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"mb5"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_vm._m(1),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_vm._m(2),_vm._v(" "),_c('button',{staticClass:"lumos-button lumos-button-positive lumos-button-bottom",on:{"click":_vm.goAsChooseKind}},[_vm._v("下一步")])])}
-var CarInfo_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"frmgrid"},[_c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("行驶证信息")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})]),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车牌号")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text","value":"粤AT810P"}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车架号")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text"}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车型")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text"}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("发动机号")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text"}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("注册日期")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text"}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"frmgrid"},[_c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("是否公司车")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})]),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车主")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text","value":""}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("证件号码")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text","value":""}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"frmgrid"},[_c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("是否过户车")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})]),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("过户日期")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text","value":""}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])])}]
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-65651d06","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsCar/As/CarInfo.vue
+var CarInfo_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"mb5"},[_c('div',{staticClass:"frmgrid"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_vm._m(1),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.plateNo),expression:"carPlateNoInfo.carInfo.plateNo"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.plateNo)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "plateNo", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_vm._m(2),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.vin),expression:"carPlateNoInfo.carInfo.vin"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.vin)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "vin", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_vm._m(3),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.modelName),expression:"carPlateNoInfo.carInfo.modelName"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.modelName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "modelName", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_vm._m(4),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.engineNo),expression:"carPlateNoInfo.carInfo.engineNo"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.engineNo)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "engineNo", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_vm._m(5),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.registerDate),expression:"carPlateNoInfo.carInfo.registerDate"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.registerDate)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "registerDate", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])]),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_c('div',{staticClass:"frmgrid"},[_vm._m(6),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_vm._m(7),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carOwner.name),expression:"carPlateNoInfo.carOwner.name"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carOwner.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carOwner, "name", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_vm._m(8),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carOwner.certNo),expression:"carPlateNoInfo.carOwner.certNo"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carOwner.certNo)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carOwner, "certNo", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])]),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_c('div',{staticClass:"frmgrid"},[_vm._m(9),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_vm._m(10),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.transferDate),expression:"carPlateNoInfo.carInfo.transferDate"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.transferDate)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "transferDate", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])]),_vm._v(" "),_c('button',{staticClass:"lumos-button lumos-button-positive lumos-button-bottom",on:{"click":_vm.goAsChooseKind}},[_vm._v("下一步")])])}
+var CarInfo_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("行驶证信息")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车牌号")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车架号")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车型")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("发动机号")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("注册日期")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("是否公司车")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车主")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("证件号码")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("是否过户车")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("过户日期")])])}]
 var CarInfo_esExports = { render: CarInfo_render, staticRenderFns: CarInfo_staticRenderFns }
 /* harmony default export */ var As_CarInfo = (CarInfo_esExports);
 // CONCATENATED MODULE: ./src/pages/InsCar/As/CarInfo.vue
-function CarInfo_injectStyle (ssrContext) {
-  __webpack_require__("WrJS")
-}
 var CarInfo_normalizeComponent = __webpack_require__("VU/8")
 /* script */
 
@@ -763,9 +824,9 @@ var CarInfo_normalizeComponent = __webpack_require__("VU/8")
 /* template functional */
 var CarInfo___vue_template_functional__ = false
 /* styles */
-var CarInfo___vue_styles__ = CarInfo_injectStyle
+var CarInfo___vue_styles__ = null
 /* scopeId */
-var CarInfo___vue_scopeId__ = "data-v-66e651af"
+var CarInfo___vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var CarInfo___vue_module_identifier__ = null
 var CarInfo_Component = CarInfo_normalizeComponent(
@@ -834,12 +895,112 @@ var ChooseKind_Component = ChooseKind_normalizeComponent(
 
 /* harmony default export */ var InsCar_As_ChooseKind = (ChooseKind_Component.exports);
 
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/pages/InsCar/As/InsOffer.vue
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var InsOffer = ({
+  data() {
+    return {};
+  },
+  methods: {
+    goAsChooseKind() {
+      console.log("goAsChooseKind");
+      this.$router.push({
+        path: "/InsCar/As/ChooseKind"
+      });
+    }
+  }
+
+});
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-322734e6","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsCar/As/InsOffer.vue
+var InsOffer_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"mb5"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_vm._m(1),_vm._v(" "),_c('button',{staticClass:"lumos-button lumos-button-positive lumos-button-bottom",on:{"click":_vm.goAsChooseKind}},[_vm._v("下一步")])])}
+var InsOffer_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"frmgrid"},[_c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("车辆信息")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})]),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车牌号")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text","value":"粤AT810P"}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车架号")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text"}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车型")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text"}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("发动机号")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text"}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("注册日期")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text"}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"frmgrid"},[_c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("投保信息")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})]),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车主")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text","value":""}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("证件号码")])]),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{attrs:{"type":"text","value":""}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])])}]
+var InsOffer_esExports = { render: InsOffer_render, staticRenderFns: InsOffer_staticRenderFns }
+/* harmony default export */ var As_InsOffer = (InsOffer_esExports);
 // CONCATENATED MODULE: ./src/pages/InsCar/As/InsOffer.vue
 var InsOffer_normalizeComponent = __webpack_require__("VU/8")
 /* script */
-var InsOffer___vue_script__ = null
+
+
 /* template */
-var __vue_template__ = null
+
 /* template functional */
 var InsOffer___vue_template_functional__ = false
 /* styles */
@@ -849,15 +1010,15 @@ var InsOffer___vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var InsOffer___vue_module_identifier__ = null
 var InsOffer_Component = InsOffer_normalizeComponent(
-  InsOffer___vue_script__,
-  __vue_template__,
+  InsOffer,
+  As_InsOffer,
   InsOffer___vue_template_functional__,
   InsOffer___vue_styles__,
   InsOffer___vue_scopeId__,
   InsOffer___vue_module_identifier__
 )
 
-/* harmony default export */ var InsOffer = (InsOffer_Component.exports);
+/* harmony default export */ var InsCar_As_InsOffer = (InsOffer_Component.exports);
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-18605907","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsCar/Ms/CarInfo.vue
 var Ms_CarInfo_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n  上传证件\n")])}
@@ -1102,7 +1263,7 @@ vue_esm["a" /* default */].use(vue_router_esm["a" /* default */]);
     path: '/Home/Index', name: 'HomeIndex', component: pages_Home_Index, children: [{ path: '/InsCar', name: 'InsCar', component: src_pages_InsCar_Index, meta: { requireAuth: true } }, { path: '/InsMarket', name: 'InsMarket', component: pages_InsMarket_Index, meta: { requireAuth: true } }, { path: '/InsClaim', name: 'InsClaim', component: src_pages_InsClaim_Index, meta: { requireAuth: true } }, { path: '/My', name: 'My', component: pages_My_Index, meta: { requireAuth: false } }]
   }, {
     path: '/Hello', name: 'Hello', component: src_pages_hello
-  }, { path: '/InsCar/As/CarInfo', name: 'InsCarAsCarInfo', component: InsCar_As_CarInfo, meta: { requireAuth: true } }, { path: '/InsCar/As/ChooseKind', name: 'InsCarAsChooseKind', component: InsCar_As_ChooseKind, meta: { requireAuth: true } }, { path: '/InsCar/As/InsOffer', name: 'InsCarAsInsOffer', component: InsOffer, meta: { requireAuth: true } }, { path: '/InsCar/Ms/CarInfo', name: 'InsCarMsCarInfo', component: InsCar_Ms_CarInfo, meta: { requireAuth: true } }]
+  }, { path: '/InsCar/As/CarInfo', name: 'InsCarAsCarInfo', component: InsCar_As_CarInfo, meta: { requireAuth: true } }, { path: '/InsCar/As/ChooseKind', name: 'InsCarAsChooseKind', component: InsCar_As_ChooseKind, meta: { requireAuth: true } }, { path: '/InsCar/As/InsOffer', name: 'InsCarAsInsOffer', component: InsCar_As_InsOffer, meta: { requireAuth: true } }, { path: '/InsCar/Ms/CarInfo', name: 'InsCarMsCarInfo', component: InsCar_Ms_CarInfo, meta: { requireAuth: true } }]
 }));
 // EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
 var vuex_esm = __webpack_require__("NYxO");
@@ -1200,6 +1361,8 @@ function checkStatus(response) {
     if (response && (response.status === 200 || response.status === 304 || response.status === 400)) {
       resolve(response.data);
     } else {
+
+      alert("网络异常");
       reject({
         state: "0",
         message: "网络异常"
@@ -1219,7 +1382,8 @@ function checkStatus(response) {
     });
   },
   get(url, params) {
-    params = lib_default.a.stringify(params);
+    //params = qs.stringify(params);
+    //console.log("params:"+params)
     return axios_default()({
       method: "get",
       url,
@@ -1843,48 +2007,48 @@ const plateNumber_clickoutside = {
     }
     // 给当前元素绑定个私有变量，方便在unbind中可以解除事件监听
     el.__vueClickOutside__ = documentHandler;
-    document.addEventListener('click', documentHandler);
+    document.addEventListener("click", documentHandler);
   },
   update() {},
   unbind(el, binding) {
     // 解除事件监听
-    document.removeEventListener('click', el.__vueClickOutside__);
+    document.removeEventListener("click", el.__vueClickOutside__);
     delete el.__vueClickOutside__;
   }
 };
 
 /* harmony default export */ var plateNumber = ({
-  name: 'plateNumber',
+  name: "plateNumber",
   data() {
     return {
       show: true,
       formData: {
-        commonCard: '1',
-        num0: '',
-        num1: '',
-        num2: '',
-        num3: '',
-        num4: '',
-        num5: '',
-        num6: '',
-        num7: ''
+        commonCard: "1",
+        num0: "",
+        num1: "",
+        num2: "",
+        num3: "",
+        num4: "",
+        num5: "",
+        num6: "",
+        num7: ""
       },
       allKeyWord: {
         _1: [1, 2, 3, 4, 5, 6, 7],
         _2: [8, 9, 0],
-        _3: ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
-        _4: ['H', 'J', 'K', 'L', 'M', 'N', 'O'],
-        _5: ['P', 'Q', 'R', 'S', 'T', 'U', 'V'],
-        _6: ['W', 'X', 'Y', 'Z'],
-        _7: ['港', '澳', '学', '领', '警']
+        _3: ["A", "B", "C", "D", "E", "F", "G"],
+        _4: ["H", "J", "K", "L", "M", "N", "O"],
+        _5: ["P", "Q", "R", "S", "T", "U", "V"],
+        _6: ["W", "X", "Y", "Z"],
+        _7: ["港", "澳", "学", "领", "警"]
       },
       activeKeyWordIndex: 1, // 当前车牌号
       keyBoardStatus: false,
       firstWrapStatus: false, // 选择弹窗
-      confirmTitle: '',
+      confirmTitle: "",
       submitConfirm: false,
       submitConfirmFalse: false,
-      submitConfirmText: ''
+      submitConfirmText: ""
     };
   },
   mounted() {},
@@ -1893,19 +2057,17 @@ const plateNumber_clickoutside = {
     handleClose(e) {
       //this.show = false;
       // this.firstWrapStatus=false;
-
       // if(this.keyBoardStatus)
       // {
       //   this.keyBoardStatus=false;
       // }
-
     },
     clickFirstWrap() {
       // 点击第一个输入框
       this.firstClickStatus = true;
       this.firstWrapStatus = true;
       this.keyBoardStatus = false;
-      this.formData.num0 = '';
+      this.formData.num0 = "";
       this.show = true;
       this.$nextTick(() => {
         document.body.scrollTop = 1000;
@@ -1913,7 +2075,7 @@ const plateNumber_clickoutside = {
     },
     selectFirstWord(event) {
       // 选择省份
-      if (event.target.localName !== 'span') {
+      if (event.target.localName !== "span") {
         return;
       }
       this.formData.num0 = event.target.innerText;
@@ -1928,9 +2090,9 @@ const plateNumber_clickoutside = {
     clickKeyBoard(item) {
       // 点击自定义键盘
       console.log(item);
-      this.formData['num' + this.activeKeyWordIndex] = item;
+      this.formData["num" + this.activeKeyWordIndex] = item;
 
-      if (this.formData.commonCard === '1') {
+      if (this.formData.commonCard === "1") {
         this.activeKeyWordIndex++;
         if (this.activeKeyWordIndex > 6) {
           this.keyBoardStatus = false;
@@ -1951,49 +2113,49 @@ const plateNumber_clickoutside = {
       // console.log(this.activeKeyWordIndex)
       // console.log(this.formData['num' + (this.activeKeyWordIndex - 1)])
       if (this.activeKeyWordIndex > 1) {
-        this.formData['num' + (this.activeKeyWordIndex - 1)] = '';
+        this.formData["num" + (this.activeKeyWordIndex - 1)] = "";
         this.activeKeyWordIndex--;
       }
     },
     clickKeyWordWrap(activeKeyWordIndex) {
       this.keyBoardStatus = true;
       this.activeKeyWordIndex = activeKeyWordIndex;
-      this.formData['num' + this.activeKeyWordIndex] = '';
+      this.formData["num" + this.activeKeyWordIndex] = "";
     },
     submitFn() {
       let plateLicense;
-      if (this.formData.commonCard === '1') {
+      if (this.formData.commonCard === "1") {
         plateLicense = this.plate_license_1;
         plateLicense = this.palindrome(plateLicense);
         if (plateLicense.length < 7) {
-          alert('请输入正确的车牌号');
+          alert("请输入正确的车牌号");
           return;
         }
       }
-      if (this.formData.commonCard === '2') {
+      if (this.formData.commonCard === "2") {
         plateLicense = this.plate_license_2;
         plateLicense = this.palindrome(plateLicense);
         if (plateLicense.length < 8) {
-          alert('请输入正确的车牌号');
+          alert("请输入正确的车牌号");
           return;
         }
       }
-      this.$emit('getPlateLicense', plateLicense);
+      this.$emit("getPlateLicense", plateLicense);
       console.log(plateLicense);
       alert(plateLicense);
     },
     palindrome(str) {
-      var arr = str.split('');
+      var arr = str.split("");
       arr = arr.filter(function (val) {
-        return val !== ' ' && val !== ',' && val !== '.' && val !== '?' && val !== ':' && val !== ';' && val !== '`' && val !== "'" && val !== '_' && val !== '/' && val !== '-' && val !== '\\' && val !== '' && val !== '(' && val !== ')';
+        return val !== " " && val !== "," && val !== "." && val !== "?" && val !== ":" && val !== ";" && val !== "`" && val !== "'" && val !== "_" && val !== "/" && val !== "-" && val !== "\\" && val !== "" && val !== "(" && val !== ")";
       });
-      return arr.join('');
+      return arr.join("");
     },
     checkIsHasSpecialStr(str) {
       var flag = false;
-      var arr = str.split('');
+      var arr = str.split("");
       arr.forEach(val => {
-        if (val === '!' || val === '}' || val === '{' || val === ']' || val === '[' || val === '&' || val === '$' || val === '@' || val === ' ' || val === ',' || val === '.' || val === '?' || val === ':' || val === ';' || val === '`' || val === "'" || val === '_' || val === '/' || val === '-' || val === '\\' || val === '' || val === '(' || val === ')') {
+        if (val === "!" || val === "}" || val === "{" || val === "]" || val === "[" || val === "&" || val === "$" || val === "@" || val === " " || val === "," || val === "." || val === "?" || val === ":" || val === ";" || val === "`" || val === "'" || val === "_" || val === "/" || val === "-" || val === "\\" || val === "" || val === "(" || val === ")") {
           flag = true;
         }
       });
@@ -2018,7 +2180,6 @@ const plateNumber_clickoutside = {
 
   watch: {
     firstWrapStatus: function (val, oldval) {
-
       //var cur_top=document.body.scrollTop;
       //console.log("cur_top:"+cur_top);
 
@@ -2045,14 +2206,14 @@ const plateNumber_clickoutside = {
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-0b63d25d","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/lib/plateNumber/src/plateNumber.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-bdc543f0","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/lib/plateNumber/src/plateNumber.vue
 var plateNumber_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"clickoutside",rawName:"v-clickoutside",value:(_vm.handleClose),expression:"handleClose"}],staticClass:"item pdt0",attrs:{"id":"plateNumber"}},[_c('div',{staticClass:"wrap"},[_c('div',{staticClass:"radio-box"},[_c('label',{staticClass:"flex-items-center"},[(_vm.formData.commonCard == 1)?_c('img',{attrs:{"src":__webpack_require__("C2vF"),"alt":""}}):_c('img',{attrs:{"src":__webpack_require__("N5kI"),"alt":""}}),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.formData.commonCard),expression:"formData.commonCard"}],attrs:{"type":"radio","value":"1"},domProps:{"checked":_vm._q(_vm.formData.commonCard,"1")},on:{"change":function($event){return _vm.$set(_vm.formData, "commonCard", "1")}}}),_vm._v("普通车牌\n      ")]),_vm._v(" "),_c('label',{staticClass:"flex-items-center"},[(_vm.formData.commonCard == 2)?_c('img',{attrs:{"src":__webpack_require__("C2vF"),"alt":""}}):_c('img',{attrs:{"src":__webpack_require__("N5kI"),"alt":""}}),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.formData.commonCard),expression:"formData.commonCard"}],attrs:{"type":"radio","value":"2"},domProps:{"checked":_vm._q(_vm.formData.commonCard,"2")},on:{"change":function($event){return _vm.$set(_vm.formData, "commonCard", "2")}}}),_vm._v("新能源车牌\n      ")])]),_vm._v(" "),_c('div',{staticClass:"plate-box"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"num-box"},[_c('div',{staticClass:"num0",on:{"click":function($event){return _vm.clickFirstWrap()}}},[_c('span',[_vm._v(_vm._s(_vm.formData.num0))])]),_vm._v(" "),_c('div',{staticClass:"num1 mgr2",on:{"click":function($event){return _vm.clickKeyWordWrap(1)}}},[_c('span',[_vm._v(_vm._s(_vm.formData.num1))])]),_vm._v(" "),_c('em',{staticClass:"spot"}),_vm._v(" "),_c('div',{staticClass:"num1",on:{"click":function($event){return _vm.clickKeyWordWrap(2)}}},[_c('span',[_vm._v(_vm._s(_vm.formData.num2))])]),_vm._v(" "),_c('div',{staticClass:"num1",on:{"click":function($event){return _vm.clickKeyWordWrap(3)}}},[_c('span',[_vm._v(_vm._s(_vm.formData.num3))])]),_vm._v(" "),_c('div',{staticClass:"num1",on:{"click":function($event){return _vm.clickKeyWordWrap(4)}}},[_c('span',[_vm._v(_vm._s(_vm.formData.num4))])]),_vm._v(" "),_c('div',{staticClass:"num1",on:{"click":function($event){return _vm.clickKeyWordWrap(5)}}},[_c('span',[_vm._v(_vm._s(_vm.formData.num5))])]),_vm._v(" "),_c('div',{staticClass:"num1",on:{"click":function($event){return _vm.clickKeyWordWrap(6)}}},[_c('span',[_vm._v(_vm._s(_vm.formData.num6))])]),_vm._v(" "),(_vm.formData.commonCard == '2')?_c('div',{staticClass:"num1",on:{"click":function($event){return _vm.clickKeyWordWrap(7)}}},[_c('span',[_vm._v(_vm._s(_vm.formData.num7))])]):_vm._e()])])]),_vm._v(" "),(_vm.firstWrapStatus)?_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.show),expression:"show"}],ref:"firstwordwrap",staticClass:"first-word-wrap"},[_c('div',{staticClass:"first-word",on:{"click":function($event){return _vm.selectFirstWord($event)}}},[_vm._m(1),_vm._v(" "),_vm._m(2),_vm._v(" "),_vm._m(3),_vm._v(" "),_vm._m(4),_vm._v(" "),_vm._m(5),_vm._v(" "),_vm._m(6),_vm._v(" "),_vm._m(7),_vm._v(" "),_vm._m(8)]),_vm._v(" "),_c('div',{staticClass:"first-word",on:{"click":function($event){return _vm.selectFirstWord($event)}}},[_vm._m(9),_vm._v(" "),_vm._m(10),_vm._v(" "),_vm._m(11),_vm._v(" "),_vm._m(12),_vm._v(" "),_vm._m(13),_vm._v(" "),_vm._m(14),_vm._v(" "),_vm._m(15),_vm._v(" "),_vm._m(16)]),_vm._v(" "),_c('div',{staticClass:"first-word",on:{"click":function($event){return _vm.selectFirstWord($event)}}},[_vm._m(17),_vm._v(" "),_vm._m(18),_vm._v(" "),_vm._m(19),_vm._v(" "),_vm._m(20),_vm._v(" "),_vm._m(21),_vm._v(" "),_vm._m(22),_vm._v(" "),_vm._m(23),_vm._v(" "),_vm._m(24)]),_vm._v(" "),_c('div',{staticClass:"first-word",on:{"click":function($event){return _vm.selectFirstWord($event)}}},[_vm._m(25),_vm._v(" "),_vm._m(26),_vm._v(" "),_vm._m(27),_vm._v(" "),_vm._m(28),_vm._v(" "),_vm._m(29),_vm._v(" "),_vm._m(30),_vm._v(" "),_vm._m(31),_vm._v(" "),_c('div',{staticClass:"word bordernone"})])]):_vm._e(),_vm._v(" "),(_vm.keyBoardStatus === true)?_c('div',{ref:"keyboardwrap",staticClass:"keyboard-wrap"},[(_vm.activeKeyWordIndex !== 1)?_c('div',{staticClass:"keyboard"},_vm._l((_vm.allKeyWord._1),function(item,index){return _c('span',{key:index,on:{"click":function($event){return _vm.clickKeyBoard(item)}}},[_vm._v(_vm._s(item))])}),0):_vm._e(),_vm._v(" "),(_vm.activeKeyWordIndex !== 1)?_c('div',{staticClass:"keyboard"},[_vm._l((_vm.allKeyWord._2),function(item,index){return _c('span',{key:index,on:{"click":function($event){return _vm.clickKeyBoard(item)}}},[_vm._v(_vm._s(item))])}),_vm._v(" "),_c('span',{staticClass:"bordernone"}),_vm._v(" "),_c('span',{staticClass:"bordernone"}),_vm._v(" "),_c('span',{staticClass:"bordernone"}),_vm._v(" "),_c('span',{staticClass:"bordernone"})],2):_vm._e(),_vm._v(" "),_c('div',{staticClass:"keyboard"},_vm._l((_vm.allKeyWord._3),function(item,index){return _c('span',{key:index,on:{"click":function($event){return _vm.clickKeyBoard(item)}}},[_vm._v(_vm._s(item))])}),0),_vm._v(" "),_c('div',{staticClass:"keyboard"},_vm._l((_vm.allKeyWord._4),function(item,index){return _c('span',{key:index,on:{"click":function($event){return _vm.clickKeyBoard(item)}}},[_vm._v(_vm._s(item))])}),0),_vm._v(" "),_c('div',{staticClass:"keyboard"},_vm._l((_vm.allKeyWord._5),function(item,index){return _c('span',{key:index,on:{"click":function($event){return _vm.clickKeyBoard(item)}}},[_vm._v(_vm._s(item))])}),0),_vm._v(" "),_c('div',{staticClass:"keyboard"},[_vm._l((_vm.allKeyWord._6),function(item,index){return _c('span',{key:index,on:{"click":function($event){return _vm.clickKeyBoard(item)}}},[_vm._v(_vm._s(item))])}),_vm._v(" "),_c('span',{staticClass:"bordernone"}),_vm._v(" "),_c('span',{staticClass:"bordernone"}),_vm._v(" "),_c('span',{staticClass:"bordernone"})],2),_vm._v(" "),(_vm.activeKeyWordIndex !== 1)?_c('div',{staticClass:"keyboard"},[_vm._l((_vm.allKeyWord._7),function(item,index){return _c('span',{key:index,on:{"click":function($event){return _vm.clickKeyBoard(item)}}},[_vm._v(_vm._s(item))])}),_vm._v(" "),_c('span',{staticClass:"bordernone"}),_vm._v(" "),_c('span',{staticClass:"delete",on:{"click":_vm.deleteWord}},[_c('img',{attrs:{"src":__webpack_require__("3+ED"),"alt":""}})])],2):_vm._e(),_vm._v(" "),_c('div',{staticClass:"cancel"},[_c('span',{on:{"click":function($event){_vm.keyBoardStatus = false}}},[_vm._v("完成")])])]):_vm._e()])}
 var plateNumber_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"title-box"},[_c('span',[_vm._v("车牌号")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("京")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("湘")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("津")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("鄂")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("沪")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("粤")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("渝")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("琼")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("翼")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("川")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("晋")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("贵")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("辽")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("云")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("吉")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("陕")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("黑")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("甘")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("苏")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("青")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("浙")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("皖")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("藏")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("闽")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("蒙")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("赣")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("桂")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("鲁")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("宁")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("豫")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"word"},[_c('span',[_vm._v("新")])])}]
 var plateNumber_esExports = { render: plateNumber_render, staticRenderFns: plateNumber_staticRenderFns }
 /* harmony default export */ var src_plateNumber = (plateNumber_esExports);
 // CONCATENATED MODULE: ./src/lib/plateNumber/src/plateNumber.vue
 function plateNumber_injectStyle (ssrContext) {
-  __webpack_require__("xE/G")
+  __webpack_require__("nqnd")
 }
 var plateNumber_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -2065,7 +2226,7 @@ var plateNumber___vue_template_functional__ = false
 /* styles */
 var plateNumber___vue_styles__ = plateNumber_injectStyle
 /* scopeId */
-var plateNumber___vue_scopeId__ = "data-v-0b63d25d"
+var plateNumber___vue_scopeId__ = "data-v-bdc543f0"
 /* moduleIdentifier (server only) */
 var plateNumber___vue_module_identifier__ = null
 var plateNumber_Component = plateNumber_normalizeComponent(
@@ -2440,14 +2601,14 @@ var cityselect_Component = cityselect_normalizeComponent(
     isShow: false
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-77cb5c5c","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/lib/loading/src/loading.vue
-var loading_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isShow),expression:"isShow"}],staticClass:"loading"},[_vm._m(0),_vm._v(" "),_vm._m(1)])}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-27bc1170","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/lib/loading/src/loading.vue
+var loading_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isShow),expression:"isShow"}],staticClass:"lumos-loading"},[_vm._m(0),_vm._v(" "),_vm._m(1)])}
 var loading_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"loading-img"},[_c('img',{staticStyle:{"width":"32px","display":"inline-block"},attrs:{"src":__webpack_require__("F7NO")}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"loading-tips"},[_c('span')])}]
 var loading_esExports = { render: loading_render, staticRenderFns: loading_staticRenderFns }
 /* harmony default export */ var src_loading = (loading_esExports);
 // CONCATENATED MODULE: ./src/lib/loading/src/loading.vue
 function loading_injectStyle (ssrContext) {
-  __webpack_require__("qP9P")
+  __webpack_require__("/N5t")
 }
 var loading_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -2484,7 +2645,7 @@ let Load = {}; // 定义插件对象
 Load.install = (Vue, options) => {
     //Vue的install方法，用于定义vue插件
     // 如果存在loading 不重复创建DOM
-    if (document.getElementsByClassName('.load-status').length) return;
+    if (document.getElementsByClassName('.lumos-loading').length) return;
 
     // 创建一个VUE构造器
     let lTemp = Vue.extend(loading_src_loading);
@@ -2515,7 +2676,219 @@ Load.install = (Vue, options) => {
 };
 // //导出Load
 /* harmony default export */ var lib_loading = (Load);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/lib/confirm/src/confirm.vue
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var src_confirm = ({
+  name: "lumos-confirm",
+  props: {
+    title: {
+      type: String,
+      default: "提示"
+    },
+    msg: {
+      type: String,
+      default: ""
+    },
+    type: {
+      type: String,
+      default: "alert"
+    },
+    alertBtnText: {
+      type: String,
+      default: "我知道了"
+    },
+    yesBtnText: {
+      type: String,
+      default: "确定"
+    },
+    noBtnText: {
+      type: String,
+      default: "取消"
+    }
+  },
+  data() {
+    return {
+      title: this.title,
+      msg: this.msg,
+      type: this.type
+    };
+  },
+  props: {
+    isShow: false,
+    yesClick: {
+      type: Function
+    }
+  },
+  methods: {
+    confirm() {
+      let _this = this;
+      this.isShow = true;
+      return new Promise(function (resolve, reject) {
+        _this.promiseStatus = { resolve, reject };
+      });
+    },
+    noClick() {
+      this.isShow = false;
+      this.promiseStatus && this.promiseStatus.reject();
+    },
+    _yesClick() {
+      this.isShow = false;
+      this.yesClick();
+    },
+    alertClick() {
+      this.isShow = false;
+      this.promiseStatus && this.promiseStatus.resolve();
+    }
+  }
+});
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-2a50bb7f","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/lib/confirm/src/confirm.vue
+var confirm_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isShow),expression:"isShow"}],staticClass:"lumos-confirm"},[_c('div',{staticClass:"wraper"},[_c('div',{staticClass:"confirm-title"},[_vm._v("\r\n                    "+_vm._s(_vm.title)+"\r\n                ")]),_vm._v(" "),_c('p',{staticClass:"confirm-content"},[_c('span',{staticClass:"msg",domProps:{"innerHTML":_vm._s(_vm.msg)}})]),_vm._v(" "),(_vm.type == 'alert')?_c('div',{staticClass:"confirm-operation"},[_c('div',{staticClass:"confirm-btn",on:{"click":function($event){$event.stopPropagation();return _vm.alertClick($event)}}},[_c('span',{staticClass:"my-btn-text"},[_vm._v(_vm._s(_vm.alertBtnText))])])]):_vm._e(),_vm._v(" "),(_vm.type == 'confirm')?_c('div',{staticClass:"confirm-operation"},[_c('div',{staticClass:"cancel-btn br1",on:{"touchstart":function($event){$event.preventDefault();return _vm.noClick($event)}}},[_c('span',{staticClass:"btn-text"},[_vm._v(_vm._s(_vm.noBtnText))])]),_vm._v(" "),_c('div',{staticClass:"confirm-btn",on:{"touchstart":function($event){$event.preventDefault();return _vm._yesClick($event)}}},[_c('span',{staticClass:"btn-text"},[_vm._v(_vm._s(_vm.yesBtnText)+"        ")])])]):_vm._e()])])}
+var confirm_staticRenderFns = []
+var confirm_esExports = { render: confirm_render, staticRenderFns: confirm_staticRenderFns }
+/* harmony default export */ var confirm_src_confirm = (confirm_esExports);
+// CONCATENATED MODULE: ./src/lib/confirm/src/confirm.vue
+function confirm_injectStyle (ssrContext) {
+  __webpack_require__("cv8Y")
+}
+var confirm_normalizeComponent = __webpack_require__("VU/8")
+/* script */
+
+
+/* template */
+
+/* template functional */
+var confirm___vue_template_functional__ = false
+/* styles */
+var confirm___vue_styles__ = confirm_injectStyle
+/* scopeId */
+var confirm___vue_scopeId__ = "data-v-2a50bb7f"
+/* moduleIdentifier (server only) */
+var confirm___vue_module_identifier__ = null
+var confirm_Component = confirm_normalizeComponent(
+  src_confirm,
+  confirm_src_confirm,
+  confirm___vue_template_functional__,
+  confirm___vue_styles__,
+  confirm___vue_scopeId__,
+  confirm___vue_module_identifier__
+)
+
+/* harmony default export */ var lib_confirm_src_confirm = (confirm_Component.exports);
+
+// CONCATENATED MODULE: ./src/lib/confirm/index.js
+
+
+
+
+let Confirm = {}; // 定义插件对象
+
+Confirm.install = (Vue, options) => {
+    //Vue的install方法，用于定义vue插件
+    // 如果存在loading 不重复创建DOM
+    if (document.getElementsByClassName('.lumos-confirm').length) return;
+
+    // 创建一个VUE构造器
+    let lTemp = Vue.extend(lib_confirm_src_confirm);
+
+    // 提供一个在页面上已存在的DOM元素作为Vue实例的挂载目标。
+    // 在实例挂载之后，可以通过$vm.$el访问。
+    // 如果这个选项在实例化时有用到，实例将立即进入编译过程。否则，需要显示调用vm.$mount()手动开启编译(如下)
+    // 提供的元素只能作为挂载点。所有的挂载元素会被vue生成的dom替换。因此不能挂载在顶级元素(html, body)上
+    // let $vm = new toastTpl({
+    //  el: document.createElement('div')
+    // })
+
+    // 实例化VUE实例
+    let $vm = new lTemp();
+
+    // 此处使用$mount来手动开启编译。用$el来访问元素，并插入到body中
+    let tpl = $vm.$mount().$el;
+    document.body.appendChild(tpl);
+
+    let defaultOptions = {
+        title: '提示',
+        yesBtnText: '确定',
+        noBtnText: '取消',
+        isShow: true
+    };
+
+    const confirm = function (options) {
+        Object.assign($vm, defaultOptions, options, {
+            type: 'confirm'
+        });
+    };
+
+    Vue.prototype.$confirm = confirm;
+
+    // Vue.prototype.$loading = { //在Vue的原型上添加实例方法，以全局调用
+    //     show() {
+    //       $vm.isShow = true;
+    //     },
+    //     hide() {
+    //         $vm.isShow = false;
+    //     }
+    // }
+};
+// //导出Load
+/* harmony default export */ var lib_confirm = (Confirm);
+
+// import Vue from 'vue'
+// import message from './src/confirm.vue'
+
+// const VueComponent = Vue.extend(message);
+// const vm = new VueComponent().$mount();
+// let init = false;
+// let defaultOptions = {
+// yesBtnText: '确定',
+// noBtnText: '取消',
+// shhow:false
+// };
+
+// const confirm = function (options) {
+// Object.assign(vm,defaultOptions , options,{
+//     type:'confirm'
+// });
+
+// if (!init) {
+//     document.body.appendChild(vm.$el);
+//     init = true;
+// }
+
+// return vm.confirm();
+// };
+
+// Vue.prototype.$confirm=confirm;
+
+// export default confirm;
 // CONCATENATED MODULE: ./src/lib/index.js
+
 
 
 
@@ -2545,7 +2918,8 @@ var components = {
 };
 
 var uses = {
-    Loading: lib_loading
+    Loading: lib_loading,
+    Confirm: lib_confirm
 };
 
 /* harmony default export */ var src_lib = ({
@@ -2652,14 +3026,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADj
 
 /***/ }),
 
-/***/ "UTZr":
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \r\n\r\n\r\n@import '@/assets/css/var.less'\r\n^\r\nMissing semi-colon or unrecognised media features on import\r\n      in D:\\github\\lumos-vue\\src\\App.vue (line 81, column 0)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at <anonymous>\n    at runMicrotasksCallback (internal/process/next_tick.js:121:5)\n    at _combinedTickCallback (internal/process/next_tick.js:131:7)\n    at process._tickCallback (internal/process/next_tick.js:180:9)");
-
-/***/ }),
-
-/***/ "WrJS":
+/***/ "UdBE":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -2673,6 +3040,13 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADj
 
 /***/ }),
 
+/***/ "cv8Y":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "eCgX":
 /***/ (function(module, exports) {
 
@@ -2680,7 +3054,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADj
 
 /***/ }),
 
-/***/ "qP9P":
+/***/ "nqnd":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -2715,13 +3089,6 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADj
 
 /***/ }),
 
-/***/ "xE/G":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "yy6t":
 /***/ (function(module, exports) {
 
@@ -2730,4 +3097,4 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.22e0d659bbc5cf6cf0b5.js.map
+//# sourceMappingURL=app.0225e5db7068cec325e0.js.map

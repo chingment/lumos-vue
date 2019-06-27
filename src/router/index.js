@@ -29,7 +29,7 @@ export default new Router({
     {
       path: '/Hello', name: 'Hello', component: Hello
     },
-    { path: '/InsCar/As/CarInfo', name: 'InsCarAsCarInfo', component: InsCarAsCarInfo,meta: {requireAuth: true}},
+    { path: '/InsCar/As/CarInfo', name: 'InsCarAsCarInfo', component: InsCarAsCarInfo,meta: {requireAuth: true}  },
     { path: '/InsCar/As/ChooseKind', name: 'InsCarAsChooseKind', component: InsCarAsChooseKind,meta: {requireAuth: true}},
     { path: '/InsCar/As/InsOffer', name: 'InsCarAsInsOffer', component: InsCarAsInsOffer,meta: {requireAuth: true}},
     { path: '/InsCar/Ms/CarInfo', name: 'InsCarMsCarInfo', component: InsCarMsCarInfo,meta: {requireAuth: true}}

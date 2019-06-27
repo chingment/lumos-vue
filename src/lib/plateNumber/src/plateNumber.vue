@@ -222,121 +222,118 @@
   </div>
 </template>
 <script>
-import { fail } from 'assert';
+import { fail } from "assert";
 
 const clickoutside = {
-    // 初始化指令
-    bind(el, binding, vnode) {
-        function documentHandler(e) {
-            // 这里判断点击的元素是否是本身，是本身，则返回
-            if (el.contains(e.target)) {
-                return false;
-            }
-            // 判断指令中是否绑定了函数
-            if (binding.expression) {
-                // 如果绑定了函数 则调用那个函数，此处binding.value就是handleClose方法
-                binding.value(e);
-            }
-        }
-        // 给当前元素绑定个私有变量，方便在unbind中可以解除事件监听
-        el.__vueClickOutside__ = documentHandler;
-        document.addEventListener('click', documentHandler);
-    },
-    update() {},
-    unbind(el, binding) {
-        // 解除事件监听
-        document.removeEventListener('click', el.__vueClickOutside__);
-        delete el.__vueClickOutside__;
-    },
+  // 初始化指令
+  bind(el, binding, vnode) {
+    function documentHandler(e) {
+      // 这里判断点击的元素是否是本身，是本身，则返回
+      if (el.contains(e.target)) {
+        return false;
+      }
+      // 判断指令中是否绑定了函数
+      if (binding.expression) {
+        // 如果绑定了函数 则调用那个函数，此处binding.value就是handleClose方法
+        binding.value(e);
+      }
+    }
+    // 给当前元素绑定个私有变量，方便在unbind中可以解除事件监听
+    el.__vueClickOutside__ = documentHandler;
+    document.addEventListener("click", documentHandler);
+  },
+  update() {},
+  unbind(el, binding) {
+    // 解除事件监听
+    document.removeEventListener("click", el.__vueClickOutside__);
+    delete el.__vueClickOutside__;
+  }
 };
 
 export default {
-  name: 'plateNumber',
-  data () {
+  name: "plateNumber",
+  data() {
     return {
       show: true,
       formData: {
-        commonCard: '1',
-        num0: '',
-        num1: '',
-        num2: '',
-        num3: '',
-        num4: '',
-        num5: '',
-        num6: '',
-        num7: ''
+        commonCard: "1",
+        num0: "",
+        num1: "",
+        num2: "",
+        num3: "",
+        num4: "",
+        num5: "",
+        num6: "",
+        num7: ""
       },
       allKeyWord: {
         _1: [1, 2, 3, 4, 5, 6, 7],
         _2: [8, 9, 0],
-        _3: ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
-        _4: ['H', 'J', 'K', 'L', 'M', 'N', 'O'],
-        _5: ['P', 'Q', 'R', 'S', 'T', 'U', 'V'],
-        _6: ['W', 'X', 'Y', 'Z'],
-        _7: ['港', '澳', '学', '领', '警']
+        _3: ["A", "B", "C", "D", "E", "F", "G"],
+        _4: ["H", "J", "K", "L", "M", "N", "O"],
+        _5: ["P", "Q", "R", "S", "T", "U", "V"],
+        _6: ["W", "X", "Y", "Z"],
+        _7: ["港", "澳", "学", "领", "警"]
       },
       activeKeyWordIndex: 1, // 当前车牌号
       keyBoardStatus: false,
       firstWrapStatus: false, // 选择弹窗
-      confirmTitle: '',
+      confirmTitle: "",
       submitConfirm: false,
       submitConfirmFalse: false,
-      submitConfirmText: ''
-    }
+      submitConfirmText: ""
+    };
   },
-  mounted () {
-  },
-  directives: {clickoutside},
+  mounted() {},
+  directives: { clickoutside },
   methods: {
-     handleClose(e) {
-            //this.show = false;
-            // this.firstWrapStatus=false;
-
-            // if(this.keyBoardStatus)
-            // {
-            //   this.keyBoardStatus=false;
-            // }
-            
-        },
-    clickFirstWrap () {
-      // 点击第一个输入框
-      this.firstClickStatus = true
-      this.firstWrapStatus = true
-      this.keyBoardStatus = false
-      this.formData.num0 = ''
-      this.show=true
-      this.$nextTick(() => {
-        document.body.scrollTop =1000
-      });
-
+    handleClose(e) {
+      //this.show = false;
+      // this.firstWrapStatus=false;
+      // if(this.keyBoardStatus)
+      // {
+      //   this.keyBoardStatus=false;
+      // }
     },
-    selectFirstWord (event) {
+    clickFirstWrap() {
+      // 点击第一个输入框
+      this.firstClickStatus = true;
+      this.firstWrapStatus = true;
+      this.keyBoardStatus = false;
+      this.formData.num0 = "";
+      this.show = true;
+      this.$nextTick(() => {
+        document.body.scrollTop = 1000;
+      });
+    },
+    selectFirstWord(event) {
       // 选择省份
-      if (event.target.localName !== 'span') {
-        return
+      if (event.target.localName !== "span") {
+        return;
       }
-      this.formData.num0 = event.target.innerText
-      this.firstSelectStatus = true
-      this.firstWrapStatus = false
-      this.firstClickStatus = false
-      this.keyBoardStatus = true
-      this.activeKeyWordIndex = 1
+      this.formData.num0 = event.target.innerText;
+      this.firstSelectStatus = true;
+      this.firstWrapStatus = false;
+      this.firstClickStatus = false;
+      this.keyBoardStatus = true;
+      this.activeKeyWordIndex = 1;
       // this.$refs.num1.focus()
       // document.getElementById('num1').focus()
     },
-    clickKeyBoard (item) { // 点击自定义键盘
-      console.log(item)
-      this.formData['num' + this.activeKeyWordIndex] = item
+    clickKeyBoard(item) {
+      // 点击自定义键盘
+      console.log(item);
+      this.formData["num" + this.activeKeyWordIndex] = item;
 
-      if (this.formData.commonCard === '1') {
-        this.activeKeyWordIndex++
+      if (this.formData.commonCard === "1") {
+        this.activeKeyWordIndex++;
         if (this.activeKeyWordIndex > 6) {
-          this.keyBoardStatus = false
+          this.keyBoardStatus = false;
         }
       } else {
-        this.activeKeyWordIndex++
+        this.activeKeyWordIndex++;
         if (this.activeKeyWordIndex > 7) {
-          this.keyBoardStatus = false
+          this.keyBoardStatus = false;
         }
       }
 
@@ -344,108 +341,109 @@ export default {
       //   document.body.scrollTop =0
       // });
     },
-    deleteWord () { // 退格
+    deleteWord() {
+      // 退格
       // console.log(this.activeKeyWordIndex)
       // console.log(this.formData['num' + (this.activeKeyWordIndex - 1)])
       if (this.activeKeyWordIndex > 1) {
-        this.formData['num' + (this.activeKeyWordIndex - 1)] = ''
-        this.activeKeyWordIndex--
+        this.formData["num" + (this.activeKeyWordIndex - 1)] = "";
+        this.activeKeyWordIndex--;
       }
     },
-    clickKeyWordWrap (activeKeyWordIndex) {
-      this.keyBoardStatus = true
-      this.activeKeyWordIndex = activeKeyWordIndex
-      this.formData['num' + this.activeKeyWordIndex] = ''
+    clickKeyWordWrap(activeKeyWordIndex) {
+      this.keyBoardStatus = true;
+      this.activeKeyWordIndex = activeKeyWordIndex;
+      this.formData["num" + this.activeKeyWordIndex] = "";
     },
-    submitFn () {
-      let plateLicense
-      if (this.formData.commonCard === '1') {
-        plateLicense = this.plate_license_1
-        plateLicense = this.palindrome(plateLicense)
+    submitFn() {
+      let plateLicense;
+      if (this.formData.commonCard === "1") {
+        plateLicense = this.plate_license_1;
+        plateLicense = this.palindrome(plateLicense);
         if (plateLicense.length < 7) {
-          alert('请输入正确的车牌号')
-          return
+          alert("请输入正确的车牌号");
+          return;
         }
       }
-      if (this.formData.commonCard === '2') {
-        plateLicense = this.plate_license_2
-        plateLicense = this.palindrome(plateLicense)
+      if (this.formData.commonCard === "2") {
+        plateLicense = this.plate_license_2;
+        plateLicense = this.palindrome(plateLicense);
         if (plateLicense.length < 8) {
-          alert('请输入正确的车牌号')
-          return
+          alert("请输入正确的车牌号");
+          return;
         }
       }
-      this.$emit('getPlateLicense',plateLicense)
+      this.$emit("getPlateLicense", plateLicense);
       console.log(plateLicense);
-      alert(plateLicense)
+      alert(plateLicense);
     },
-    palindrome (str) {
-      var arr = str.split('')
-      arr = arr.filter(function (val) {
+    palindrome(str) {
+      var arr = str.split("");
+      arr = arr.filter(function(val) {
         return (
-          val !== ' ' &&
-          val !== ',' &&
-          val !== '.' &&
-          val !== '?' &&
-          val !== ':' &&
-          val !== ';' &&
-          val !== '`' &&
+          val !== " " &&
+          val !== "," &&
+          val !== "." &&
+          val !== "?" &&
+          val !== ":" &&
+          val !== ";" &&
+          val !== "`" &&
           val !== "'" &&
-          val !== '_' &&
-          val !== '/' &&
-          val !== '-' &&
-          val !== '\\' &&
-          val !== '' &&
-          val !== '(' &&
-          val !== ')'
-        )
-      })
-      return arr.join('')
+          val !== "_" &&
+          val !== "/" &&
+          val !== "-" &&
+          val !== "\\" &&
+          val !== "" &&
+          val !== "(" &&
+          val !== ")"
+        );
+      });
+      return arr.join("");
     },
-    checkIsHasSpecialStr (str) {
-      var flag = false
-      var arr = str.split('')
+    checkIsHasSpecialStr(str) {
+      var flag = false;
+      var arr = str.split("");
       arr.forEach(val => {
         if (
-          val === '!' ||
-          val === '}' ||
-          val === '{' ||
-          val === ']' ||
-          val === '[' ||
-          val === '&' ||
-          val === '$' ||
-          val === '@' ||
-          val === ' ' ||
-          val === ',' ||
-          val === '.' ||
-          val === '?' ||
-          val === ':' ||
-          val === ';' ||
-          val === '`' ||
+          val === "!" ||
+          val === "}" ||
+          val === "{" ||
+          val === "]" ||
+          val === "[" ||
+          val === "&" ||
+          val === "$" ||
+          val === "@" ||
+          val === " " ||
+          val === "," ||
+          val === "." ||
+          val === "?" ||
+          val === ":" ||
+          val === ";" ||
+          val === "`" ||
           val === "'" ||
-          val === '_' ||
-          val === '/' ||
-          val === '-' ||
-          val === '\\' ||
-          val === '' ||
-          val === '(' ||
-          val === ')'
+          val === "_" ||
+          val === "/" ||
+          val === "-" ||
+          val === "\\" ||
+          val === "" ||
+          val === "(" ||
+          val === ")"
         ) {
-          flag = true
+          flag = true;
         }
-      })
-      return flag
+      });
+      return flag;
     },
-    checkIsHasChineseStr (str) {
-      var Reg = /.*[\u4e00-\u9fa5]+.*/
+    checkIsHasChineseStr(str) {
+      var Reg = /.*[\u4e00-\u9fa5]+.*/;
       if (Reg.test(str)) {
-        return true
+        return true;
       }
-      return false
+      return false;
     }
   },
   computed: {
-    plate_license_1 () {
+    plate_license_1() {
       return (
         this.formData.num0 +
         this.formData.num1 +
@@ -454,9 +452,9 @@ export default {
         this.formData.num4 +
         this.formData.num5 +
         this.formData.num6
-      )
+      );
     },
-    plate_license_2 () {
+    plate_license_2() {
       return (
         this.formData.num0 +
         this.formData.num1 +
@@ -466,47 +464,46 @@ export default {
         this.formData.num5 +
         this.formData.num6 +
         this.formData.num7
-      )
+      );
     }
   },
-  
-  watch:{
-     firstWrapStatus:function(val,oldval){
-       
-       //var cur_top=document.body.scrollTop;
-       //console.log("cur_top:"+cur_top);
 
-       // console.log("keyBoardStatus:"+val)
+  watch: {
+    firstWrapStatus: function(val, oldval) {
+      //var cur_top=document.body.scrollTop;
+      //console.log("cur_top:"+cur_top);
 
-      var top=0;
-        if(val){
-          top=300;
-        }
+      // console.log("keyBoardStatus:"+val)
 
-          this.$nextTick(() => {
-      document.body.scrollTop =top
- });
+      var top = 0;
+      if (val) {
+        top = 300;
+      }
+
+      this.$nextTick(() => {
+        document.body.scrollTop = top;
+      });
     },
-    keyBoardStatus:function(val,oldval){
-          var top=0;
-        if(val){
-          top=300;
-        }
+    keyBoardStatus: function(val, oldval) {
+      var top = 0;
+      if (val) {
+        top = 300;
+      }
 
-          this.$nextTick(() => {
-      document.body.scrollTop =top
- });
+      this.$nextTick(() => {
+        document.body.scrollTop = top;
+      });
     }
   }
-}
+};
 </script>
 <style lang="less" scoped>
 .flex-items-center {
   display: flex;
   align-items: center;
 }
-.mgr2{
-  margin-right: .2rem;
+.mgr2 {
+  margin-right: 0.2rem;
 }
 .wrap {
   width: 100%;
@@ -541,23 +538,23 @@ export default {
     color: #4a4a4a;
   }
 
-   .plate-box{
-      display: flex;
-      align-content: center;
-      justify-content: center;
-   }
+  .plate-box {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
 
-   .title-box{
-     flex: 1;
-     display: flex;
+  .title-box {
+    flex: 1;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-        font-size: 1.1rem;
-   }
+    font-size: 1.1rem;
+  }
 
   // input输入框
   .num-box {
-     flex: 1;
+    flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -573,7 +570,7 @@ export default {
       width: 1.6rem;
       height: 1.6rem;
       border: 1px solid #e4e4e4;
-      margin-left: .2rem;
+      margin-left: 0.2rem;
       &.first {
         position: relative;
         text-align: center;
@@ -655,7 +652,7 @@ export default {
 .first-word-wrap {
   // height: 9.4rem;
   z-index: 999;
-  background-color: #D2D5DB;
+  background-color: #d2d5db;
   padding: 0.6rem 0.8rem 1.1rem;
   position: fixed;
   bottom: 0;
@@ -668,16 +665,16 @@ export default {
     .word {
       box-sizing: border-box;
       // width: 1.8rem;
-       height: 1.8rem;
+      height: 1.8rem;
       // border: 1px solid #9cbce2;
-      box-shadow: 0px 1px 4px  rgba(0, 0, 0, 0.35);
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.35);
       border-radius: 0.16rem;
       text-align: center;
       flex: 1;
-      margin: .2rem;
+      margin: 0.2rem;
       &.bordernone {
         border: none;
-        box-shadow:none
+        box-shadow: none;
       }
       span {
         box-sizing: border-box;
@@ -696,14 +693,14 @@ export default {
         width: 1.6rem;
       }
     }
-    &:nth-last-of-type(1){
+    &:nth-last-of-type(1) {
       margin-bottom: 0rem;
     }
   }
 }
 .keyboard-wrap {
   z-index: 9999;
-  background-color: #D2D5DB;
+  background-color: #d2d5db;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -723,36 +720,36 @@ export default {
       justify-content: center;
       height: 1.8rem;
       margin: 0 0.3rem;
-      box-shadow: 0px 1px 4px  rgba(0, 0, 0, 0.35);
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.35);
       background-color: #fff;
       border-radius: 0.125rem;
       flex: 1;
-      margin: .2rem;
+      margin: 0.2rem;
       &:active {
         background-color: #e4e4e4;
       }
-      &.bordernone{
+      &.bordernone {
         border: none;
         box-shadow: none;
-        background-color: #D2D5DB;
-        &:active{
-          background-color:#D2D5DB;
+        background-color: #d2d5db;
+        &:active {
+          background-color: #d2d5db;
         }
       }
-      &.delete{
+      &.delete {
         background-color: #465266;
-        img{
+        img {
           width: 1.15rem;
-          height: .8rem;
+          height: 0.8rem;
         }
       }
     }
   }
-  .cancel{
+  .cancel {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    span{
+    span {
       display: flex;
       align-items: center;
       justify-content: center;

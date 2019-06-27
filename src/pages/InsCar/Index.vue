@@ -122,7 +122,7 @@
 .block-companyrules,
 .block-searchplatenorecords {
   background-color: #fff;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 .block-serarch {
   background-color: #fff;
@@ -143,13 +143,13 @@
 }
 
 .titlebar .titlebar-left .icon {
-  width: 0.4rem;
-  height: 2rem;
+  width: 0.3rem;
+  height: 1.6rem;
 }
 
 .titlebar .titlebar-left .title {
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   margin-left: 0.3rem;
 }
 
@@ -337,16 +337,34 @@ export default {
     },
     goAsCarInfo() {
       var plateNo = "粤A8K96A";
-
+      let _this = this;
       this.$http
-        .get("/InsCar/SearchCarInfo", { "plateNo":plateNo })
+        .get("/InsCar/SearchCarPlateNoInfo", { plateNo: plateNo })
         .then(res => {
-          console.log(res);
-          var d = res.data;
+          if (res.result == 1) {
+            var d = res.data;
+
+            _this.$router.push({
+              name:'InsCarAsCarInfo',
+              path: "/InsCar/As/CarInfo",
+              params: {
+                carPlateNoInfo: d
+              }
+            });
+
+          } else {
+            this.$confirm({
+              title: "提示",
+              msg: "搜索不到车辆信息，是否需要人工报价？",
+              yesBtnText: "人工报价",
+              yesClick: () => {
+                _this.$router.push({
+                  path: "/InsCar/Ms/CarInfo"
+                });
+              }
+            });
+          }
         })
-        .catch(error => {
-          alert(error);
-        });
 
       // console.log("goAsCarInfo");
       // this.$router.push({

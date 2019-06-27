@@ -3,6 +3,7 @@ import header from "./header/src/header";
 import plateNumber from "./plateNumber/src/plateNumber";
 import cityselect from "./cityselect/src/cityselect";
 import Loading from './loading'
+import Confirm from './confirm'
 
 // import loading from "./loading/src/loading";
 // const components={
@@ -27,7 +28,8 @@ var components={
 }
 
 var uses={
-    Loading
+    Loading,
+    Confirm
 }
 
 export default {

@@ -6,7 +6,7 @@ let Load = {};  // 定义插件对象
 
 Load.install = (Vue, options) => { //Vue的install方法，用于定义vue插件
     // 如果存在loading 不重复创建DOM
-    if (document.getElementsByClassName('.load-status').length) return
+    if (document.getElementsByClassName('.lumos-loading').length) return
 
     // 创建一个VUE构造器
     let lTemp = Vue.extend(loadTemp);

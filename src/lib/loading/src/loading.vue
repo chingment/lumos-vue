@@ -1,5 +1,5 @@
 <template>
-    <div class="loading" v-show="isShow" >
+    <div class="lumos-loading" v-show="isShow" >
     <div class="loading-img">
         <img src="@/assets/images/loading.gif" style="width:32px;display: inline-block" />
     </div>
@@ -12,7 +12,7 @@
 
 <style>
 
-   .loading{
+   .lumos-loading{
    position: fixed;
 	outline: none;
 	border: none;

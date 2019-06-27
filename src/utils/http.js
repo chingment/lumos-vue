@@ -44,10 +44,13 @@ function checkStatus(response) {
     ) {
       resolve(response.data);
     } else {
+     
+      alert("网络异常");
       reject({
         state: "0",
         message: "网络异常"
       });
+
     }
   });
 }
