@@ -5,9 +5,10 @@
 </template>
 
 <style>
+@import "./assets/css/base.css";
 #app {
-  cursor:pointer;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -16,8 +17,6 @@
 </style>
 
 <style lang="less">
-
-  @import './assets/css/var.less';
-   
+@import "./assets/css/var.less";
 </style>
 

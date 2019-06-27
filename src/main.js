@@ -8,7 +8,7 @@ import http from "./utils/http";
 
 //import lumosui from 'lumos-ui'
 
-import './assets/css/base.css'
+//import './assets/css/base.css'
 
 //Vue.use(lumosui)
 

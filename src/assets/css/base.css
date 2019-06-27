@@ -38,6 +38,10 @@ img{
     padding-top: 0;
 }
 
+.bdb0 {
+ border-bottom-width: 0px;
+}
+
 .mb5{
     margin-bottom: 5rem;
 }
@@ -49,6 +53,7 @@ img{
 .lumos-page{
   
 }
+
 
 .lumos-tabbody{
     overflow: auto;
@@ -107,27 +112,20 @@ img{
 
 .lumos-button{
         border: 1px solid transparent;
-        background-color: #f5f5f5;
-        color: #444;
+        border-color: transparent;
+        background-color: #006dee;
+        color: #fff;
         position: relative;
         display: inline-block;
         margin: 0;
         padding: 0 12px;
         min-width: 52px;
-        min-height: 47px;
         border-radius: 4px;
         vertical-align: top;
         text-align: center;
         text-overflow: ellipsis;
         font-size: 16px;
-        line-height: 42px;
         cursor: pointer;
-}
-
-.lumos-button.lumos-button-positive {
-    border-color: transparent;
-    background-color: #006dee;
-    color: #fff;
 }
 
 .lumos-button.lumos-button-bottom{
@@ -137,19 +135,17 @@ img{
     clear: both;
     display: block;
     border-radius: 0;
+    height: 46px;
+    line-height: 46px;
 }
 
-.lumos-button.lumos-button-block, .lumos-button.lumos-button-full {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.lumos-button-full>button.lumos-button, button.lumos-button-block, button.lumos-button-full, input.lumos-button.lumos-button-block {
+.lumos-button.lumos-button-full{
+    height: 46px;
+    line-height: 46px;
     width: 100%;
 }
-.lumos-button {
-    min-height: 44px;
-}
-.lumos-button-block {
-    display: block;
-    clear: both;
+
+.lumos-button.lumos-button-private{
+   height: 28px;
+   font-size: .8rem;
 }

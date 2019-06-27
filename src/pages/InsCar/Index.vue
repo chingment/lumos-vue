@@ -64,7 +64,7 @@
     
     </div>
 
-   <button  @click="goAsCarInfo"  class="lumos-button lumos-button-positive lumos-button-block br4" >立即询价</button>
+   <button  @click="goAsCarInfo"  class="lumos-button lumos-button-full" >立即询价</button>
 
    
       <div class="manr">
@@ -224,6 +224,10 @@
 .empty-searchplatenorecords {
   line-height: 2.3rem;
   text-align: left;
+}
+
+.manr{
+  line-height: 2rem;
 }
 
 .manr span {
