@@ -20,9 +20,6 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/', name: 'InsCar', component: InsCarIndex,
-    },
-    {
       path: '/Home/Index', name: 'HomeIndex', component: HomeIndex, children: [
         { path: '/InsCar', name: 'InsCar', component: InsCarIndex,meta: {requireAuth: true}},
         { path: '/InsMarket', name: 'InsMarket', component: InsMarketIndex,meta: {requireAuth: true} },
@@ -37,6 +34,6 @@ export default new Router({
     { path: '/InsCar/As/CarModelSearch', name: 'InsCarAsCarModelSearch', component: InsCarAsCarModelSearch,meta: {requireAuth: true}},
     { path: '/InsCar/As/ChooseKind', name: 'InsCarAsChooseKind', component: InsCarAsChooseKind,meta: {requireAuth: true}},
     { path: '/InsCar/As/InsOffer', name: 'InsCarAsInsOffer', component: InsCarAsInsOffer,meta: {requireAuth: true}},
-    { path: '/InsCar/Ms/CarInfo', name: 'InsCarMsCarInfo', component: Inscarm,meta: {requireAuth: true}}
+    { path: '/InsCar/Ms/CarInfo', name: 'InsCarMsCarInfo', component: InsCarMsCarInfo,meta: {requireAuth: true}}
   ]
 })

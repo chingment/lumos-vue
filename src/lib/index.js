@@ -6,6 +6,7 @@ import cityselect from "./cityselect/src/cityselect";
 import test from "./test/src/test";
 import Loading from './loading'
 import Confirm from './confirm'
+import Toast from './toast'
 
 // import loading from "./loading/src/loading";
 // const components={
@@ -33,10 +34,12 @@ var components={
 
 var uses={
     Loading,
-    Confirm
+    Confirm,
+    Toast
 }
 
 export default {
     components,
-    uses
+    uses,
+    Toast
 }

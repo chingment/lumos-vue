@@ -32,8 +32,7 @@
          <div class="item-left" ><span class="title">车型</span></div>
          <div class="item-middle" ><input type="text"  v-model="carPlateNoInfo.carInfo.modelName" placeholder="请选择车型" /></div>
          <div class="item-right" >
-                
-                     <button class="lumos-button lumos-button-private">选择车型</button>
+             <button @click="searchCarModel" class="lumos-button lumos-button-private">选择车型</button>
          </div>
       </div>
        <div class="item" id="item_carmodel" >
@@ -182,6 +181,13 @@ export default {
           _this.carPlateNoInfo.carInfo.transferDate = date;
         }
       });
+    },
+    searchCarModel ()   {
+      this.toast('dasdadd');
+      this.$router.push({
+        path: "/InsCar/As/CarModelSearch"
+      });
+
     }
   },
   mounted: function() {
