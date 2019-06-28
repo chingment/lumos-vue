@@ -6,6 +6,10 @@ import router from './router'
 import store from './store'
 import http from "./utils/http";
 
+import Calendar from 'vue2-datepick'; //日期控件
+
+Vue.use(Calendar);//日期控件
+
 //import lumosui from 'lumos-ui'
 
 //import './assets/css/base.css'
@@ -38,6 +42,7 @@ Object.keys(lumoslib_uses).forEach((key) => {
 });
 
 
+
 //然后通过 USE方法全局注册
 // import Loading from './lib/loading'
 // Vue.use(Loading);
@@ -66,6 +71,24 @@ router.beforeEach((to, from, next) => {
 
    next();
 })
+
+
+
+Vue.prototype.getNowFormatDate = function() {
+  var date = new Date();
+  var seperator1 = "-";
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var strDate = date.getDate();
+  if (month >= 1 && month <= 9) {
+    month = "0" + month;
+  }
+  if (strDate >= 0 && strDate <= 9) {
+    strDate = "0" + strDate;
+  }
+  var currentdate = year + seperator1 + month + seperator1 + strDate;
+  return currentdate;
+};
 
 
 /* eslint-disable no-new */

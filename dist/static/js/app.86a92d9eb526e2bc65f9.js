@@ -1,5 +1,12 @@
 webpackJsonp([1],{
 
+/***/ "+xJP":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "/N5t":
 /***/ (function(module, exports) {
 
@@ -778,6 +785,11 @@ var InsCar_Index_Component = InsCar_Index_normalizeComponent(
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -817,6 +829,32 @@ var InsCar_Index_Component = InsCar_Index_normalizeComponent(
       this.$router.push({
         path: "/InsCar/As/ChooseKind"
       });
+    },
+    registerDateClick() {
+      var _this = this;
+      var _val = this.carPlateNoInfo.carInfo.registerDate;
+      this.$picker.show({
+        type: "datePicker",
+        date: _val,
+        endTime: "2020-01-01",
+        startTime: "1930-01-01",
+        onOk: date => {
+          _this.carPlateNoInfo.carInfo.registerDate = date;
+        }
+      });
+    },
+    transferDateClick() {
+      var _this = this;
+      var _val = this.carPlateNoInfo.carInfo.transferDate;
+      this.$picker.show({
+        type: "datePicker",
+        date: _val,
+        endTime: "2020-01-01",
+        startTime: "1930-01-01",
+        onOk: date => {
+          _this.carPlateNoInfo.carInfo.transferDate = date;
+        }
+      });
     }
   },
   mounted: function () {
@@ -828,14 +866,14 @@ var InsCar_Index_Component = InsCar_Index_normalizeComponent(
     //Vue.set(carPlateNoInfo,'carInfo',carPlateNoInfo.carInfo);
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-23386d8d","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsCar/As/CarInfo.vue
-var CarInfo_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"mb5"},[_c('div',{staticClass:"frmgrid"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_vm._m(1),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.plateNo),expression:"carPlateNoInfo.carInfo.plateNo"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.plateNo)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "plateNo", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_vm._m(2),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.vin),expression:"carPlateNoInfo.carInfo.vin"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.vin)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "vin", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_vm._m(3),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.engineNo),expression:"carPlateNoInfo.carInfo.engineNo"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.engineNo)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "engineNo", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item bdb0",staticStyle:{"border-bottom-width":"0px"}},[_vm._m(4),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.modelName),expression:"carPlateNoInfo.carInfo.modelName"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.modelName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "modelName", $event.target.value)}}})]),_vm._v(" "),_vm._m(5)]),_vm._v(" "),_c('div',{staticClass:"item",attrs:{"id":"item_carmodel"}},[_vm._m(6),_vm._v(" "),_c('div',{staticClass:"item-middle",staticStyle:{"display":"block"}},[_c('div',{staticClass:"tt1"},[_vm._v(_vm._s(_vm.carPlateNoInfo.carInfo.marketYear)+" 款；"+_vm._s(_vm.carPlateNoInfo.carInfo.passengerNumber)+" 座；排量 "+_vm._s(_vm.carPlateNoInfo.carInfo.displacement)+"；车价 "+_vm._s(_vm.carPlateNoInfo.carInfo.purchasePrice)+" 元")]),_vm._v(" "),_c('div',{staticClass:"tt2"},[_vm._v("* 以上是自动匹配车型，如有错误请重新选择")])]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_vm._m(7),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.registerDate),expression:"carPlateNoInfo.carInfo.registerDate"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.registerDate)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "registerDate", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])]),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_c('div',{staticClass:"frmgrid"},[_vm._m(8),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_vm._m(9),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carOwner.name),expression:"carPlateNoInfo.carOwner.name"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carOwner.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carOwner, "name", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_vm._m(10),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carOwner.certNo),expression:"carPlateNoInfo.carOwner.certNo"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carOwner.certNo)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carOwner, "certNo", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])]),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_c('div',{staticClass:"frmgrid"},[_vm._m(11),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_vm._m(12),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.transferDate),expression:"carPlateNoInfo.carInfo.transferDate"}],attrs:{"type":"text"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.transferDate)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "transferDate", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])]),_vm._v(" "),_c('button',{staticClass:"lumos-button lumos-button-bottom",on:{"click":_vm.goAsChooseKind}},[_vm._v("下一步")])])}
-var CarInfo_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("行驶证信息")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车牌号")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车架号")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("发动机号")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车型")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-right"},[_c('button',{staticClass:"lumos-button lumos-button-private"},[_vm._v("选择车型")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v(" ")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("注册日期")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("是否公司车")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车主")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("证件号码")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("是否过户车")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("过户日期")])])}]
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-31cf7816","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/InsCar/As/CarInfo.vue
+var CarInfo_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"mb5"},[_c('div',{staticClass:"frmgrid"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_vm._m(1),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.plateNo),expression:"carPlateNoInfo.carInfo.plateNo"}],attrs:{"type":"text","placeholder":"请输入车牌号"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.plateNo)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "plateNo", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_vm._m(2),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.vin),expression:"carPlateNoInfo.carInfo.vin"}],attrs:{"type":"text","placeholder":"请输入车架号"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.vin)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "vin", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_vm._m(3),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.engineNo),expression:"carPlateNoInfo.carInfo.engineNo"}],attrs:{"type":"text","placeholder":"请输入发动机号"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.engineNo)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "engineNo", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item bdb0",staticStyle:{"border-bottom-width":"0px"}},[_vm._m(4),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.modelName),expression:"carPlateNoInfo.carInfo.modelName"}],attrs:{"type":"text","placeholder":"请选择车型"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.modelName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "modelName", $event.target.value)}}})]),_vm._v(" "),_vm._m(5)]),_vm._v(" "),_c('div',{staticClass:"item",attrs:{"id":"item_carmodel"}},[_vm._m(6),_vm._v(" "),_c('div',{staticClass:"item-middle",staticStyle:{"display":"block"}},[_c('div',{staticClass:"tt1"},[_vm._v(_vm._s(_vm.carPlateNoInfo.carInfo.marketYear)+" 款；"+_vm._s(_vm.carPlateNoInfo.carInfo.passengerNumber)+" 座；排量 "+_vm._s(_vm.carPlateNoInfo.carInfo.displacement)+"；车价 "+_vm._s(_vm.carPlateNoInfo.carInfo.purchasePrice)+" 元")]),_vm._v(" "),_c('div',{staticClass:"tt2"},[_vm._v("* 以上是自动匹配车型，如有错误请重新选择")])]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_vm._m(7),_vm._v(" "),_c('div',{staticClass:"item-middle",on:{"click":_vm.registerDateClick}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.registerDate),expression:"carPlateNoInfo.carInfo.registerDate"}],attrs:{"type":"text","onfocus":"this.blur();","placeholder":"选择日期"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.registerDate)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "registerDate", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])]),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_c('div',{staticClass:"frmgrid"},[_c('div',{staticClass:"title"},[_vm._m(8),_vm._v(" "),_c('div',{staticClass:"title-right"},[_c('lumos-switch',{model:{value:(_vm.carPlateNoInfo.carInfo.isCompanyCar),callback:function ($$v) {_vm.$set(_vm.carPlateNoInfo.carInfo, "isCompanyCar", $$v)},expression:"carPlateNoInfo.carInfo.isCompanyCar"}})],1)]),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_vm._m(9),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carOwner.name),expression:"carPlateNoInfo.carOwner.name"}],attrs:{"type":"text","placeholder":"车主姓名"},domProps:{"value":(_vm.carPlateNoInfo.carOwner.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carOwner, "name", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.carPlateNoInfo.carInfo.isCompanyCar),expression:"carPlateNoInfo.carInfo.isCompanyCar"}],staticClass:"item"},[_vm._m(10),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carOwner.certNo),expression:"carPlateNoInfo.carOwner.certNo"}],attrs:{"type":"text","placeholder":"请输入证件号码"},domProps:{"value":(_vm.carPlateNoInfo.carOwner.certNo)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carOwner, "certNo", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])]),_vm._v(" "),_c('div',{staticClass:"space"}),_vm._v(" "),_c('div',{staticClass:"frmgrid"},[_c('div',{staticClass:"title"},[_vm._m(11),_vm._v(" "),_c('div',{staticClass:"title-right"},[_c('lumos-switch',{model:{value:(_vm.carPlateNoInfo.carInfo.isTransfer),callback:function ($$v) {_vm.$set(_vm.carPlateNoInfo.carInfo, "isTransfer", $$v)},expression:"carPlateNoInfo.carInfo.isTransfer"}})],1)]),_vm._v(" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.carPlateNoInfo.carInfo.isTransfer),expression:"carPlateNoInfo.carInfo.isTransfer"}],staticClass:"field"},[_c('div',{staticClass:"item"},[_vm._m(12),_vm._v(" "),_c('div',{staticClass:"item-middle",on:{"click":_vm.transferDateClick}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.carPlateNoInfo.carInfo.transferDate),expression:"carPlateNoInfo.carInfo.transferDate"}],attrs:{"type":"text","onfocus":"this.blur();","placeholder":"选择日期"},domProps:{"value":(_vm.carPlateNoInfo.carInfo.transferDate)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.carPlateNoInfo.carInfo, "transferDate", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])]),_vm._v(" "),_c('button',{staticClass:"lumos-button lumos-button-bottom",on:{"click":_vm.goAsChooseKind}},[_vm._v("下一步")])])}
+var CarInfo_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("行驶证信息")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车牌号")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车架号")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("发动机号")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车型")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-right"},[_c('button',{staticClass:"lumos-button lumos-button-private"},[_vm._v("选择车型")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v(" ")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("注册日期")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("是否公司车")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("车主")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("证件号码")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("是否过户车")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"title"},[_vm._v("过户日期")])])}]
 var CarInfo_esExports = { render: CarInfo_render, staticRenderFns: CarInfo_staticRenderFns }
 /* harmony default export */ var As_CarInfo = (CarInfo_esExports);
 // CONCATENATED MODULE: ./src/pages/InsCar/As/CarInfo.vue
 function CarInfo_injectStyle (ssrContext) {
-  __webpack_require__("zMWX")
+  __webpack_require__("i8fi")
 }
 var CarInfo_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -848,7 +886,7 @@ var CarInfo___vue_template_functional__ = false
 /* styles */
 var CarInfo___vue_styles__ = CarInfo_injectStyle
 /* scopeId */
-var CarInfo___vue_scopeId__ = "data-v-23386d8d"
+var CarInfo___vue_scopeId__ = "data-v-31cf7816"
 /* moduleIdentifier (server only) */
 var CarInfo___vue_module_identifier__ = null
 var CarInfo_Component = CarInfo_normalizeComponent(
@@ -1222,19 +1260,33 @@ var My_Index_Component = My_Index_normalizeComponent(
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ var hello = ({
-  name: "app"
+  data() {
+    return {
+      text: {
+        name: "'我是父级组件的内容'"
+      }
+    };
+  },
+  methods: {
+    onChange() {
+      this.text.name = '我是由父级组件触发改变了内容';
+    }
+  }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-48a5fce7","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/hello.vue
-var hello_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n  ss\n")])}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-e531c7c0","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/hello.vue
+var hello_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('p',[_vm._v("我是父级组件")]),_vm._v(" "),_c('p',[_vm._v("父级组件内容："+_vm._s(_vm.text.name))]),_vm._v(" "),_c('hr'),_vm._v(" "),_c('child',{model:{value:(_vm.text.name),callback:function ($$v) {_vm.$set(_vm.text, "name", $$v)},expression:"text.name"}})],1)}
 var hello_staticRenderFns = []
 var hello_esExports = { render: hello_render, staticRenderFns: hello_staticRenderFns }
 /* harmony default export */ var pages_hello = (hello_esExports);
 // CONCATENATED MODULE: ./src/pages/hello.vue
 function hello_injectStyle (ssrContext) {
-  __webpack_require__("rdxS")
+  __webpack_require__("ogF+")
 }
 var hello_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -1247,7 +1299,7 @@ var hello___vue_template_functional__ = false
 /* styles */
 var hello___vue_styles__ = hello_injectStyle
 /* scopeId */
-var hello___vue_scopeId__ = null
+var hello___vue_scopeId__ = "data-v-e531c7c0"
 /* moduleIdentifier (server only) */
 var hello___vue_module_identifier__ = null
 var hello_Component = hello_normalizeComponent(
@@ -1282,6 +1334,8 @@ vue_esm["a" /* default */].use(vue_router_esm["a" /* default */]);
 /* harmony default export */ var router = (new vue_router_esm["a" /* default */]({
   mode: 'history',
   routes: [{
+    path: '/', name: 'InsCar', component: src_pages_InsCar_Index
+  }, {
     path: '/Home/Index', name: 'HomeIndex', component: pages_Home_Index, children: [{ path: '/InsCar', name: 'InsCar', component: src_pages_InsCar_Index, meta: { requireAuth: true } }, { path: '/InsMarket', name: 'InsMarket', component: pages_InsMarket_Index, meta: { requireAuth: true } }, { path: '/InsClaim', name: 'InsClaim', component: src_pages_InsClaim_Index, meta: { requireAuth: true } }, { path: '/My', name: 'My', component: pages_My_Index, meta: { requireAuth: false } }]
   }, {
     path: '/Hello', name: 'Hello', component: src_pages_hello
@@ -1415,6 +1469,10 @@ function checkStatus(response) {
     });
   }
 });
+// EXTERNAL MODULE: ./node_modules/vue2-datepick/lib/index.js
+var vue2_datepick_lib = __webpack_require__("qMlo");
+var vue2_datepick_lib_default = /*#__PURE__*/__webpack_require__.n(vue2_datepick_lib);
+
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/lib/tabbar/src/tabbar.vue
 //
 //
@@ -1777,6 +1835,95 @@ var header_Component = header_normalizeComponent(
 )
 
 /* harmony default export */ var header_src_header = (header_Component.exports);
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/lib/switch/src/switch.vue
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var src_switch = ({
+  name: "lumos-switch",
+  props: {
+    value: {
+      type: Boolean,
+      default: true
+    },
+    text: {
+      type: String,
+      default: "|"
+    }
+  },
+  data() {
+    return {
+      isChecked: this.value
+    };
+  },
+  computed: {
+    direction() {
+      if (this.text) {
+        return this.text.split("|");
+      } else {
+        return [];
+      }
+    }
+  },
+  watch: {
+    value(newVal) {
+      this.isChecked = newVal;
+    },
+    isChecked(newVal) {
+      this.$emit("input", newVal);
+    }
+  },
+  methods: {
+    toggle() {
+      this.isChecked = !this.isChecked;
+    }
+  }
+});
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-2cb2a91a","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/lib/switch/src/switch.vue
+var switch_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('span',{staticClass:"lumos-switch",class:{'lumos-switch-on' : _vm.isChecked},staticStyle:{"position":"relative"},attrs:{"value":_vm.value},on:{"click":_vm.toggle}},[(_vm.isChecked && _vm.direction.length > 0)?_c('div',{staticStyle:{"width":"100%","height":"100%","position":"absolute","padding":"0 5px","line-height":"20px","color":"#FFF","text-align":"left","user-select":"none"}},[_vm._v("\n\t\t\t"+_vm._s(_vm.direction[0])+"\n\t\t")]):_vm._e(),_vm._v(" "),(!_vm.isChecked && _vm.direction.length > 0)?_c('div',{staticStyle:{"width":"100%","height":"100%","position":"absolute","padding":"0 5px","right":"2px","line-height":"22px","color":"#7A7A7A","text-align":"right","user-select":"none"}},[_vm._v("\n\t\t\t"+_vm._s(_vm.direction[1])+"\n\t\t")]):_vm._e()])])}
+var switch_staticRenderFns = []
+var switch_esExports = { render: switch_render, staticRenderFns: switch_staticRenderFns }
+/* harmony default export */ var switch_src_switch = (switch_esExports);
+// CONCATENATED MODULE: ./src/lib/switch/src/switch.vue
+function switch_injectStyle (ssrContext) {
+  __webpack_require__("+xJP")
+}
+var switch_normalizeComponent = __webpack_require__("VU/8")
+/* script */
+
+
+/* template */
+
+/* template functional */
+var switch___vue_template_functional__ = false
+/* styles */
+var switch___vue_styles__ = switch_injectStyle
+/* scopeId */
+var switch___vue_scopeId__ = "data-v-2cb2a91a"
+/* moduleIdentifier (server only) */
+var switch___vue_module_identifier__ = null
+var switch_Component = switch_normalizeComponent(
+  src_switch,
+  switch_src_switch,
+  switch___vue_template_functional__,
+  switch___vue_styles__,
+  switch___vue_scopeId__,
+  switch___vue_module_identifier__
+)
+
+/* harmony default export */ var lib_switch_src_switch = (switch_Component.exports);
 
 // EXTERNAL MODULE: ./node_modules/assert/assert.js
 var assert = __webpack_require__("N+Om");
@@ -2572,6 +2719,79 @@ var cityselect_Component = cityselect_normalizeComponent(
 
 /* harmony default export */ var cityselect_src_cityselect = (cityselect_Component.exports);
 
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/lib/test/src/test.vue
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var test = ({
+  name: "child",
+  props: {
+    //此处一定要用value
+    value: {
+      type: String
+    }
+  },
+  data() {
+    return {
+      myValue: this.value
+    };
+  },
+  methods: {
+    onChange() {
+      this.myValue = '我是由子组件触发改变了内容';
+    }
+  },
+  watch: {
+    //监听prop传的value，如果父级有变化了，将子组件的myValue也跟着变，达到父变子变的效果
+    value(newVal) {
+      this.myValue = newVal;
+    },
+    //监听myValue，如果子组件中的内容变化了，通知父级组件，将新的值告诉父级组件，我更新了，父级组件接受到值后页就跟着变了
+    //参考官网：https://cn.vuejs.org/v2/guide/components-custom-events.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E7%9A%84-v-model
+    myValue(newVal) {
+      this.$emit('input', newVal);
+    }
+  }
+});
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-54a2640e","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/lib/test/src/test.vue
+var test_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('p',[_vm._v("我是子组件")]),_vm._v(" "),_c('p',[_vm._v("子组件内容："+_vm._s(_vm.myValue))]),_vm._v(" "),_c('p',[_c('button',{on:{"click":_vm.onChange}},[_vm._v("改变内容")])])])}
+var test_staticRenderFns = []
+var test_esExports = { render: test_render, staticRenderFns: test_staticRenderFns }
+/* harmony default export */ var src_test = (test_esExports);
+// CONCATENATED MODULE: ./src/lib/test/src/test.vue
+function test_injectStyle (ssrContext) {
+  __webpack_require__("Q5sX")
+}
+var test_normalizeComponent = __webpack_require__("VU/8")
+/* script */
+
+
+/* template */
+
+/* template functional */
+var test___vue_template_functional__ = false
+/* styles */
+var test___vue_styles__ = test_injectStyle
+/* scopeId */
+var test___vue_scopeId__ = "data-v-54a2640e"
+/* moduleIdentifier (server only) */
+var test___vue_module_identifier__ = null
+var test_Component = test_normalizeComponent(
+  test,
+  src_test,
+  test___vue_template_functional__,
+  test___vue_styles__,
+  test___vue_scopeId__,
+  test___vue_module_identifier__
+)
+
+/* harmony default export */ var test_src_test = (test_Component.exports);
+
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/lib/loading/src/loading.vue
 //
 //
@@ -2913,6 +3133,8 @@ Confirm.install = (Vue, options) => {
 
 
 
+
+
 // import loading from "./loading/src/loading";
 // const components={
 //     install(Vue){
@@ -2932,7 +3154,9 @@ var components = {
     tabbar: tabbar_src_tabbar,
     header: header_src_header,
     cityselect: cityselect_src_cityselect,
-    plateNumber: plateNumber_src_plateNumber
+    plateNumber: plateNumber_src_plateNumber,
+    switchc: lib_switch_src_switch,
+    test: test_src_test
 };
 
 var uses = {
@@ -2952,6 +3176,10 @@ var uses = {
 
 
 
+
+ //日期控件
+
+vue_esm["a" /* default */].use(vue2_datepick_lib_default.a); //日期控件
 
 //import lumosui from 'lumos-ui'
 
@@ -3030,6 +3258,13 @@ new vue_esm["a" /* default */]({
 
 /***/ }),
 
+/***/ "Q5sX":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "Tu3O":
 /***/ (function(module, exports) {
 
@@ -3058,6 +3293,13 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADj
 
 /***/ }),
 
+/***/ "i8fi":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "nqnd":
 /***/ (function(module, exports) {
 
@@ -3072,7 +3314,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADj
 
 /***/ }),
 
-/***/ "rdxS":
+/***/ "ogF+":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -3105,14 +3347,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADj
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ8xqgAAABL0lEQVRIia3UzUoDMRDA8f9u68UX8Jn6ENIPQW/t1qN3T4KL2pvbip+Iz+XBNxAE0cN2IIRMNpndXMIMyY/JZ1HX9QRogANgCbzTo42BB+BoH78Bh8DOCpbAyIkL4B5Y9AEvgD8vZ0Zl8nIotNz3mwg6t4AxtMlBSy/eAKs+qA8C3Clo0vJDoIaOUlANNKMxUNBKQWcWEOBWQZsQmgJmoamgoGsFnVpAgBsF3Qo6zgQFBahpfycX/cmt0EVDlV5ZQWi3qwglLW0NXHu5X+DcAmrYFPjIBWPYK+QtuRPLASsFm7lYKljR3rkQ9uIP7gKzsC5Qw+YaFgNj2HOkiCBoxkKgdpqLFMwHBXPfp2BPKZgLDoIJeKZgJ7mYgJcK9piLCfg9FCbgKfAJfAHHfTCAf0LMZOTJk7cFAAAAAElFTkSuQmCC"
 
-/***/ }),
-
-/***/ "zMWX":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.db98b28a0eb03369d1cc.js.map
+//# sourceMappingURL=app.86a92d9eb526e2bc65f9.js.map

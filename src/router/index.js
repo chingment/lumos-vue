@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import HomeIndex from '@/pages/Home/Index'
 import InsCarIndex from '@/pages/InsCar/Index'
 import InsCarAsCarInfo from '@/pages/InsCar/As/CarInfo'
+import InsCarAsCarModelSearch from '@/pages/InsCar/As/CarModelSearch'
 import InsCarAsChooseKind from '@/pages/InsCar/As/ChooseKind'
 import InsCarAsInsOffer from '@/pages/InsCar/As/InsOffer'
 
@@ -19,6 +20,9 @@ export default new Router({
   mode: 'history',
   routes: [
     {
+      path: '/', name: 'InsCar', component: InsCarIndex,
+    },
+    {
       path: '/Home/Index', name: 'HomeIndex', component: HomeIndex, children: [
         { path: '/InsCar', name: 'InsCar', component: InsCarIndex,meta: {requireAuth: true}},
         { path: '/InsMarket', name: 'InsMarket', component: InsMarketIndex,meta: {requireAuth: true} },
@@ -30,8 +34,9 @@ export default new Router({
       path: '/Hello', name: 'Hello', component: Hello
     },
     { path: '/InsCar/As/CarInfo', name: 'InsCarAsCarInfo', component: InsCarAsCarInfo,meta: {requireAuth: true}  },
+    { path: '/InsCar/As/CarModelSearch', name: 'InsCarAsCarModelSearch', component: InsCarAsCarModelSearch,meta: {requireAuth: true}},
     { path: '/InsCar/As/ChooseKind', name: 'InsCarAsChooseKind', component: InsCarAsChooseKind,meta: {requireAuth: true}},
     { path: '/InsCar/As/InsOffer', name: 'InsCarAsInsOffer', component: InsCarAsInsOffer,meta: {requireAuth: true}},
-    { path: '/InsCar/Ms/CarInfo', name: 'InsCarMsCarInfo', component: InsCarMsCarInfo,meta: {requireAuth: true}}
+    { path: '/InsCar/Ms/CarInfo', name: 'InsCarMsCarInfo', component: Inscarm,meta: {requireAuth: true}}
   ]
 })

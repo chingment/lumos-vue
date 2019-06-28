@@ -1,7 +1,9 @@
 import tabbar from "./tabbar/src/tabbar";
 import header from "./header/src/header";
+import switchc from "./switch/src/switch";
 import plateNumber from "./plateNumber/src/plateNumber";
 import cityselect from "./cityselect/src/cityselect";
+import test from "./test/src/test";
 import Loading from './loading'
 import Confirm from './confirm'
 
@@ -24,7 +26,9 @@ var components={
     tabbar,
     header,
     cityselect,
-    plateNumber
+    plateNumber,
+    switchc,
+    test
 }
 
 var uses={

@@ -46,7 +46,7 @@
       </div>
       <div class="item" >
          <div class="item-left" ><span class="title">注册日期</span></div>
-         <div class="item-middle" ><input type="text" v-model="carPlateNoInfo.carInfo.registerDate" placeholder="选择日期" /></div>
+         <div class="item-middle" @click="registerDateClick" ><input type="text" onfocus="this.blur();"  v-model="carPlateNoInfo.carInfo.registerDate" placeholder="选择日期" /></div>
          <div class="item-right" ></div>
       </div>
    </div>
@@ -62,32 +62,7 @@
         <span class="title">是否公司车</span>
       </div>
       <div class="title-right">
-
-    <div class="radiobox">
-        <label class="item">
-          <img v-if="carPlateNoInfo.carInfo.isCompanyCar"
-            src="@/assets/images/icon_chose_s@2x.png"
-            alt="">
-          <img v-else
-            src="@/assets/images/icon_chose_n@2x.png"
-            alt="">
-          <input type="radio"
-            v-model="carPlateNoInfo.carInfo.isCompanyCar"
-             />是
-        </label>
-        <label class="item">
-          <img v-if="carPlateNoInfo.carInfo.isCompanyCar==false"
-            src="@/assets/images/icon_chose_s@2x.png"
-            alt="">
-          <img v-else
-            src="@/assets/images/icon_chose_n@2x.png"
-            alt="">
-          <input type="radio"
-            v-model="carPlateNoInfo.carInfo.isCompanyCar"
-             />否
-        </label>
-      </div>
-
+          <lumos-switch v-model="carPlateNoInfo.carInfo.isCompanyCar" ></lumos-switch>
       </div>
     </div>
 
@@ -97,7 +72,7 @@
          <div class="item-middle" ><input type="text"  v-model="carPlateNoInfo.carOwner.name" placeholder="车主姓名" /></div>
          <div class="item-right" ></div>
       </div>
-       <div class="item" >
+       <div class="item" v-show="carPlateNoInfo.carInfo.isCompanyCar" >
          <div class="item-left" ><span class="title">证件号码</span></div>
          <div class="item-middle" ><input type="text"  v-model="carPlateNoInfo.carOwner.certNo"   placeholder="请输入证件号码"/></div>
          <div class="item-right" ></div>
@@ -118,15 +93,17 @@
         <span class="title">是否过户车</span>
       </div>
       <div class="title-right">
-
-
+             <lumos-switch v-model="carPlateNoInfo.carInfo.isTransfer" ></lumos-switch>
       </div>
     </div>
 
-   <div class="field" >
+   <div class="field" v-show="carPlateNoInfo.carInfo.isTransfer" >
       <div class="item" >
          <div class="item-left" ><span class="title">过户日期</span></div>
-         <div class="item-middle" ><input type="text" v-model="carPlateNoInfo.carInfo.transferDate" placeholder="选择日期" /></div>
+         <div class="item-middle" @click="transferDateClick" >
+         
+           
+           <input type="text" onfocus="this.blur();" v-model="carPlateNoInfo.carInfo.transferDate" placeholder="选择日期" /></div>
          <div class="item-right" ></div>
       </div>
    </div>
@@ -178,6 +155,32 @@ export default {
       console.log("goAsChooseKind");
       this.$router.push({
         path: "/InsCar/As/ChooseKind"
+      });
+    },
+    registerDateClick() {
+      var _this = this;
+      var _val = this.carPlateNoInfo.carInfo.registerDate;
+      this.$picker.show({
+        type: "datePicker",
+        date: _val,
+        endTime: _this.getNowFormatDate(),
+        startTime: "1930-01-01",
+        onOk: date => {
+          _this.carPlateNoInfo.carInfo.registerDate = date;
+        }
+      });
+    },
+    transferDateClick() {
+      var _this = this;
+      var _val = this.carPlateNoInfo.carInfo.transferDate;
+      this.$picker.show({
+        type: "datePicker",
+        date: _val,
+        endTime: _this.getNowFormatDate(),
+        startTime: "1990-01-01",
+        onOk: date => {
+          _this.carPlateNoInfo.carInfo.transferDate = date;
+        }
       });
     }
   },
