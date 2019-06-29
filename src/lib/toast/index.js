@@ -28,7 +28,7 @@ Toast.install = (Vue, options) => { //Vue的install方法，用于定义vue插�
 
     Vue.prototype.$toast = function (test) {
         $vm.isShow = true;
-        setTimeout(() => { vm.show = false })
+        setTimeout(() => { $vm.isShow = false },1500);
     }
 }
 // //导出Load

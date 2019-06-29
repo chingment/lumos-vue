@@ -28,7 +28,7 @@
          <div class="item-middle" ><input type="text" v-model="carPlateNoInfo.carInfo.engineNo" placeholder="请输入发动机号" /></div>
          <div class="item-right" ></div>
       </div>
-      <div class="item bdb0" style="border-bottom-width: 0px;" >
+      <div class="item">
          <div class="item-left" ><span class="title">车型</span></div>
          <div class="item-middle" ><input type="text"  v-model="carPlateNoInfo.carInfo.modelName" placeholder="请选择车型" /></div>
          <div class="item-right" >
@@ -183,10 +183,10 @@ export default {
       });
     },
     searchCarModel ()   {
-      this.toast('dasdadd');
-      this.$router.push({
-        path: "/InsCar/As/CarModelSearch"
-      });
+      this.$toast("dads");
+      // this.$router.push({
+      //   path: "/InsCar/As/CarModelSearch"
+      // });
 
     }
   },
@@ -206,6 +206,7 @@ export default {
   line-height: 1.6rem;
   font-size: 0.8rem;
   padding-top: 0px;
+  border-top-width: 0px;
 }
 
 #item_carmodel .tt1 {

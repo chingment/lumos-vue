@@ -27,11 +27,11 @@ export default {
   name: "lumos-toast",
   data() {
       return {
-
+        isShow:this.aisShow
       }
   },
   props: {
-    isShow: false
+    aisShow: false
   }
 }
 </script>
