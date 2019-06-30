@@ -1,14 +1,22 @@
 <template>
-	<div>
-	    <span class="lumos-switch" :class="{'lumos-switch-on' : isChecked}" :value="value" @click="toggle" style="position:relative">
-			<div v-if="isChecked && direction.length > 0" style="width:100%;height:100%;position:absolute;padding:0 5px;line-height:20px;color:#FFF;text-align:left;user-select:none">
-				{{direction[0]}}
-			</div>
-			<div v-if="!isChecked && direction.length > 0" style="width:100%;height:100%;position:absolute;padding:0 5px;right:2px;line-height:22px;color:#7A7A7A;text-align:right;user-select:none">
-				{{direction[1]}}
-			</div>
-	    </span>
-	</div>
+  <div>
+    <span
+      class="lumos-switch"
+      :class="{'lumos-switch-on' : isChecked}"
+      :value="value"
+      @click="toggle"
+      style="position:relative"
+    >
+      <div
+        v-if="isChecked && direction.length > 0"
+        style="width:100%;height:100%;position:absolute;padding:0 5px;line-height:20px;color:#FFF;text-align:left;user-select:none"
+      >{{direction[0]}}</div>
+      <div
+        v-if="!isChecked && direction.length > 0"
+        style="width:100%;height:100%;position:absolute;padding:0 5px;right:2px;line-height:22px;color:#7A7A7A;text-align:right;user-select:none"
+      >{{direction[1]}}</div>
+    </span>
+  </div>
 </template>
 
 <script>

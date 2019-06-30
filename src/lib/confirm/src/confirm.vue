@@ -1,29 +1,25 @@
 <template>
-<div  class='lumos-confirm' v-show="isShow">
-        <div class="wraper">
-                <div class="confirm-title">
-                    {{title}}
-                </div>
-                <p class="confirm-content">
-                    <span class="msg" v-html="msg"></span>
-                </p>
-                <div class="confirm-operation" v-if="type == 'alert'" >
-                      <div class="confirm-btn" @click.stop="alertClick" > 
-                       <span  class="my-btn-text">{{alertBtnText}}</span>
-                      </div>
-                </div>
-                <div class="confirm-operation" v-if="type == 'confirm'">
-                   
-                    <div  @touchstart.prevent="noClick" class="cancel-btn br1">
-                    <span  class="btn-text">{{noBtnText}}</span>
-                    </div>
-                    <div  @touchstart.prevent="_yesClick"  class="confirm-btn">
-                    <span   class="btn-text">{{yesBtnText}}        </span>
-                    </div>
-                  
-                </div>
+  <div class="lumos-confirm" v-show="isShow">
+    <div class="wraper">
+      <div class="confirm-title">{{title}}</div>
+      <p class="confirm-content">
+        <span class="msg" v-html="msg"></span>
+      </p>
+      <div class="confirm-operation" v-if="type == 'alert'">
+        <div class="confirm-btn" @click.stop="alertClick">
+          <span class="my-btn-text">{{alertBtnText}}</span>
         </div>
-</div>
+      </div>
+      <div class="confirm-operation" v-if="type == 'confirm'">
+        <div @touchstart.prevent="noClick" class="cancel-btn br1">
+          <span class="btn-text">{{noBtnText}}</span>
+        </div>
+        <div @touchstart.prevent="_yesClick" class="confirm-btn">
+          <span class="btn-text">{{yesBtnText}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
 export default {
@@ -56,15 +52,15 @@ export default {
   },
   data() {
     return {
-      title:this.title,
-      msg:this.msg,
-      type:this.type
+      title: this.title,
+      msg: this.msg,
+      type: this.type
     };
   },
   props: {
     isShow: false,
-    yesClick:{
-      type:Function,
+    yesClick: {
+      type: Function
     }
   },
   methods: {
@@ -82,7 +78,6 @@ export default {
     _yesClick() {
       this.isShow = false;
       this.yesClick();
-
     },
     alertClick() {
       this.isShow = false;
@@ -148,9 +143,9 @@ export default {
         flex: 1;
       }
 
-    .cancel-btn{
-      color: #b7b7b7;
-    }
+      .cancel-btn {
+        color: #b7b7b7;
+      }
 
       .confirm-btn {
         color: #ffb000;

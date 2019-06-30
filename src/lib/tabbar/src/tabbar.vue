@@ -3,11 +3,11 @@
     <template v-for="(tab) in this.atabs">
       <router-link class="item" :key="tab.name" :to="tab.pagePath">
         <div class="item-icon">
-          <img v-if="!tab.selected" :src="tab.iconPath" />
-          <img v-if="tab.selected" :src="tab.selectedIconPath"/>
+          <img v-if="!tab.selected" :src="tab.iconPath">
+          <img v-if="tab.selected" :src="tab.selectedIconPath">
         </div>
         <div class="item-text">
-          <span :class="tab.selected?'active':'normal'" >{{ tab.text }}</span>
+          <span :class="tab.selected?'active':'normal'">{{ tab.text }}</span>
         </div>
         <div class="item-vonbadge">
           <span :class="tab.vonBadge.type">{{ tab.vonBadge.text }}</span>
@@ -79,7 +79,7 @@
 
 <script>
 export default {
-  name: 'lumos-tabbar',
+  name: "lumos-tabbar",
   data() {
     return {
       atabs: this.tabs
@@ -90,14 +90,14 @@ export default {
       type: Array,
       default: [
         {
-          name: '',
-          text: '标题',
-          pagePath: '',
-          iconPath: '',
-          selectedIconPath: '',
+          name: "",
+          text: "标题",
+          pagePath: "",
+          iconPath: "",
+          selectedIconPath: "",
           vonBadge: {
-            type: 'circle',
-            text: ''
+            type: "circle",
+            text: ""
           },
           selected: false
         }

@@ -1,24 +1,21 @@
 <template>
-    <div class="lumos-toast" v-show="isShow" >
-        <span>提示</span>
-    </div>
+  <div class="lumos-toast" v-show="isShow">
+    <span>提示</span>
+  </div>
 </template>
 
 
 <style>
-
-   .lumos-toast{
-     position: fixed;
-    left: 50%;
-    top:50%;
-    background: rgba(0,0,0,.35);
-    padding: 10px;
-    border-radius: 5px;
-    transform: translate(-50%,-50%);
-    color:#fff;
-
-   }
-
+.lumos-toast {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 10px;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
 </style>
 
 
@@ -26,12 +23,12 @@
 export default {
   name: "lumos-toast",
   data() {
-      return {
-        isShow:this.aisShow
-      }
+    return {
+      isShow: this.aisShow
+    };
   },
   props: {
     aisShow: false
   }
-}
+};
 </script>

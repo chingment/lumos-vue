@@ -71,8 +71,8 @@
   padding-right: 10px;
 }
 
-.lumos-header .header-right .button{
-   display: flex;
+.lumos-header .header-right .button {
+  display: flex;
 }
 
 .lumos-header .header-right .button .button-icon {
@@ -100,7 +100,7 @@
   font-size: 0.5rem;
 }
 
-.lumos-header .header-right  .button .button-text {
+.lumos-header .header-right .button .button-text {
   margin-left: 0.3rem;
 }
 </style>
