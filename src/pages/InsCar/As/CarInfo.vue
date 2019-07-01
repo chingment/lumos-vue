@@ -38,7 +38,7 @@
        <div class="item" id="item_carmodel" >
          <div class="item-left" ><span class="title">&nbsp;</span></div>
          <div class="item-middle" style="display:block" >
-           <div class="tt1">{{ carPlateNoInfo.carInfo.marketYear }} 款；{{ carPlateNoInfo.carInfo.passengerNumber }} 座；排量 {{ carPlateNoInfo.carInfo.displacement }}；车价 {{ carPlateNoInfo.carInfo.purchasePrice }} 元</div>
+           <div class="tt1">{{ carPlateNoInfo.carInfo.marketYear }} 款；{{ carPlateNoInfo.carInfo.seat }} 座；排量 {{ carPlateNoInfo.carInfo.exhaust }}；车价 {{ carPlateNoInfo.carInfo.purchasePrice }} 元</div>
            <div class="tt2" >* 以上是自动匹配车型，如有错误请重新选择</div>
          </div>
          <div class="item-right" ></div>
@@ -130,12 +130,12 @@ export default {
           registerDate: "",
           modelCode: "",
           modelName: "",
-          displacement: "",
+          exhaust: "",
           marketYear: "",
-          passengerNumber: "",
+          seat: "",
           purchasePrice: "",
-          tonnage: "",
-          wholeWeight: "",
+          quality: "",
+          weight: "",
           isTransfer: false,
           transferDate: "",
           isCompanyCar: false
@@ -183,10 +183,10 @@ export default {
       });
     },
     searchCarModel ()   {
-      this.$toast("dads");
-      // this.$router.push({
-      //   path: "/InsCar/As/CarModelSearch"
-      // });
+      //this.$toast("dads");
+      this.$router.push({
+        path: "/InsCar/As/CarModelSearch"
+      });
 
     }
   },

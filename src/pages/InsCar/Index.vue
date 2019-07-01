@@ -312,9 +312,6 @@ export default {
           var d = res.data;
           this.companyRules = d.companyRules;
           this.searchPlateNoRecords = d.searchPlateNoRecords;
-        })
-        .catch(error => {
-          alert(error);
         });
     },
     getCityInfo: function() {
@@ -343,7 +340,7 @@ export default {
       var plateNo = "粤A8K96A";
       let _this = this;
       this.$http
-        .get("/InsCar/SearchCarPlateNoInfo", { plateNo: plateNo })
+        .get("/InsCar/SearchPlateNoInfo", { plateNo: plateNo })
         .then(res => {
           if (res.result == 1) {
             var d = res.data;
@@ -369,7 +366,8 @@ export default {
             });
           }
         })
-
+        
+      //this.$toast("提示");
       // console.log("goAsCarInfo");
       // this.$router.push({
       //   path: "/InsCar/As/CarInfo"

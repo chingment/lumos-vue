@@ -21,7 +21,6 @@ axios.interceptors.request.use(
 axios.interceptors.response.use(
   response => {
     Vue.prototype.$loading.hide()
-    console.log("得到响应")
     return response;
   },
   error => {
@@ -44,13 +43,8 @@ function checkStatus(response) {
     ) {
       resolve(response.data);
     } else {
-     
-      alert("网络异常");
-      reject({
-        state: "0",
-        message: "网络异常"
-      });
-
+      Vue.prototype.$toast('网络异常');
+      Vue.prototype.$loading.hide();
     }
   });
 }

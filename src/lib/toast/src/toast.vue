@@ -1,6 +1,6 @@
 <template>
   <div class="lumos-toast" v-show="isShow">
-    <span>提示</span>
+    <span>{{ text }}</span>
   </div>
 </template>
 
@@ -24,11 +24,19 @@ export default {
   name: "lumos-toast",
   data() {
     return {
-      isShow: this.aisShow
+      isShow: this.isShow,
+      text: this.text
     };
   },
   props: {
-    aisShow: false
+    isShow: {
+      type: Boolean,
+      default: false
+    },
+    text: {
+      type: String,
+      default: "AAA"
+    }
   }
 };
 </script>
