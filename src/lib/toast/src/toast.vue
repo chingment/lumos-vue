@@ -24,8 +24,6 @@ export default {
   name: "lumos-toast",
   data() {
     return {
-      isShow: this.isShow,
-      text: this.text
     };
   },
   props: {
@@ -35,7 +33,7 @@ export default {
     },
     text: {
       type: String,
-      default: "AAA"
+      default: ""
     }
   }
 };
