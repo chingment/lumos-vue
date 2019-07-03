@@ -37,15 +37,10 @@
      <div class="empty-companyrules" v-else>
       暂无数据
     </div>
-
-
   </div>
    <div class="space"></div>
 
   <div class="block-serarch" >
- 
-
-
     <div class="lumos-lnav" >
      <plateNumber @getPlateLicense="getPlateLicense" ></plateNumber>
     
@@ -76,7 +71,7 @@
       </div>
 
   </div>
-<div class="block-searchplatenorecords"  >
+<div class="block-searchplatenorecords">
     <div class="titlebar">
       <div class="titlebar-left">
         <span class="icon">
@@ -86,8 +81,6 @@
       </div>
       <div class="titlebar-right"></div>
     </div>
-
-
    <div class="list-searchplatenorecords" v-if="searchPlateNoRecords.length>0">
       <template v-for="(searchPlateNoRecord,index) in this.searchPlateNoRecords">
         <div class="item" :key="index">
@@ -294,6 +287,7 @@ export default {
       // this.$nextTick(() => {
       //      document.body.scrollTop =1000
       // });
+      
       //this.$store.dispatch('setUId', 'test');
 
       // this.$router.push({
