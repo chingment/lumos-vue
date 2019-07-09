@@ -16,7 +16,5 @@
 }
 </style>
 
-<style lang="less">
-@import "./assets/css/var.less";
-</style>
+
 
