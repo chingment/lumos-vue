@@ -12,17 +12,16 @@ export default {
   data() {
     return {
       messageBox: {
-        title: "",
-        content: ""
+        title: "温馨提示",
+        content: "您好，您访问的页面不存在"
       }
     };
   },
   mounted: function() {
     var _this = this;
-
-    console.log(_this.$store.getters.getMessagesBox);
-
-    _this.messageBox = _this.$store.getters.getMessagesBox;
+    if (typeof _this.$store.getters.getMessagesBox != "undefined") {
+      _this.messageBox = _this.$store.getters.getMessagesBox;
+    }
   }
 };
 </script>
