@@ -29,16 +29,16 @@ Vue.use(Calendar);//日期控件
 
 import lumoslib from './lib/index'
 
-var lumoslib_components=lumoslib.components;
+var lumoslib_components = lumoslib.components;
 
 Object.keys(lumoslib_components).forEach((key) => {
-	Vue.component(lumoslib_components[key].name, lumoslib_components[key])
+  Vue.component(lumoslib_components[key].name, lumoslib_components[key])
 });
 
-var lumoslib_uses=lumoslib.uses;
+var lumoslib_uses = lumoslib.uses;
 
 Object.keys(lumoslib_uses).forEach((key) => {
-	Vue.use(lumoslib_uses[key]);
+  Vue.use(lumoslib_uses[key]);
 });
 
 
@@ -58,37 +58,46 @@ Vue.prototype.$http = http;
 
 
 router.beforeEach((to, from, next) => {
-  
-  var mId="121221"
-  var uId="2312asdadd"
-  http
-  .get("/User/LoginByUrlParams", { mId: mId,uId:uId })
-  .then(res => {
-    console.log(res);
 
-  // next({
-  //   path: '/InsCar',
-  //   query: { redirect: to.fullPath }
-  // })
+  var mId = "121221"
+  var uId = "2312asdadd"
 
-  });
+  if (to.matched.some(record => record.meta.requireAuth)) {  // 判断该路由是否需要登录权限
 
-  // if (to.matched.some(record => record.meta.requireAuth)){  // 判断该路由是否需要登录权限
-  // next({
-  //   path: '/My',
-  //   query: { redirect: to.fullPath }
-  // })
-  // }
-  // else {
-  //   next();
-  // }
+    http.get("/User/LoginByUrlParams", { mId: mId, uId: uId }).then(res => {
+      if (res.result == 1) {
+        next()
+      }
+      else {
 
-   next();
+        var messageBox= {
+          title:'温馨提示',
+          content:res.message
+        }
+
+        store.dispatch('setMessageBox',messageBox)
+
+        next({
+          name:'ErrorIndex',
+          path: '/Error'
+        })
+      }
+    });
+    // next({
+    //   path: '/My',
+    //   query: { redirect: to.fullPath }
+    // })
+  }
+  else {
+    next();
+  }
+
+  //next();
 })
 
 
 
-Vue.prototype.getNowFormatDate = function() {
+Vue.prototype.getNowFormatDate = function () {
   var date = new Date();
   var seperator1 = "-";
   var year = date.getFullYear();

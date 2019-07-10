@@ -172,7 +172,6 @@ export default {
       font-size: 30px;
       color: #fff;
 
-
       img{
              border-radius: 10px;
       }

@@ -6,6 +6,11 @@ export const mutations = {
 	//更新用户代理标识
 	SETUID(state, val) {
 		state.uId = val;
+	},
+
+	SETMESSAGEBOX(state, val) {
+		localStorage.setItem("MESSAGEBOX",JSON.stringify(val));
+		state.messageBox = val;
 	}
 
 }
