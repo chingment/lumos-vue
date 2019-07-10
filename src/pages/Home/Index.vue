@@ -1,9 +1,7 @@
 <template>
-  <div class="lumos-page">
-     <lumos-swiper></lumos-swiper>
-
-
-    <div class="lnavgrid">
+  <div id="app_wrapper">
+    <lumos-swiper></lumos-swiper>
+    <div class="lnavgrid pd">
       <div class="title">
         <div class="title-left">
           <span class="icon">
@@ -18,7 +16,7 @@
 
 
      <div class="item" >
-      <div class="item-lefticon lumos-hid"></div>
+      <div class="item-lefticon hid"></div>
       <div class="item-content" >  
       <div class="title" > 车险报价 </div>
       <div class="note lumos-hid" ></div>
@@ -29,7 +27,7 @@
      </div>
 
      <div class="item" >
-      <div class="item-lefticon lumos-hid"></div>
+      <div class="item-lefticon hid"></div>
       <div class="item-content" >  
       <div class="title" > 理赔服务 </div>
       <div class="note lumos-hid" ></div>
@@ -41,7 +39,7 @@
 
 
      <div class="item" >
-      <div class="item-lefticon lumos-hid"></div>
+      <div class="item-lefticon hid"></div>
       <div class="item-content" >  
       <div class="title" > 车辆定损 </div>
       <div class="note lumos-hid" ></div>
@@ -59,3 +57,7 @@
 <script>
 </script>
 
+
+<style  lang="less">
+
+</style>

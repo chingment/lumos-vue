@@ -1,5 +1,5 @@
 <template>
-    <div class="lumos-swiper">
+    <div class="lumos-swiper pd">
         <div class="wrapper" ref="swiper">
             <p ref="ritem" v-for="(item, index) in newlist"
             @touchstart="touchStart($event)"
@@ -148,13 +148,13 @@ export default {
   }
 };
 </script>
-<style lang="less">
+<style lang="less" scoped>
 .lumos-swiper {
   overflow: hidden;
   width: 100%;
   position: relative;
   background-color: #fff;
-  padding: 1rem;
+  padding: 1rem 0;
   > .wrapper {
     width: 100%;
     height: 100%;

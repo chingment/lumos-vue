@@ -1,6 +1,6 @@
 <template>
-  <div class="mb5">
-    <div class="frmgrid">
+  <div id="app_wrapper" class="mb5">
+    <div class="frmgrid pd">
       <div class="title">
         <div class="title-left">
           <span class="icon">
@@ -80,7 +80,7 @@
     </div>
     <div class="space"></div>
 
-    <div class="frmgrid">
+    <div class="frmgrid pd">
       <div class="title">
         <div class="title-left">
           <span class="icon">
@@ -117,7 +117,7 @@
 
     <div class="space"></div>
 
-    <div class="frmgrid">
+    <div class="frmgrid pd">
       <div class="title">
         <div class="title-left">
           <span class="icon">

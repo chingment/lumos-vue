@@ -21,17 +21,21 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAgCAYAAABt
 
 /***/ }),
 
-/***/ "5YV7":
+/***/ "73M7":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ "73M7":
-/***/ (function(module, exports) {
+/***/ "9sOB":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"lumos-page"},[_c('lumos-swiper'),_vm._v(" "),_vm._m(0)],1)}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"lnavgrid"},[_c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("车险服务")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})]),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-lefticon hid"}),_vm._v(" "),_c('div',{staticClass:"item-content"},[_c('div',{staticClass:"title"},[_vm._v(" 车险报价 ")]),_vm._v(" "),_c('div',{staticClass:"note lumos-hid"})]),_vm._v(" "),_c('div',{staticClass:"item-righticon"},[_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-lefticon hid"}),_vm._v(" "),_c('div',{staticClass:"item-content"},[_c('div',{staticClass:"title"},[_vm._v(" 理赔服务 ")]),_vm._v(" "),_c('div',{staticClass:"note lumos-hid"})]),_vm._v(" "),_c('div',{staticClass:"item-righticon"},[_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-lefticon hid"}),_vm._v(" "),_c('div',{staticClass:"item-content"},[_c('div',{staticClass:"title"},[_vm._v(" 车辆定损 ")]),_vm._v(" "),_c('div',{staticClass:"note lumos-hid"})]),_vm._v(" "),_c('div',{staticClass:"item-righticon"},[_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])])])])}]
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
 
@@ -63,7 +67,7 @@ module.exports = __webpack_require__.p + "static/img/loading.b74908f.gif";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Index_vue__ = __webpack_require__("h4Hj");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Index_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Index_vue__);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_73996fea_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__ = __webpack_require__("o1Uk");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_37b8568c_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__ = __webpack_require__("9sOB");
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
 
@@ -80,7 +84,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Index_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_73996fea_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_37b8568c_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Index_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -89,6 +93,13 @@ var Component = normalizeComponent(
 
 /* harmony default export */ __webpack_exports__["default"] = (Component.exports);
 
+
+/***/ }),
+
+/***/ "KnqR":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -122,15 +133,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // EXTERNAL MODULE: ./node_modules/vue/dist/vue.esm.js
 var vue_esm = __webpack_require__("7+uW");
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-a3dde32e","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/App.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-6e763ac1","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/App.vue
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('router-view')],1)}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ var App = (esExports);
 // CONCATENATED MODULE: ./src/App.vue
 function injectStyle (ssrContext) {
-  __webpack_require__("5YV7")
-  __webpack_require__("nxRJ")
+  __webpack_require__("KnqR")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -3918,24 +3928,6 @@ new vue_esm["a" /* default */]({
 
 /***/ }),
 
-/***/ "nxRJ":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "o1Uk":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"lumos-page"},[_c('lumos-swiper'),_vm._v(" "),_vm._m(0)],1)}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"lnavgrid"},[_c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})]),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v("车险服务")])]),_vm._v(" "),_c('div',{staticClass:"title-right"})]),_vm._v(" "),_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-lefticon lumos-hid"}),_vm._v(" "),_c('div',{staticClass:"item-content"},[_c('div',{staticClass:"title"},[_vm._v(" 车险报价 ")]),_vm._v(" "),_c('div',{staticClass:"note lumos-hid"})]),_vm._v(" "),_c('div',{staticClass:"item-righticon"},[_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-lefticon lumos-hid"}),_vm._v(" "),_c('div',{staticClass:"item-content"},[_c('div',{staticClass:"title"},[_vm._v(" 理赔服务 ")]),_vm._v(" "),_c('div',{staticClass:"note lumos-hid"})]),_vm._v(" "),_c('div',{staticClass:"item-righticon"},[_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])]),_vm._v(" "),_c('div',{staticClass:"item"},[_c('div',{staticClass:"item-lefticon lumos-hid"}),_vm._v(" "),_c('div',{staticClass:"item-content"},[_c('div',{staticClass:"title"},[_vm._v(" 车辆定损 ")]),_vm._v(" "),_c('div',{staticClass:"note lumos-hid"})]),_vm._v(" "),_c('div',{staticClass:"item-righticon"},[_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])])])])}]
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
-
-/***/ }),
-
 /***/ "ogF+":
 /***/ (function(module, exports) {
 
@@ -3965,4 +3957,4 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.9f1ee017f0bc5775322a.js.map
+//# sourceMappingURL=app.0cb16e5509d3868408f0.js.map

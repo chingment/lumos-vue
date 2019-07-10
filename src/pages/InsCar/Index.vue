@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app_wrapper">
     <lumos-header
       :title="header.title"
       :rightButton="header.rightButton"
@@ -7,7 +7,7 @@
     ></lumos-header>
 
 
-   <div class="block-companyrules" >
+   <div class="block-companyrules pd" >
     <div class="titlebar">
       <div class="titlebar-left">
         <span class="icon">
@@ -40,12 +40,14 @@
   </div>
    <div class="space"></div>
 
-  <div class="block-serarch" >
-    <div class="lumos-lnav" >
+  <div class="block-serarch pd" >
+    <div class="lnavgrid" >
+
+     <div class="field">
      <plateNumber @getPlateLicense="getPlateLicense" ></plateNumber>
     
      <div class="item" >
-      <div class="item-lefticon lumos-hid"></div>
+      <div class="item-lefticon hid"></div>
       <div class="item-content" >  
       <div class="title" > 投保城市  </div>
       <div class="note" @click="citySelectOpen()" > {{ city.localCity.cityName }} </div>
@@ -56,7 +58,9 @@
             alt="">
       </div>      
      </div>
-    
+     </div>   
+ 
+
     </div>
 
    <button  @click="goAsCarInfo"  class="lumos-button lumos-button-full" >立即询价</button>
@@ -71,7 +75,7 @@
       </div>
 
   </div>
-<div class="block-searchplatenorecords">
+<div class="block-searchplatenorecords pd">
     <div class="titlebar">
       <div class="titlebar-left">
         <span class="icon">
@@ -111,15 +115,15 @@
   </div>
 </template>
 
-<style scoped>
+<style  lang="less" scoped>
 .block-companyrules,
 .block-searchplatenorecords {
   background-color: #fff;
-  padding: 0.8rem;
+  padding-top: .8rem;
+  padding-bottom: .8rem
 }
 .block-serarch {
   background-color: #fff;
-  padding: 0 1rem;
 }
 
 .titlebar {
