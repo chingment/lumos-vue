@@ -7,8 +7,13 @@ export const actions = {
 	setUId({ commit }, val) {
 		commit('SETUID', val);
 	},
+	//更新提示盒子信息
 	setMessageBox({ commit }, val) {
 		commit('SETMESSAGEBOX', val);
+	},
+	//更新用户信息
+	setUserInfo({ commit }, val) {
+		commit('SETUSERINFO', val);
 	}
 
 }

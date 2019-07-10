@@ -7,10 +7,13 @@ export const mutations = {
 	SETUID(state, val) {
 		state.uId = val;
 	},
-
 	SETMESSAGEBOX(state, val) {
 		localStorage.setItem("MESSAGEBOX",JSON.stringify(val));
 		state.messageBox = val;
+	},
+	SETUSERINFO(state, val) {
+		localStorage.setItem("USERINFO",JSON.stringify(val));
+		state.userInfo = val;
 	}
 
 }

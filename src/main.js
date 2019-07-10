@@ -59,30 +59,45 @@ Vue.prototype.$http = http;
 
 router.beforeEach((to, from, next) => {
 
-  var mId = "121221"
-  var uId = "2312asdadd"
+
+  //console.log(to.query.mId)
+
+  //var mId = "121221"
+  //var uId = "2312asdadd"
 
   if (to.matched.some(record => record.meta.requireAuth)) {  // 判断该路由是否需要登录权限
 
-    http.get("/User/LoginByUrlParams", { mId: mId, uId: uId }).then(res => {
-      if (res.result == 1) {
-        next()
-      }
-      else {
+    if (store.getters.getUserInfo.userId == '') {
+      var mId = to.query.mId == "undefined" ? "" : to.query.mId
+      var uId = to.query.uId == "undefined" ? "" : to.query.uId
 
-        var messageBox= {
-          title:'温馨提示',
-          content:res.message
+      http.get("/User/LoginByUrlParams", { mId: mId, uId: uId }).then(res => {
+        if (res.result == 1) {
+
+          store.dispatch('setUserInfo', res.data)
+
+          next()
         }
+        else {
 
-        store.dispatch('setMessageBox',messageBox)
+          var messageBox = {
+            title: '温馨提示',
+            content: res.message
+          }
 
-        next({
-          name:'ErrorIndex',
-          path: '/Error'
-        })
-      }
-    });
+          store.dispatch('setMessageBox', messageBox)
+
+          next({
+            name: 'ErrorIndex',
+            path: '/Error'
+          })
+        }
+      });
+    }
+    else{
+      next();
+    }
+
     // next({
     //   path: '/My',
     //   query: { redirect: to.fullPath }

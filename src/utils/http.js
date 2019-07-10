@@ -41,6 +41,7 @@ function checkStatus(response) {
         response.status === 304 ||
         response.status === 400)
     ) {
+      console.log(response.data)
       resolve(response.data);
     } else {
       Vue.prototype.$toast('网络异常');

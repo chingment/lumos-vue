@@ -28,6 +28,13 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAgCAYAAABt
 
 /***/ }),
 
+/***/ "53p7":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "73M7":
 /***/ (function(module, exports) {
 
@@ -1572,8 +1579,8 @@ var hello_Component = hello_normalizeComponent(
   data() {
     return {
       messageBox: {
-        title: "",
-        content: ""
+        title: "温馨提示",
+        content: "您好，您访问的页面不存在"
       }
     };
   },
@@ -1584,14 +1591,14 @@ var hello_Component = hello_normalizeComponent(
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-2a3885d0","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/Error/Index.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-150c43e6","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/Error/Index.vue
 var Error_Index_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app_wrapper"}},[_c('div',{staticClass:"messagebox"},[_vm._m(0),_vm._v(" "),_c('P',{staticClass:"title"},[_vm._v(_vm._s(_vm.messageBox.title))]),_vm._v(" "),_c('P',{staticClass:"content"},[_vm._v(_vm._s(_vm.messageBox.content))])],1)])}
 var Error_Index_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("W3O6"),"alt":""}})])}]
 var Error_Index_esExports = { render: Error_Index_render, staticRenderFns: Error_Index_staticRenderFns }
 /* harmony default export */ var pages_Error_Index = (Error_Index_esExports);
 // CONCATENATED MODULE: ./src/pages/Error/Index.vue
 function Error_Index_injectStyle (ssrContext) {
-  __webpack_require__("p4uX")
+  __webpack_require__("53p7")
 }
 var Error_Index_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -1653,6 +1660,10 @@ const state = {
 	messageBox: {
 		tilte: '提示',
 		content: '提示内容'
+	},
+	userInfo: {
+		userId: '',
+		merchantId: ''
 	}
 };
 // CONCATENATED MODULE: ./src/store/getters.js
@@ -1661,8 +1672,14 @@ const getters = {
     getUId: state => state.uId,
     getMessagesBox(state) {
         state.messageBox = JSON.parse(localStorage.getItem("MESSAGEBOX"));
-
         return state.messageBox;
+    },
+    getUserInfo(state) {
+        var userInfo = localStorage.getItem("USERINFO");
+        if (userInfo != null) {
+            state.userInfo = JSON.parse(userInfo);
+        }
+        return state.userInfo;
     }
 };
 // CONCATENATED MODULE: ./src/store/mutations.js
@@ -1675,10 +1692,13 @@ const mutations = {
 	SETUID(state, val) {
 		state.uId = val;
 	},
-
 	SETMESSAGEBOX(state, val) {
 		localStorage.setItem("MESSAGEBOX", JSON.stringify(val));
 		state.messageBox = val;
+	},
+	SETUSERINFO(state, val) {
+		localStorage.setItem("USERINFO", JSON.stringify(val));
+		state.userInfo = val;
 	}
 
 };
@@ -1692,8 +1712,13 @@ const actions = {
 	setUId({ commit }, val) {
 		commit('SETUID', val);
 	},
+	//更新提示盒子信息
 	setMessageBox({ commit }, val) {
 		commit('SETMESSAGEBOX', val);
+	},
+	//更新用户信息
+	setUserInfo({ commit }, val) {
+		commit('SETUSERINFO', val);
 	}
 
 };
@@ -1753,6 +1778,7 @@ axios_default.a.defaults.timeout = 10000;
 function checkStatus(response) {
   return new Promise((resolve, reject) => {
     if (response && (response.status === 200 || response.status === 304 || response.status === 400)) {
+      console.log(response.data);
       resolve(response.data);
     } else {
       vue_esm["a" /* default */].prototype.$toast('网络异常');
@@ -3839,30 +3865,43 @@ vue_esm["a" /* default */].prototype.$http = http;
 
 router.beforeEach((to, from, next) => {
 
-  var mId = "121221";
-  var uId = "2312asdadd";
+  //console.log(to.query.mId)
+
+  //var mId = "121221"
+  //var uId = "2312asdadd"
 
   if (to.matched.some(record => record.meta.requireAuth)) {
     // 判断该路由是否需要登录权限
 
-    http.get("/User/LoginByUrlParams", { mId: mId, uId: uId }).then(res => {
-      if (res.result == 1) {
-        next();
-      } else {
+    if (store.getters.getUserInfo.userId == '') {
+      var mId = to.query.mId == "undefined" ? "" : to.query.mId;
+      var uId = to.query.uId == "undefined" ? "" : to.query.uId;
 
-        var messageBox = {
-          title: '温馨提示',
-          content: res.message
-        };
+      http.get("/User/LoginByUrlParams", { mId: mId, uId: uId }).then(res => {
+        if (res.result == 1) {
 
-        store.dispatch('setMessageBox', messageBox);
+          store.dispatch('setUserInfo', res.data);
 
-        next({
-          name: 'ErrorIndex',
-          path: '/Error'
-        });
-      }
-    });
+          next();
+        } else {
+
+          var messageBox = {
+            title: '温馨提示',
+            content: res.message
+          };
+
+          store.dispatch('setMessageBox', messageBox);
+
+          next({
+            name: 'ErrorIndex',
+            path: '/Error'
+          });
+        }
+      });
+    } else {
+      next();
+    }
+
     // next({
     //   path: '/My',
     //   query: { redirect: to.fullPath }
@@ -4058,13 +4097,6 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 
 /***/ }),
 
-/***/ "p4uX":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "vWqb":
 /***/ (function(module, exports) {
 
@@ -4087,4 +4119,4 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.5ce694c311c4bb482414.js.map
+//# sourceMappingURL=app.da5c29f9c5727e716117.js.map
