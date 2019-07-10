@@ -1,13 +1,15 @@
 <template>
     <div class="lumos-swiper pd">
         <div class="wrapper" ref="swiper">
-            <p ref="ritem" v-for="(item, index) in newlist"
+            <div class="item" ref="ritem" v-for="(item, index) in newlist"
             @touchstart="touchStart($event)"
             @touchmove="touchMove($event)"
             @touchend="touchEnd($event)"
-            :style="{backgroundImage: 'url('+ item.src +')'}"  >
-            
-            </p>
+              >
+             
+             <img :src="item.src">
+
+            </div>
         </div>
     </div>
 </template>
@@ -157,11 +159,10 @@ export default {
   padding: 1rem 0;
   > .wrapper {
     width: 100%;
-    height: 100%;
-     height: 150px;
+    height: 150px;
     position: relative;
     overflow: hidden;
-    p {
+    .item {
       position: absolute;
       width: 100%;
       flex: 1;
@@ -170,8 +171,11 @@ export default {
       text-align: center;
       font-size: 30px;
       color: #fff;
-      line-height: 500px;
-      border-radius: 10px;
+
+
+      img{
+             border-radius: 10px;
+      }
     }
   }
 }

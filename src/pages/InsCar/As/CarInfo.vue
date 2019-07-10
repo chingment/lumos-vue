@@ -50,7 +50,7 @@
             <button @click="carModelSelectOpen" class="lumos-button lumos-button-private">选择车型</button>
           </div>
         </div>
-        <div class="item" id="item_carmodel">
+        <div class="item" id="item_carmodel" v-show="(carPlateNoInfo.carInfo.modelCode!='')">
           <div class="item-left">
             <span class="title">&nbsp;</span>
           </div>

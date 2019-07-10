@@ -59,6 +59,20 @@ Vue.prototype.$http = http;
 
 router.beforeEach((to, from, next) => {
   
+  var mId="121221"
+  var uId="2312asdadd"
+  http
+  .get("/User/LoginByUrlParams", { mId: mId,uId:uId })
+  .then(res => {
+    console.log(res);
+
+  // next({
+  //   path: '/InsCar',
+  //   query: { redirect: to.fullPath }
+  // })
+
+  });
+
   // if (to.matched.some(record => record.meta.requireAuth)){  // 判断该路由是否需要登录权限
   // next({
   //   path: '/My',
