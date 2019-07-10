@@ -59,52 +59,64 @@ Vue.prototype.$http = http;
 
 router.beforeEach((to, from, next) => {
 
+  if (to.matched.length === 0) {
 
-  //console.log(to.query.mId)
+    store.dispatch('setMessageBox', {
+      title: '温馨提示',
+      content: "您好，您访问的页面不存在"
+    })
 
-  //var mId = "121221"
-  //var uId = "2312asdadd"
+    next({
+      name: 'ErrorIndex',
+      path: '/Error'
+    })
 
-  if (to.matched.some(record => record.meta.requireAuth)) {  // 判断该路由是否需要登录权限
-
-    if (store.getters.getUserInfo.userId == '') {
-      var mId = to.query.mId == "undefined" ? "" : to.query.mId
-      var uId = to.query.uId == "undefined" ? "" : to.query.uId
-
-      http.get("/User/LoginByUrlParams", { mId: mId, uId: uId }).then(res => {
-        if (res.result == 1) {
-
-          store.dispatch('setUserInfo', res.data)
-
-          next()
-        }
-        else {
-
-          var messageBox = {
-            title: '温馨提示',
-            content: res.message
-          }
-
-          store.dispatch('setMessageBox', messageBox)
-
-          next({
-            name: 'ErrorIndex',
-            path: '/Error'
-          })
-        }
-      });
-    }
-    else{
-      next();
-    }
-
-    // next({
-    //   path: '/My',
-    //   query: { redirect: to.fullPath }
-    // })
   }
   else {
-    next();
+    //console.log(to.query.mId)
+
+    //var mId = "121221"
+    //var uId = "2312asdadd"
+
+    if (to.matched.some(record => record.meta.requireAuth)) {  // 判断该路由是否需要登录权限
+
+      if (store.getters.getUserInfo.userId == '') {
+        var mId = to.query.mId == "undefined" ? "" : to.query.mId
+        var uId = to.query.uId == "undefined" ? "" : to.query.uId
+
+        http.get("/User/LoginByUrlParams", { mId: mId, uId: uId }).then(res => {
+          if (res.result == 1) {
+
+            store.dispatch('setUserInfo', res.data)
+
+            next()
+          }
+          else {
+
+            store.dispatch('setMessageBox', {
+              title: '温馨提示',
+              content: res.message
+            })
+
+            next({
+              name: 'ErrorIndex',
+              path: '/Error'
+            })
+          }
+        });
+      }
+      else {
+        next();
+      }
+
+      // next({
+      //   path: '/My',
+      //   query: { redirect: to.fullPath }
+      // })
+    }
+    else {
+      next();
+    }
   }
 
   //next();

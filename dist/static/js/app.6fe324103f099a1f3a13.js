@@ -3865,49 +3865,62 @@ vue_esm["a" /* default */].prototype.$http = http;
 
 router.beforeEach((to, from, next) => {
 
-  //console.log(to.query.mId)
+  if (to.matched.length === 0) {
 
-  //var mId = "121221"
-  //var uId = "2312asdadd"
+    store.dispatch('setMessageBox', {
+      title: '温馨提示',
+      content: "您好，您访问的页面不存在"
+    });
 
-  if (to.matched.some(record => record.meta.requireAuth)) {
-    // 判断该路由是否需要登录权限
+    next({
+      name: 'ErrorIndex',
+      path: '/Error'
+    });
+  } else {
+    //console.log(to.query.mId)
 
-    if (store.getters.getUserInfo.userId == '') {
-      var mId = to.query.mId == "undefined" ? "" : to.query.mId;
-      var uId = to.query.uId == "undefined" ? "" : to.query.uId;
+    //var mId = "121221"
+    //var uId = "2312asdadd"
 
-      http.get("/User/LoginByUrlParams", { mId: mId, uId: uId }).then(res => {
-        if (res.result == 1) {
+    if (to.matched.some(record => record.meta.requireAuth)) {
+      // 判断该路由是否需要登录权限
 
-          store.dispatch('setUserInfo', res.data);
+      if (store.getters.getUserInfo.userId == '') {
+        var mId = to.query.mId == "undefined" ? "" : to.query.mId;
+        var uId = to.query.uId == "undefined" ? "" : to.query.uId;
 
-          next();
-        } else {
+        http.get("/User/LoginByUrlParams", { mId: mId, uId: uId }).then(res => {
+          if (res.result == 1) {
 
-          var messageBox = {
-            title: '温馨提示',
-            content: res.message
-          };
+            store.dispatch('setUserInfo', res.data);
 
-          store.dispatch('setMessageBox', messageBox);
+            next();
+          } else {
 
-          next({
-            name: 'ErrorIndex',
-            path: '/Error'
-          });
-        }
-      });
+            var messageBox = {
+              title: '温馨提示',
+              content: res.message
+            };
+
+            store.dispatch('setMessageBox', messageBox);
+
+            next({
+              name: 'ErrorIndex',
+              path: '/Error'
+            });
+          }
+        });
+      } else {
+        next();
+      }
+
+      // next({
+      //   path: '/My',
+      //   query: { redirect: to.fullPath }
+      // })
     } else {
       next();
     }
-
-    // next({
-    //   path: '/My',
-    //   query: { redirect: to.fullPath }
-    // })
-  } else {
-    next();
   }
 
   //next();
@@ -4119,4 +4132,4 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.da5c29f9c5727e716117.js.map
+//# sourceMappingURL=app.6fe324103f099a1f3a13.js.map
