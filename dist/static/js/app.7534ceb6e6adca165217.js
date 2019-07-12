@@ -3897,12 +3897,10 @@ router.beforeEach((to, from, next) => {
             next();
           } else {
 
-            var messageBox = {
+            store.dispatch('setMessageBox', {
               title: '温馨提示',
               content: res.message
-            };
-
-            store.dispatch('setMessageBox', messageBox);
+            });
 
             next({
               name: 'ErrorIndex',
@@ -4132,4 +4130,4 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.6fe324103f099a1f3a13.js.map
+//# sourceMappingURL=app.7534ceb6e6adca165217.js.map

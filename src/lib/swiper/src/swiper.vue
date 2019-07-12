@@ -13,6 +13,8 @@
         </div>
     </div>
 </template>
+
+
 <script>
 export default {
   name: "lumos-swiper",
@@ -21,35 +23,13 @@ export default {
       startX: "",
       moveX: "",
       list: [
-        {
-          src:
-            "http://chzflive.caihome.cn/web/o_1c7390v9q1al1rak17g2v3uhc438?x-oss-process=image/resize,m_fill,h_240,w_320"
-        },
-        {
-          src:
-            "http://chzflive.caihome.cn/web/o_1c7390v9q1al1rak17g2v3uhc438?x-oss-process=image/resize,m_fill,h_240,w_320"
-        },
-        {
-          src:
-            "http://chzflive.caihome.cn/web/o_1c7390v9q1al1rak17g2v3uhc438?x-oss-process=image/resize,m_fill,h_240,w_320"
-        },
-        {
-          src:
-            "http://chzflive.caihome.cn/web/o_1c7390v9q1al1rak17g2v3uhc438?x-oss-process=image/resize,m_fill,h_240,w_320"
-        },
-        {
-          src:
-            "http://chzflive.caihome.cn/web/o_1c7390v9q1al1rak17g2v3uhc438?x-oss-process=image/resize,m_fill,h_240,w_320"
-        },
-        {
-          src:
-            "http://chzflive.caihome.cn/web/o_1c7390v9q1al1rak17g2v3uhc438?x-oss-process=image/resize,m_fill,h_240,w_320"
-        }
+        { src: "http://file.17fanju.com/Upload/Banner/1.png" },
+        { src: "http://file.17fanju.com/Upload/Banner/2.png" }
       ],
       contenter: this.$refs.swiper,
       active: -1,
       off: true,
-      autoplay: 2000,
+      autoplay: 1000,
       start: null
     };
   },
@@ -116,9 +96,10 @@ export default {
     },
     //循环滚动处理
     setactive(active) {
+      console.log("dsda:" + this.list.length);
       if (active == 0) {
-        this.active = -6;
-      } else if (active == -7) {
+        this.active = -(this.list.length - 2);
+      } else if (active == -(this.list.length - 1)) {
         this.active = -1;
       } else {
         return false;
@@ -150,6 +131,7 @@ export default {
   }
 };
 </script>
+
 <style lang="less" scoped>
 .lumos-swiper {
   overflow: hidden;
@@ -163,8 +145,8 @@ export default {
     position: relative;
     overflow: hidden;
     .item {
-      position: absolute;
       width: 100%;
+      position: absolute;
       flex: 1;
       height: 100%;
       background-size: 100%;
@@ -172,8 +154,8 @@ export default {
       font-size: 30px;
       color: #fff;
 
-      img{
-             border-radius: 10px;
+      img {
+        border-radius: 10px;
       }
     }
   }
