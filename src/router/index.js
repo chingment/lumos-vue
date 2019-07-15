@@ -15,6 +15,7 @@ import MyIndex from '@/pages/My/Index'
 import Hello from '@/pages/hello'
 
 import ErrorIndex from '@/pages/Error/Index'
+import ErrorNonOpen from '@/pages/Error/NonOpen'
 
 Vue.use(Router)
 
@@ -32,6 +33,7 @@ export default new Router({
     { path: '/InsCar/As/ChooseKind', name: 'InsCarAsChooseKind', component: InsCarAsChooseKind,meta: {requireAuth: true}},
     { path: '/InsCar/As/InsOffer', name: 'InsCarAsInsOffer', component: InsCarAsInsOffer,meta: {requireAuth: true}},
     { path: '/InsCar/Ms/CarInfo', name: 'InsCarMsCarInfo', component: InsCarMsCarInfo,meta: {requireAuth: true}},
-    { path: '/Error', name: 'ErrorIndex', component: ErrorIndex,meta: {requireAuth: false}}
+    { path: '/Error', name: 'ErrorIndex', component: ErrorIndex,meta: {requireAuth: false}},
+    { path: '/Error/NonOpen', name: 'ErrorNonOpen', component: ErrorNonOpen,meta: {requireAuth: false}}
   ]
 })

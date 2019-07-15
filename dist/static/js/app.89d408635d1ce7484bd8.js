@@ -35,13 +35,6 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAgCAYAAABt
 
 /***/ }),
 
-/***/ "93zc":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "C2vF":
 /***/ (function(module, exports) {
 
@@ -202,7 +195,9 @@ var vue_router_esm = __webpack_require__("/ocq");
       switch (item.opType) {
         case "HURL":
           window.location.href = item.opContent;
-
+          break;
+        case "PURL":
+          this.$router.push({ path: item.opContent });
           break;
       }
     }
@@ -212,14 +207,14 @@ var vue_router_esm = __webpack_require__("/ocq");
     _this.getData();
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-e6ab8df6","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/Home/Index.vue
-var Index_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app_wrapper"}},[_c('lumos-swiper'),_vm._v(" "),_vm._l((this.lNavGrids),function(lNavGrid,pIndex){return [_c('div',{key:pIndex,staticClass:"lnavgrid pd"},[_c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_vm._m(0,true),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v(_vm._s(lNavGrid.title))])]),_vm._v(" "),_c('div',{staticClass:"title-right"})]),_vm._v(" "),_c('div',{staticClass:"field"},[_vm._l((lNavGrid.items),function(item,cIndex){return [_c('div',{key:cIndex,staticClass:"item",on:{"click":function($event){return _vm.lNavGridItemClick(item)}}},[_c('div',{staticClass:"item-lefticon hid"}),_vm._v(" "),_c('div',{staticClass:"item-content"},[_c('div',{staticClass:"title"},[_vm._v(" "+_vm._s(item.title)+" ")]),_vm._v(" "),_c('div',{staticClass:"note lumos-hid"})]),_vm._v(" "),_vm._m(1,true)])]})],2)])]})],2)}
-var Index_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("1V5X")}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-righticon"},[_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])}]
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-691d586e","hasScoped":true,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/Home/Index.vue
+var Index_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app_wrapper"}},[_c('lumos-swiper'),_vm._v(" "),_vm._l((this.lNavGrids),function(lNavGrid,pIndex){return [_c('div',{key:pIndex,staticClass:"lnavgrid pd"},[_c('div',{staticClass:"title"},[_c('div',{staticClass:"title-left"},[_c('span',{staticClass:"icon"}),_vm._v(" "),_c('span',{staticClass:"title"},[_vm._v(_vm._s(lNavGrid.title))])]),_vm._v(" "),_c('div',{staticClass:"title-right"})]),_vm._v(" "),_c('div',{staticClass:"field"},[_vm._l((lNavGrid.items),function(item,cIndex){return [_c('div',{key:cIndex,staticClass:"item",on:{"click":function($event){return _vm.lNavGridItemClick(item)}}},[_c('div',{staticClass:"item-lefticon hid"}),_vm._v(" "),_c('div',{staticClass:"item-content"},[_c('div',{staticClass:"title"},[_vm._v(" "+_vm._s(item.title)+" ")]),_vm._v(" "),_c('div',{staticClass:"note lumos-hid"})]),_vm._v(" "),_vm._m(0,true)])]})],2)])]})],2)}
+var Index_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-righticon"},[_c('img',{attrs:{"src":__webpack_require__("yy6t"),"alt":""}})])}]
 var Index_esExports = { render: Index_render, staticRenderFns: Index_staticRenderFns }
 /* harmony default export */ var Home_Index = (Index_esExports);
 // CONCATENATED MODULE: ./src/pages/Home/Index.vue
 function Index_injectStyle (ssrContext) {
-  __webpack_require__("93zc")
+  __webpack_require__("hnvM")
 }
 var Index_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -232,7 +227,7 @@ var Index___vue_template_functional__ = false
 /* styles */
 var Index___vue_styles__ = Index_injectStyle
 /* scopeId */
-var Index___vue_scopeId__ = "data-v-e6ab8df6"
+var Index___vue_scopeId__ = "data-v-691d586e"
 /* moduleIdentifier (server only) */
 var Index___vue_module_identifier__ = null
 var Index_Component = Index_normalizeComponent(
@@ -1700,7 +1695,41 @@ var Error_Index_Component = Error_Index_normalizeComponent(
 
 /* harmony default export */ var src_pages_Error_Index = (Error_Index_Component.exports);
 
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-e06718d6","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/Error/NonOpen.vue
+var NonOpen_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app_wrapper"}},[_c('div',{staticClass:"messagebox"},[_vm._m(0),_vm._v(" "),_c('P',{staticClass:"title"},[_vm._v("温馨提示")]),_vm._v(" "),_c('P',{staticClass:"content"},[_vm._v("该功能未开通，敬请期待！")])],1)])}
+var NonOpen_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"icon"},[_c('img',{attrs:{"src":__webpack_require__("W3O6"),"alt":""}})])}]
+var NonOpen_esExports = { render: NonOpen_render, staticRenderFns: NonOpen_staticRenderFns }
+/* harmony default export */ var NonOpen = (NonOpen_esExports);
+// CONCATENATED MODULE: ./src/pages/Error/NonOpen.vue
+function NonOpen_injectStyle (ssrContext) {
+  __webpack_require__("Zd42")
+}
+var NonOpen_normalizeComponent = __webpack_require__("VU/8")
+/* script */
+var NonOpen___vue_script__ = null
+/* template */
+
+/* template functional */
+var NonOpen___vue_template_functional__ = false
+/* styles */
+var NonOpen___vue_styles__ = NonOpen_injectStyle
+/* scopeId */
+var NonOpen___vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var NonOpen___vue_module_identifier__ = null
+var NonOpen_Component = NonOpen_normalizeComponent(
+  NonOpen___vue_script__,
+  NonOpen,
+  NonOpen___vue_template_functional__,
+  NonOpen___vue_styles__,
+  NonOpen___vue_scopeId__,
+  NonOpen___vue_module_identifier__
+)
+
+/* harmony default export */ var Error_NonOpen = (NonOpen_Component.exports);
+
 // CONCATENATED MODULE: ./src/router/index.js
+
 
 
 
@@ -1723,7 +1752,7 @@ vue_esm["a" /* default */].use(vue_router_esm["a" /* default */]);
 
 /* harmony default export */ var router = (new vue_router_esm["a" /* default */]({
   mode: 'history',
-  routes: [{ path: '/Home/Index', name: 'HomeIndex', component: pages_Home_Index, meta: { requireAuth: true } }, { path: '/InsCar', name: 'InsCar', component: src_pages_InsCar_Index, meta: { requireAuth: true } }, { path: '/InsMarket', name: 'InsMarket', component: pages_InsMarket_Index, meta: { requireAuth: true } }, { path: '/InsClaim', name: 'InsClaim', component: src_pages_InsClaim_Index, meta: { requireAuth: true } }, { path: '/My', name: 'My', component: pages_My_Index, meta: { requireAuth: false } }, { path: '/Hello', name: 'Hello', component: src_pages_hello }, { path: '/InsCar/As/CarInfo', name: 'InsCarAsCarInfo', component: InsCar_As_CarInfo, meta: { requireAuth: true } }, { path: '/InsCar/As/CarModelSearch', name: 'InsCarAsCarModelSearch', component: InsCar_As_CarModelSearch, meta: { requireAuth: true } }, { path: '/InsCar/As/ChooseKind', name: 'InsCarAsChooseKind', component: InsCar_As_ChooseKind, meta: { requireAuth: true } }, { path: '/InsCar/As/InsOffer', name: 'InsCarAsInsOffer', component: InsCar_As_InsOffer, meta: { requireAuth: true } }, { path: '/InsCar/Ms/CarInfo', name: 'InsCarMsCarInfo', component: InsCar_Ms_CarInfo, meta: { requireAuth: true } }, { path: '/Error', name: 'ErrorIndex', component: src_pages_Error_Index, meta: { requireAuth: false } }]
+  routes: [{ path: '/Home/Index', name: 'HomeIndex', component: pages_Home_Index, meta: { requireAuth: true } }, { path: '/InsCar', name: 'InsCar', component: src_pages_InsCar_Index, meta: { requireAuth: true } }, { path: '/InsMarket', name: 'InsMarket', component: pages_InsMarket_Index, meta: { requireAuth: true } }, { path: '/InsClaim', name: 'InsClaim', component: src_pages_InsClaim_Index, meta: { requireAuth: true } }, { path: '/My', name: 'My', component: pages_My_Index, meta: { requireAuth: false } }, { path: '/Hello', name: 'Hello', component: src_pages_hello }, { path: '/InsCar/As/CarInfo', name: 'InsCarAsCarInfo', component: InsCar_As_CarInfo, meta: { requireAuth: true } }, { path: '/InsCar/As/CarModelSearch', name: 'InsCarAsCarModelSearch', component: InsCar_As_CarModelSearch, meta: { requireAuth: true } }, { path: '/InsCar/As/ChooseKind', name: 'InsCarAsChooseKind', component: InsCar_As_ChooseKind, meta: { requireAuth: true } }, { path: '/InsCar/As/InsOffer', name: 'InsCarAsInsOffer', component: InsCar_As_InsOffer, meta: { requireAuth: true } }, { path: '/InsCar/Ms/CarInfo', name: 'InsCarMsCarInfo', component: InsCar_Ms_CarInfo, meta: { requireAuth: true } }, { path: '/Error', name: 'ErrorIndex', component: src_pages_Error_Index, meta: { requireAuth: false } }, { path: '/Error/NonOpen', name: 'ErrorNonOpen', component: Error_NonOpen, meta: { requireAuth: false } }]
 }));
 // EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
 var vuex_esm = __webpack_require__("NYxO");
@@ -3946,8 +3975,6 @@ router.beforeEach((to, from, next) => {
     if (to.matched.some(record => record.meta.requireAuth)) {
       // 判断该路由是否需要登录权限
 
-      store.dispatch('setUserInfo', { uId: '', mId: '' });
-
       if (store.getters.getUserInfo.uId == '') {
 
         var mId = to.query.mId == "undefined" ? "" : to.query.mId;
@@ -4057,6 +4084,20 @@ module.exports = __webpack_require__.p + "static/img/error_an.477a966.jpg";
 
 /***/ }),
 
+/***/ "Zd42":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "hnvM":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "k5+z":
 /***/ (function(module, exports) {
 
@@ -4114,4 +4155,4 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.7687dd44ce3c56ba3074.js.map
+//# sourceMappingURL=app.89d408635d1ce7484bd8.js.map

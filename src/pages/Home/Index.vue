@@ -8,7 +8,7 @@
       <div class="title">
         <div class="title-left">
           <span class="icon">
-            <img src="@/assets/images/home/titlebar_icon.png" />
+            
           </span>
           <span class="title">{{ lNavGrid.title }}</span>
         </div>
@@ -65,7 +65,9 @@ export default {
       switch (item.opType) {
         case "HURL":
           window.location.href = item.opContent;
-
+          break;
+        case "PURL":
+          this.$router.push({ path: item.opContent });
           break;
       }
     }
@@ -85,6 +87,7 @@ export default {
     .title-left {
       .icon {
         height: 1.3rem;
+        background-color: #01b9c5;
       }
 
       .title {
