@@ -29,7 +29,7 @@ export default {
       contenter: this.$refs.swiper,
       active: -1,
       off: true,
-      autoplay: 1000,
+      autoplay: 2000,
       start: null
     };
   },
@@ -96,7 +96,7 @@ export default {
     },
     //循环滚动处理
     setactive(active) {
-      console.log("dsda:" + this.list.length);
+
       if (active == 0) {
         this.active = -(this.list.length - 2);
       } else if (active == -(this.list.length - 1)) {

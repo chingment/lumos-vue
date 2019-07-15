@@ -7,7 +7,6 @@ import qs from "qs";
 //添加请求拦截器
 axios.interceptors.request.use(
   config => {
-    console.log("请求响应前")
     Vue.prototype.$loading.show()
     return config;
   },

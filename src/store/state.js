@@ -6,7 +6,7 @@ export const state = {
 		content:'提示内容'
 	},
 	userInfo:{
-		userId:'',
-		merchantId:''
+		uId:'',
+		mId:''
 	}
 }

@@ -73,18 +73,15 @@ router.beforeEach((to, from, next) => {
 
   }
   else {
-    //console.log(to.query.mId)
-
-    //var mId = "121221"
-    //var uId = "2312asdadd"
 
     if (to.matched.some(record => record.meta.requireAuth)) {  // 判断该路由是否需要登录权限
 
-      if (store.getters.getUserInfo.userId == '') {
-        var mId = to.query.mId == "undefined" ? "" : to.query.mId
-        var uId = to.query.uId == "undefined" ? "" : to.query.uId
+      if (store.getters.getUserInfo.uId == '') {
 
-        http.get("/User/LoginByUrlParams", { mId: mId, uId: uId }).then(res => {
+        var mId = to.query.mId == "undefined" ? "" : to.query.mId
+        var tppId = to.query.tppId == "undefined" ? "" : to.query.tppId
+
+        http.get("/User/LoginByUrlParams", { mId: mId, tppId: tppId }).then(res => {
           if (res.result == 1) {
 
             store.dispatch('setUserInfo', res.data)
