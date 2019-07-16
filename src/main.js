@@ -139,13 +139,25 @@ Vue.prototype.getNowFormatDate = function () {
 
 
 /* eslint-disable no-new */
-new Vue({
-  el: '#app',
+Vue.config.productionTip = false
+
+/* eslint-disable no-new */
+let app = new Vue({
   router,
   store,
   components: { App },
   template: '<App/>'
 })
 
+window.mountApp = () => {
+  app.$mount('#app')
+}
+if (process.env.NODE_ENV === 'production') {
+  if (window.STYLE_READY) {
+    window.mountApp()
+  }
+} else {
+  window.mountApp()
+}
 
 

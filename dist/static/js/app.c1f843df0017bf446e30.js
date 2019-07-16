@@ -4032,13 +4032,26 @@ vue_esm["a" /* default */].prototype.getNowFormatDate = function () {
 };
 
 /* eslint-disable no-new */
-new vue_esm["a" /* default */]({
-  el: '#app',
+vue_esm["a" /* default */].config.productionTip = false;
+
+/* eslint-disable no-new */
+let app = new vue_esm["a" /* default */]({
   router: router,
   store: store,
   components: { App: src_App },
   template: '<App/>'
 });
+
+window.mountApp = () => {
+  app.$mount('#app');
+};
+if (true) {
+  if (window.STYLE_READY) {
+    window.mountApp();
+  }
+} else {
+  window.mountApp();
+}
 
 /***/ }),
 
@@ -4155,4 +4168,4 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.89d408635d1ce7484bd8.js.map
+//# sourceMappingURL=app.c1f843df0017bf446e30.js.map
