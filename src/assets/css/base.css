@@ -35,19 +35,27 @@ img{
 }
 
 .pdt0{
-    padding-top: 0;
+    padding-top: 0 !important;
 }
 
 .bdb0 {
- border-bottom-width: 0px;
+ border-bottom-width: 0px !important;
+}
+
+div.bdt0 {
+    border-top-width: 0px !important;
 }
 
 .mb5{
-    margin-bottom: 5rem;
+    margin-bottom: 5rem !important;
 }
 
 .hid{
-    display: none;
+    display: none !important;
+}
+
+.wa{
+    width: auto !important;
 }
 
 

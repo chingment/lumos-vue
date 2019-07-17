@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import store from './store'
 import http from "./utils/http";
+import commonUtil from "./utils/commonUtil";
 
 import Calendar from 'vue2-datepick'; //日期控件
 
@@ -49,7 +50,7 @@ Object.keys(lumoslib_uses).forEach((key) => {
 
 
 Vue.prototype.$http = http;
-
+Vue.prototype.$commonUtil = commonUtil;
 
 // //方法挂靠全局
 // Object.keys(global).forEach((key) => {
@@ -99,7 +100,8 @@ router.beforeEach((to, from, next) => {
 
             next({
               name: 'LoginIndex',
-              path: '/Login'
+              path: '/Login',
+              query: { return: to.fullPath }
             })
 
           }

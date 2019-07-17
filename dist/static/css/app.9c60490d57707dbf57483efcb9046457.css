@@ -35,19 +35,27 @@ img{
 }
 
 .pdt0{
-    padding-top: 0;
+    padding-top: 0 !important;
 }
 
 .bdb0 {
- border-bottom-width: 0px;
+ border-bottom-width: 0px !important;
+}
+
+div.bdt0 {
+    border-top-width: 0px !important;
 }
 
 .mb5{
-    margin-bottom: 5rem;
+    margin-bottom: 5rem !important;
 }
 
 .hid{
-    display: none;
+    display: none !important;
+}
+
+.wa{
+    width: auto !important;
 }
 
 
@@ -175,8 +183,8 @@ img{
   color: #b7b7b7;
 }
 .frmgrid .field > .item .item-left .icon[data-v-691d586e] {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .frmgrid .field > .item .item-middle[data-v-691d586e] {
   display: -webkit-box;
@@ -406,8 +414,8 @@ img{
   color: #b7b7b7;
 }
 .frmgrid .field > .item .item-left .icon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .frmgrid .field > .item .item-middle {
   display: -webkit-box;
@@ -568,17 +576,14 @@ body {
   background-color: #fff;
 }
 .logo {
-  width: 20rem;
+  width: 16rem;
   margin: auto;
 }
-.frmgrid .field .item .item-left {
-  width: 2rem;
-}
-.frmgrid .field > .item:first-child {
-  border-top-width: 0;
+.frmgrid {
+  padding: 0 2rem;
 }
 #btn_login {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .frmgrid[data-v-2c5308e8] {
@@ -643,8 +648,8 @@ body {
   color: #b7b7b7;
 }
 .frmgrid .field > .item .item-left .icon[data-v-2c5308e8] {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .frmgrid .field > .item .item-middle[data-v-2c5308e8] {
   display: -webkit-box;
@@ -1001,8 +1006,8 @@ body {
   color: #b7b7b7;
 }
 .frmgrid .field > .item .item-left .icon[data-v-198a4e4b] {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .frmgrid .field > .item .item-middle[data-v-198a4e4b] {
   display: -webkit-box;
@@ -1234,8 +1239,8 @@ body {
   color: #b7b7b7;
 }
 .frmgrid .field > .item .item-left .icon[data-v-7e3dc7ff] {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .frmgrid .field > .item .item-middle[data-v-7e3dc7ff] {
   display: -webkit-box;
@@ -1540,8 +1545,8 @@ body {
   color: #b7b7b7;
 }
 .frmgrid .field > .item .item-left .icon[data-v-66e6d94e] {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .frmgrid .field > .item .item-middle[data-v-66e6d94e] {
   display: -webkit-box;
@@ -1846,8 +1851,8 @@ body {
   color: #b7b7b7;
 }
 .frmgrid .field > .item .item-left .icon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .frmgrid .field > .item .item-middle {
   display: -webkit-box;
@@ -2087,8 +2092,8 @@ body {
   color: #b7b7b7;
 }
 .frmgrid .field > .item .item-left .icon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .frmgrid .field > .item .item-middle {
   display: -webkit-box;
@@ -2392,8 +2397,8 @@ body {
   color: #b7b7b7;
 }
 .frmgrid .field > .item .item-left .icon[data-v-68e23d87] {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .frmgrid .field > .item .item-middle[data-v-68e23d87] {
   display: -webkit-box;
@@ -2690,8 +2695,8 @@ body {
   color: #b7b7b7;
 }
 .frmgrid .field > .item .item-left .icon[data-v-4c284a90] {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .frmgrid .field > .item .item-middle[data-v-4c284a90] {
   display: -webkit-box;
@@ -2972,8 +2977,8 @@ body {
   color: #b7b7b7;
 }
 .frmgrid .field > .item .item-left .icon[data-v-bdc543f0] {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .frmgrid .field > .item .item-middle[data-v-bdc543f0] {
   display: -webkit-box;
@@ -3518,8 +3523,8 @@ body {
   color: #b7b7b7;
 }
 .frmgrid .field > .item .item-left .icon[data-v-4bb1ee1a] {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .frmgrid .field > .item .item-middle[data-v-4bb1ee1a] {
   display: -webkit-box;
@@ -3941,8 +3946,8 @@ body {
   color: #b7b7b7;
 }
 .frmgrid .field > .item .item-left .icon[data-v-44d7d428] {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .frmgrid .field > .item .item-middle[data-v-44d7d428] {
   display: -webkit-box;
@@ -4249,8 +4254,8 @@ body {
   color: #b7b7b7;
 }
 .frmgrid .field > .item .item-left .icon[data-v-59b1647e] {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .frmgrid .field > .item .item-middle[data-v-59b1647e] {
   display: -webkit-box;
@@ -4500,4 +4505,4 @@ body {
   color: #fff;
 }
 
-/*# sourceMappingURL=app.4e24ba483dffe9e25f7e10807a042d5e.css.map*/
+/*# sourceMappingURL=app.9c60490d57707dbf57483efcb9046457.css.map*/

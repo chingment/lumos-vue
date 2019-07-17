@@ -1,18 +1,14 @@
 <template>
-
-  <div id="app_wrapper" style=" padding: 2rem;" >
+  <div id="app_wrapper" >
      <div class="logo">
-           <img class="img"  src="@/assets/logo.jpg"
-            alt=""/>
+       <img class="img"  src="@/assets/logo.jpg" alt=""/>
      </div>   
-
      <div class="frmgrid">
       <div class="field">
-        <div class="item">
-          <div class="item-left">
+        <div class="item bdt0">
+          <div class="item-left wa">
             <span class="icon">
-            <img class="img"  src="@/assets/images/icon_username.png"
-            alt=""/>
+            <img class="img"  src="@/assets/images/icon_username.png" alt=""/>
             </span>
           </div>
           <div class="item-middle">
@@ -21,22 +17,23 @@
           <div class="item-right"></div>
         </div>
            <div class="item">
-          <div class="item-left">
+          <div class="item-left wa">
             <span class="icon">
-                      <img class="img"  src="@/assets/images/icon_password.png"
-            alt=""/>
+             <img class="img"  src="@/assets/images/icon_password.png" alt=""/>
             </span>
           </div>
           <div class="item-middle">
-            <input type="text" v-model="password"  placeholder="密码" />
+            <input type="password" v-model="password"  placeholder="密码" />
           </div>
           <div class="item-right"></div>
         </div>
       </div>
+
+        <button id="btn_login" @click="login"  class="lumos-button lumos-button-full" >登录</button>
     </div>
  
 
-    <button id="btn_login" @click="login"  class="lumos-button lumos-button-full" >登录</button>
+  
    
   </div>  
 
@@ -72,8 +69,14 @@ export default {
         .then(res => {
           if (res.result == 1) {
             this.$store.dispatch("setUserInfo", res.data);
+
+            var returnUrl = this.$commonUtil.getUrlParam("return");
+            if (returnUrl == null) {
+              returnUrl = "/Home/Index";
+            }
+
             this.$router.push({
-              path: "/Home/Index"
+              path: returnUrl
             });
           } else {
             this.$toast(res.message);
@@ -84,31 +87,22 @@ export default {
 };
 </script>
 
-<style lang="less" scope >
+<style lang="less" >
 body {
   background-color: #fff;
 }
 
 .logo {
-  width: 20rem;
+  width: 16rem;
   margin: auto;
 }
 
-.frmgrid {
-  .field {
-    .item {
-      .item-left {
-        width: 2rem;
-      }
-    }
-
-    > .item:first-child {
-      border-top-width: 0;
-    }
-  }
+.frmgrid{
+  padding: 0 2rem;
 }
 
 #btn_login {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
+
 </style>

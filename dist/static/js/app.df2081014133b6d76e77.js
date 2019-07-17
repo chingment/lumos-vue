@@ -63,6 +63,13 @@ module.exports = __webpack_require__.p + "static/img/loading.b74908f.gif";
 
 /***/ }),
 
+/***/ "FAVR":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "KhbB":
 /***/ (function(module, exports) {
 
@@ -290,9 +297,6 @@ var Index_Component = Index_normalizeComponent(
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ var Login_Index = ({
   data() {
@@ -321,8 +325,14 @@ var Index_Component = Index_normalizeComponent(
       }).then(res => {
         if (res.result == 1) {
           this.$store.dispatch("setUserInfo", res.data);
+
+          var returnUrl = this.$commonUtil.getUrlParam("return");
+          if (returnUrl == null) {
+            returnUrl = "/Home/Index";
+          }
+
           this.$router.push({
-            path: "/Home/Index"
+            path: returnUrl
           });
         } else {
           this.$toast(res.message);
@@ -331,14 +341,14 @@ var Index_Component = Index_normalizeComponent(
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-23b92afa","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/Login/Index.vue
-var Login_Index_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticStyle:{"padding":"2rem"},attrs:{"id":"app_wrapper"}},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"frmgrid"},[_c('div',{staticClass:"field"},[_c('div',{staticClass:"item"},[_vm._m(1),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.username),expression:"username"}],attrs:{"type":"text","placeholder":"账号"},domProps:{"value":(_vm.username)},on:{"input":function($event){if($event.target.composing){ return; }_vm.username=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_vm._m(2),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.password),expression:"password"}],attrs:{"type":"text","placeholder":"密码"},domProps:{"value":(_vm.password)},on:{"input":function($event){if($event.target.composing){ return; }_vm.password=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])])]),_vm._v(" "),_c('button',{staticClass:"lumos-button lumos-button-full",attrs:{"id":"btn_login"},on:{"click":_vm.login}},[_vm._v("登录")])])}
-var Login_Index_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"logo"},[_c('img',{staticClass:"img",attrs:{"src":__webpack_require__("4Uwr"),"alt":""}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"icon"},[_c('img',{staticClass:"img",attrs:{"src":__webpack_require__("WI+2"),"alt":""}})])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left"},[_c('span',{staticClass:"icon"},[_c('img',{staticClass:"img",attrs:{"src":__webpack_require__("rEaC"),"alt":""}})])])}]
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-12761f6e","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/pages/Login/Index.vue
+var Login_Index_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app_wrapper"}},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"frmgrid"},[_c('div',{staticClass:"field"},[_c('div',{staticClass:"item bdt0"},[_vm._m(1),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.username),expression:"username"}],attrs:{"type":"text","placeholder":"账号"},domProps:{"value":(_vm.username)},on:{"input":function($event){if($event.target.composing){ return; }_vm.username=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})]),_vm._v(" "),_c('div',{staticClass:"item"},[_vm._m(2),_vm._v(" "),_c('div',{staticClass:"item-middle"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.password),expression:"password"}],attrs:{"type":"password","placeholder":"密码"},domProps:{"value":(_vm.password)},on:{"input":function($event){if($event.target.composing){ return; }_vm.password=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"item-right"})])]),_vm._v(" "),_c('button',{staticClass:"lumos-button lumos-button-full",attrs:{"id":"btn_login"},on:{"click":_vm.login}},[_vm._v("登录")])])])}
+var Login_Index_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"logo"},[_c('img',{staticClass:"img",attrs:{"src":__webpack_require__("4Uwr"),"alt":""}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left wa"},[_c('span',{staticClass:"icon"},[_c('img',{staticClass:"img",attrs:{"src":__webpack_require__("WI+2"),"alt":""}})])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"item-left wa"},[_c('span',{staticClass:"icon"},[_c('img',{staticClass:"img",attrs:{"src":__webpack_require__("rEaC"),"alt":""}})])])}]
 var Login_Index_esExports = { render: Login_Index_render, staticRenderFns: Login_Index_staticRenderFns }
 /* harmony default export */ var pages_Login_Index = (Login_Index_esExports);
 // CONCATENATED MODULE: ./src/pages/Login/Index.vue
 function Login_Index_injectStyle (ssrContext) {
-  __webpack_require__("w9qG")
+  __webpack_require__("FAVR")
 }
 var Login_Index_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -2041,6 +2051,14 @@ function checkStatus(response) {
       return checkStatus(response);
     });
   }
+});
+// CONCATENATED MODULE: ./src/utils/commonUtil.js
+function getUrlParam(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.href) || [, ""])[1].replace(/\+/g, '%20')) || null;
+}
+
+/* harmony default export */ var commonUtil = ({
+    getUrlParam: getUrlParam
 });
 // EXTERNAL MODULE: ./node_modules/vue2-datepick/lib/index.js
 var vue2_datepick_lib = __webpack_require__("qMlo");
@@ -3972,7 +3990,6 @@ Toast.install = (Vue, options) => {
     document.body.appendChild(tpl);
 
     Vue.prototype.$toast = function (text) {
-        console.log('dsda');
         $vm.isShow = true;
         $vm.text = text;
         setTimeout(() => {
@@ -4039,6 +4056,7 @@ var uses = {
 
 
 
+
  //日期控件
 
 vue_esm["a" /* default */].use(vue2_datepick_lib_default.a); //日期控件
@@ -4080,6 +4098,7 @@ Object.keys(lumoslib_uses).forEach(key => {
 
 
 vue_esm["a" /* default */].prototype.$http = http;
+vue_esm["a" /* default */].prototype.$commonUtil = commonUtil;
 
 // //方法挂靠全局
 // Object.keys(global).forEach((key) => {
@@ -4125,7 +4144,8 @@ router.beforeEach((to, from, next) => {
 
             next({
               name: 'LoginIndex',
-              path: '/Login'
+              path: '/Login',
+              query: { return: to.fullPath }
             });
           }
         });
@@ -4297,13 +4317,6 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACO
 
 /***/ }),
 
-/***/ "w9qG":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "ycJr":
 /***/ (function(module, exports) {
 
@@ -4319,4 +4332,4 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.a36e91d8f850516d84bd.js.map
+//# sourceMappingURL=app.df2081014133b6d76e77.js.map
