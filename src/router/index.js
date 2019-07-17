@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import HomeIndex from '@/pages/Home/Index'
+import LoginIndex from '@/pages/Login/Index'
 import InsCarIndex from '@/pages/InsCar/Index'
 import InsCarAsCarInfo from '@/pages/InsCar/As/CarInfo'
 import InsCarAsCarModelSearch from '@/pages/InsCar/As/CarModelSearch'
@@ -23,6 +24,7 @@ export default new Router({
   mode: 'history',
   routes: [
     { path: '/Home/Index', name: 'HomeIndex', component: HomeIndex,meta: {requireAuth: true}},
+    { path: '/Login', name: 'LoginIndex', component: LoginIndex,meta: {requireAuth: false}},
     { path: '/InsCar', name: 'InsCar', component: InsCarIndex,meta: {requireAuth: true}},
     { path: '/InsMarket', name: 'InsMarket', component: InsMarketIndex,meta: {requireAuth: true} },
     { path: '/InsClaim', name: 'InsClaim', component: InsClaimIndex,meta: {requireAuth: true} },

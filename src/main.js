@@ -81,6 +81,7 @@ router.beforeEach((to, from, next) => {
         var mId = to.query.mId == "undefined" ? "" : to.query.mId
         var tppId = to.query.tppId == "undefined" ? "" : to.query.tppId
 
+        
         http.get("/User/LoginByUrlParams", { mId: mId, tppId: tppId }).then(res => {
           if (res.result == 1) {
 
@@ -90,17 +91,21 @@ router.beforeEach((to, from, next) => {
           }
           else {
 
-            store.dispatch('setMessageBox', {
-              title: '温馨提示',
-              content: res.message
-            })
+            
+            // store.dispatch('setMessageBox', {
+            //   title: '温馨提示',
+            //   content: res.message
+            // })
 
             next({
-              name: 'ErrorIndex',
-              path: '/Error'
+              name: 'LoginIndex',
+              path: '/Login'
             })
+
           }
         });
+
+
       }
       else {
         next();

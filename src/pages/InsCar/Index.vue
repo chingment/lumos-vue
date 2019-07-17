@@ -58,12 +58,17 @@
             alt="">
       </div>      
      </div>
+
+
+
+     
      </div>   
  
+      
 
     </div>
 
-   <button  @click="goAsCarInfo"  class="lumos-button lumos-button-full" >立即询价</button>
+ 
 
    
       <div class="manr">
