@@ -1,0 +1,179 @@
+
+
+
+
+
+
+
+
+
+.show[data-v-7cdbcb1a] {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lumos-tabbar {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3.4rem;
+  z-index: 10;
+  background-color: #fff;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #f8f8f8;
+}
+.lumos-tabbar.is-fixed {
+  position: fixed;
+}
+.lumos-tabbar > .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  text-decoration: none;
+}
+.lumos-tabbar .item-icon {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  height: 1.2rem;
+  width: 1.2rem;
+  text-align: center;
+  margin: auto;
+}
+.lumos-tabbar .item-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.lumos-tabbar .item-text {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+.lumos-tabbar .item-text .active {
+  color: #006dee;
+}
+.lumos-tabbar .item-text .normal {
+  color: #7d7e80;
+}
+.lumos-tabbar .item-vonbadge {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  margin-left: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lumos-loading {
+  position: fixed;
+  outline: none;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  z-index: 50;
+  line-height: 32px;
+  overflow: hidden;
+  border-radius: 5px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  width: 100px;
+  text-align: center;
+}
+
+.lumos-toast {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+/*# sourceMappingURL=app.cbecb7a912a9172f14c699999e556655.css.map*/

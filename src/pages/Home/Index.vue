@@ -87,7 +87,6 @@ export default {
     .title-left {
       .icon {
         height: 1.3rem;
-        background-color: #01b9c5;
       }
 
       .title {

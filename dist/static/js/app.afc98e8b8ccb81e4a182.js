@@ -14,10 +14,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAgCAYAAABt
 
 /***/ }),
 
-/***/ "3x+D":
+/***/ "3vSi":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "3x+D":
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: \n      Something wrong with provided resources.\n      Make sure 'options.resources' is String or Array of Strings.\n    \n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:71:18)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:73:12)");
 
 /***/ }),
 
@@ -31,14 +38,14 @@ module.exports = __webpack_require__.p + "static/img/logo.6bd2a2d.jpg";
 /***/ "53p7":
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: \n      Something wrong with provided resources.\n      Make sure 'options.resources' is String or Array of Strings.\n    \n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:71:18)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:73:12)");
 
 /***/ }),
 
 /***/ "73M7":
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: \n      Something wrong with provided resources.\n      Make sure 'options.resources' is String or Array of Strings.\n    \n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:71:18)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:73:12)");
 
 /***/ }),
 
@@ -52,7 +59,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABz
 /***/ "CkVR":
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: \n      Something wrong with provided resources.\n      Make sure 'options.resources' is String or Array of Strings.\n    \n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:71:18)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:73:12)");
 
 /***/ }),
 
@@ -66,14 +73,14 @@ module.exports = __webpack_require__.p + "static/img/loading.b74908f.gif";
 /***/ "FAVR":
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: \n      Something wrong with provided resources.\n      Make sure 'options.resources' is String or Array of Strings.\n    \n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:71:18)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:73:12)");
 
 /***/ }),
 
 /***/ "KhbB":
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: \n      Something wrong with provided resources.\n      Make sure 'options.resources' is String or Array of Strings.\n    \n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:71:18)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:73:12)");
 
 /***/ }),
 
@@ -107,14 +114,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // EXTERNAL MODULE: ./node_modules/vue/dist/vue.esm.js
 var vue_esm = __webpack_require__("7+uW");
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-41c70517","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/App.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-cde196b0","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/App.vue
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('router-view')],1)}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ var App = (esExports);
 // CONCATENATED MODULE: ./src/App.vue
 function injectStyle (ssrContext) {
-  __webpack_require__("W43b")
+  __webpack_require__("3vSi")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -4208,7 +4215,7 @@ if (true) {
 /***/ "POlm":
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: \n      Something wrong with provided resources.\n      Make sure 'options.resources' is String or Array of Strings.\n    \n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:71:18)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:73:12)");
 
 /***/ }),
 
@@ -4233,13 +4240,6 @@ module.exports = __webpack_require__.p + "static/img/error_an.477a966.jpg";
 
 /***/ }),
 
-/***/ "W43b":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "WI+2":
 /***/ (function(module, exports) {
 
@@ -4250,49 +4250,49 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACO
 /***/ "Zd42":
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: \n      Something wrong with provided resources.\n      Make sure 'options.resources' is String or Array of Strings.\n    \n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:71:18)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:73:12)");
 
 /***/ }),
 
 /***/ "h77F":
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: \n      Something wrong with provided resources.\n      Make sure 'options.resources' is String or Array of Strings.\n    \n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:71:18)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:73:12)");
 
 /***/ }),
 
 /***/ "hnvM":
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: \n      Something wrong with provided resources.\n      Make sure 'options.resources' is String or Array of Strings.\n    \n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:71:18)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:73:12)");
 
 /***/ }),
 
 /***/ "k5+z":
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: \n      Something wrong with provided resources.\n      Make sure 'options.resources' is String or Array of Strings.\n    \n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:71:18)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:73:12)");
 
 /***/ }),
 
 /***/ "ka4H":
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: \n      Something wrong with provided resources.\n      Make sure 'options.resources' is String or Array of Strings.\n    \n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:71:18)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:73:12)");
 
 /***/ }),
 
 /***/ "l8Pl":
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: \n      Something wrong with provided resources.\n      Make sure 'options.resources' is String or Array of Strings.\n    \n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:71:18)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:73:12)");
 
 /***/ }),
 
 /***/ "nqnd":
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: \n      Something wrong with provided resources.\n      Make sure 'options.resources' is String or Array of Strings.\n    \n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:71:18)\n    at runLoaders (D:\\github\\lumos-vue\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\github\\lumos-vue\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.module.exports (D:\\github\\lumos-vue\\node_modules\\sass-resources-loader\\lib\\loader.js:73:12)");
 
 /***/ }),
 
@@ -4332,4 +4332,4 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.df2081014133b6d76e77.js.map
+//# sourceMappingURL=app.afc98e8b8ccb81e4a182.js.map
