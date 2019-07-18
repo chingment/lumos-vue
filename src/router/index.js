@@ -23,6 +23,7 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [
+    { path: '/', name: 'HomeIndex', component: HomeIndex,meta: {requireAuth: true}},
     { path: '/Home/Index', name: 'HomeIndex', component: HomeIndex,meta: {requireAuth: true}},
     { path: '/Login', name: 'LoginIndex', component: LoginIndex,meta: {requireAuth: false}},
     { path: '/InsCar', name: 'InsCar', component: InsCarIndex,meta: {requireAuth: true}},
